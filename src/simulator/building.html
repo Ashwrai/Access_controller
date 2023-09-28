@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<!-- https://www.w3schools.com/howto/howto_css_two_columns.asp -->
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 20px;
+}
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+<style>
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  /* border-bottom: 1px dotted black; */ /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 600px;
+  background-color: #555;
+  color: #fff;
+  text-align: left;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -30px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+</style>
+
+
+</head>
+
+<html>
+<body>
+
+<div class="row">
+    <div class="column">
+        <h4> User </h4>
+
+        <form id="formUser">
+            <div class="tooltip">
+                <input name="person" type="radio" value="43295"> Eulalia
+                <span class="tooltiptext">
+					Group Employees<br>
+					Week days, 9h-17h, Sept. 1 2023 - Mar. 1 2024<br>
+					Open, close and unlock shortly<br>
+					Exterior, ground floor, floor 1, that is, everywhere but the parking
+				</span>
+            </div>
+            <br>
+            <div class="tooltip">
+                <input name="person" type="radio" value="95783"> Manel
+                <span class="tooltiptext">
+					Group Managers<br>
+					Week days plus Saturday, 8h-20h, Sept. 1 2023 - Mar. 1 2024<br>
+					All actions<br>
+					All spaces
+				</span>
+            </div>
+            <br>
+            <div class="tooltip">
+                <input checked name="person" type="radio" value="11343"> Ana
+                <span class="tooltiptext">
+					Group Administrator<br>
+					Anytime<br>
+					All actions<br>
+					All spaces
+				</span>
+            </div>
+            <br>
+            <div class="tooltip">
+                <input name="person" type="radio" value="12345"> Bernat
+                <span class="tooltiptext">
+				Group Blank : can't do anything, ever, nowhere, but still is recognized as a valid user.
+				It's a user group to temporally keep users without any privilege instead of deleting them
+                just in case we want to recover them.<br>
+			</span>
+            </div>
+            <br>
+            <div class="tooltip">
+                <input name="person" type="radio" value="00112"> Unknown
+                <span class="tooltiptext">
+					Not recognized by the system as a user, possibly an intruder.
+				</span>
+            </div>
+        </form>
+
+        <h4> Action </h4>
+        <form id="formAction">
+            <div class="tooltip">
+                <label><input checked name="action" type="radio" value="lock" id="radiobutton_lock"> Lock</label>
+                <span class="tooltiptext">
+				    Enters Locked state from Unlocked if the door is closed. The door can now be unlocked
+                    or shortly unlocked.
+			    </span>
+            </div>
+            <br>
+			<div class="tooltip">
+				<label><input name="action" type="radio" value="unlock" id="radiobutton_unlock"> Unlock</label>
+				<span class="tooltiptext">
+				    Enters Unlocked state from Locked. Now can be open, closed and locked again.
+			    </span>
+			</div>
+            <br>
+			<div class="tooltip">
+				<label><input name="action" type="radio" value="unlock_shortly" id="radiobutton_unlock_shortly"> Unlock shortly</label>
+				<span class="tooltiptext">
+				    Enters the Unlocked Shortly state from Locked. Returns automatically to Locked after 10 seconds
+					if the door is closed. If it is open, it enters state Propped and goes back automatically to
+                    Locked only when the door is closed.<br>
+                    <strong>In order to check if the door has entered the Propped state or has returned to Locked,
+                            both from Propped or Unlocked Shortly, you have to press the Refresh button
+                    </strong>.
+			    </span>
+			</div>
+            <br>
+            <div class="tooltip">
+                <label><input name="action" type="radio" value="open" id="radiobutton_open"> Open</label>
+                <span class="tooltiptext">
+				    open one door
+			    </span>
+            </div>
+            <br>
+            <div class="tooltip">
+                <label><input name="action" type="radio" value="close" id="radiobutton_close"> Close</label>
+                <span class="tooltiptext">
+				    close one door
+			    </span>
+            </div>
+        </form>
+
+        <h4>Date and time</h4>
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time -->
+        <input id="appt_date" name="appt" type="date" style="margin: 2px;"><br>
+        <input id="appt_time" name="appt" required type="time" style="margin: 2px;" value="09:30">
+
+        <h4>Selection</h4>
+        Reader <input id="reader" readonly size="6" type="text" value=""><br><br>
+        Area <input id="area" readonly size="6" type="text" value=""><br><br>
+        <label hidden>x <input id="mouseX" readonly size="1" type="text" value=""></label>
+        <label hidden>y <input id="mouseY" readonly size="1" type="text" value=""></label>
+        <!-- add hidden after label to hide this control -->
+    </div>
+
+    <div class="column">
+        <!-- decide a width or height of the canvas in pixels and then
+          the other dimension follow the same ratio than in images -->
+        <canvas id="myCanvas" width=1000 height=303 style="margin: 20px;"></canvas>
+        <br>
+
+        <div class="tooltip">
+            <label style="margin-left: 20px;"><strong>Send</strong> : </label>
+            <span class="tooltiptext">
+                First button sends a reader or an area request according to the selected options.
+                Second button sends a refresh request to get the present state of all the doors
+                and update their readers accordingly.
+            </span>
+        </div>
+        <button onclick="sendRequest()">Reader / Area request</button>
+        <button onclick="sendRefresh()">Refresh request</button>
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+        locked <span style="color: orange;">&#9632;</span> &nbsp;&nbsp;
+        unlocked <span style="color: green; ">&#9632;</span> &nbsp;&nbsp;
+        unlocked shortly <span style="color: lime; ">&#9632;</span> &nbsp;&nbsp;
+        propped <span style="color: red; ">&#9632;</span> &nbsp;&nbsp;
+        <!--
+        do not disturb <span style="color: red; ">&#9632;</span> &nbsp;&nbsp;
+        idle <span style="color: cyan; ">&#9632;</span> &nbsp;&nbsp;
+        -->
+        <br>
+        <br>
+        <label style="margin-left: 20px;"><strong>Request</strong></label>
+        <br>
+        <textarea id="request" readonly rows="1" value="" style="width: 988px; height: 35px; margin-left: 20px;"></textarea>
+        <br>
+        <label style="margin-left: 20px;"><strong>Answer</strong></label>
+        <br>
+        <textarea id="answer" readonly rows="5" value="" style="width: 988px; height: 130px; margin-left: 20px;"></textarea>
+    </div>
+</div>
+
+
+<script src="building.js"></script>
+
+</body>
+</html>

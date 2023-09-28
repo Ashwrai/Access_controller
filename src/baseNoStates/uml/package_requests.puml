@@ -1,0 +1,50 @@
+@startuml
+'https://plantuml.com/class-diagram
+skinparam classAttributeIconSize 0
+
+package requests {
+    interface Request {
+    + {abstract} answerToJson() : JSONObject
+    + {abstract} process()
+    + {abstract} toString() : String
+    }
+
+    class RequestRefresh implements Request {
+    - jsonDoors : JSONObject[]
+    + answerToJson() : JSONObject
+    + process()
+    + toString() : String
+    }
+
+    class RequestReader implements Request {
+    - credential : String
+    - action : String
+    - now : LocalDateTime
+    - doorId : String
+    - userName : String
+    - authorized : boolean
+    - reasons : String[]
+    - doorStateName : String
+    + answerToJson() : JSONObject
+    + process()
+    - authorize(user : User, door : Door)
+    + toString() : String
+    + setDoorStateName(name : String)
+    + getAction() : String
+    + isAuthorized() : boolean
+    }
+
+    class RequestArea implements Request {
+    - credential : String
+    - action : String
+    - now : LocalDateTime
+    - areaId : String
+    - requestsReader : RequestReader[]
+    + answerToJson() : JSONObject
+    + process()
+    + getAction() : String
+    }
+}
+
+
+@enduml
