@@ -1,16 +1,21 @@
 package baseNoStates;
 
 import baseNoStates.requests.RequestReader;
+import baseNoStates.state.Locked;
+import baseNoStates.state.State;
 import org.json.JSONObject;
+
 
 
 public class Door {
   private final String id;
-  private boolean closed; // physically
+  private State state;
+  private boolean closed;
 
   public Door(String id) {
     this.id = id;
-    closed = true;
+    this.closed=true;
+    this.state = new Locked(this);
   }
 
   public void processRequest(RequestReader request) {
@@ -42,13 +47,13 @@ public class Door {
         }
         break;
       case Actions.LOCK:
-        // TODO
-        // fall through
+        state = state.lock();
+        break;
       case Actions.UNLOCK:
-        // TODO
-        // fall through
+        state = state.unlocked();
+        break;
       case Actions.UNLOCK_SHORTLY:
-        // TODO
+        //
         System.out.println("Action " + action + " not implemented yet");
         break;
       default:
@@ -66,7 +71,7 @@ public class Door {
   }
 
   public String getStateName() {
-    return "unlocked";
+    return state.asString();
   }
 
   @Override
