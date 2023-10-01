@@ -8,14 +8,13 @@ public class Locked extends State {
     }
 
     @Override
-    public State lock() {
+    public void lock() {
         System.out.println("already locked");
-        return this;
     }
 
     @Override
-    public State unlocked() {
-        return new Unlocked(door);
+    public void unlocked() {
+        door.setState(new Unlocked(door));
     }
 
     @Override

@@ -8,19 +8,21 @@ public class Unlocked extends State {
         super(door);
     }
 
-    @Override
-    public State lock() {
-        return new Unlocked(door);
-    }
+
 
     @Override
-    public State unlocked() {
+    public void unlocked() {
         System.out.println("already unlocked");
-        return this;
     }
 
+    @Override
+    public void lock() {
+        door.setState(new Locked(door));
+    }
     @Override
     public String asString() {
         return "unlocked";
     }
+
+
 }

@@ -4,15 +4,16 @@ import baseNoStates.Door;
 
 public abstract class State {
 
-    Door door;
+    protected Door door;
 
     State(Door door){
         this.door=door;
     }
 
 
-    public abstract State lock();
-    public abstract State unlocked();
+    public abstract void lock();
+    public abstract void unlocked();
     public abstract String asString();
+
 
 }

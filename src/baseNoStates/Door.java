@@ -4,7 +4,8 @@ import baseNoStates.requests.RequestReader;
 import baseNoStates.state.Locked;
 import baseNoStates.state.State;
 import org.json.JSONObject;
-
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class Door {
@@ -47,14 +48,21 @@ public class Door {
         }
         break;
       case Actions.LOCK:
-        state = state.lock();
+        state.lock();
         break;
       case Actions.UNLOCK:
-        state = state.unlocked();
+        state.unlocked();
         break;
       case Actions.UNLOCK_SHORTLY:
-        //
-        System.out.println("Action " + action + " not implemented yet");
+        state.unlocked();
+        Timer timer= new Timer();
+        timer.schedule(new TimerTask() {
+          @Override
+          public void run() {
+            state.lock();
+          }
+        }, 10000);
+        //System.out.println("Action " + action + " not implemented yet");
         break;
       default:
         assert false : "Unknown action " + action;
@@ -89,5 +97,9 @@ public class Door {
     json.put("state", getStateName());
     json.put("closed", closed);
     return json;
+  }
+
+  public void setState(State state) {
+    this.state = state;
   }
 }
