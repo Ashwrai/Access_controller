@@ -10,9 +10,11 @@ public abstract class State {
         this.door=door;
     }
 
-
+    public abstract void open();
+    public abstract void close();
+    public abstract void unlockShortly();
     public abstract void lock();
-    public abstract void unlocked();
+    public abstract void unlock();
     public abstract String asString();
 
 

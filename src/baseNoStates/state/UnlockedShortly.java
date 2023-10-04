@@ -5,10 +5,21 @@ import baseNoStates.Door;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Unlocked extends State {
-
-    Unlocked(Door door) {
-        super(door);
+public class UnlockedShortly extends State{
+    UnlockedShortly(Door door2) {
+        super(door2);
+        Timer timer= new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                if (door.isClosed())
+                    door.setState(new Locked(door));
+                else {
+                    door.setState(new Propped(door));
+                    System.out.println("Can't lock door " + door.getId() + "Because is open/propped");
+                }
+            }
+        }, 10000);
     }
 
     @Override
@@ -33,6 +44,11 @@ public class Unlocked extends State {
     }
 
     @Override
+    public void unlock() {
+        System.out.println("already unlocked");
+    }
+
+    @Override
     public void lock() {
         if (door.isClosed())
             door.setState(new Locked(door));
@@ -40,16 +56,9 @@ public class Unlocked extends State {
             System.out.println(door.getId() + " can't be locked, it's open");
     }
 
-    @Override
-    public void unlock() {
-        System.out.println("already unlocked");
-    }
-
 
     @Override
     public String asString() {
-        return "unlocked";
+        return "unlocked_shortly";
     }
-
-
 }

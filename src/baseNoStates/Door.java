@@ -4,8 +4,6 @@ import baseNoStates.requests.RequestReader;
 import baseNoStates.state.Locked;
 import baseNoStates.state.State;
 import org.json.JSONObject;
-import java.util.Timer;
-import java.util.TimerTask;
 
 
 public class Door {
@@ -34,35 +32,19 @@ public class Door {
   private void doAction(String action) {
     switch (action) {
       case Actions.OPEN:
-        if (closed) {
-          closed = false;
-        } else {
-          System.out.println("Can't open door " + id + " because it's already open");
-        }
+        state.open();
         break;
       case Actions.CLOSE:
-        if (closed) {
-          System.out.println("Can't close door " + id + " because it's already closed");
-        } else {
-          closed = true;
-        }
+        state.close();
         break;
       case Actions.LOCK:
         state.lock();
         break;
       case Actions.UNLOCK:
-        state.unlocked();
+        state.unlock();
         break;
       case Actions.UNLOCK_SHORTLY:
-        state.unlocked();
-        Timer timer= new Timer();
-        timer.schedule(new TimerTask() {
-          @Override
-          public void run() {
-            state.lock();
-          }
-        }, 10000);
-        //System.out.println("Action " + action + " not implemented yet");
+        state.unlockShortly();
         break;
       default:
         assert false : "Unknown action " + action;
@@ -70,6 +52,9 @@ public class Door {
     }
   }
 
+  public void setClose(boolean c){
+    closed = c;
+  }
   public boolean isClosed() {
     return closed;
   }
