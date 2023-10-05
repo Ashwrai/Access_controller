@@ -58,7 +58,7 @@ public class UnlockedShortly extends State{
 
 
     @Override
-    public String asString() {
+    public String getName() {
         return "unlocked_shortly";
     }
 }

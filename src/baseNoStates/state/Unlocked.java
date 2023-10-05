@@ -47,7 +47,7 @@ public class Unlocked extends State {
 
 
     @Override
-    public String asString() {
+    public String getName() {
         return "unlocked";
     }
 

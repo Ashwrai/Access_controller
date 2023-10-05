@@ -15,7 +15,7 @@ public abstract class State {
     public abstract void unlockShortly();
     public abstract void lock();
     public abstract void unlock();
-    public abstract String asString();
+    public abstract String getName();
 
 
 }

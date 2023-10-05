@@ -39,7 +39,7 @@ public class Propped extends State {
     }
 
     @Override
-    public String asString() {
+    public String getName() {
         return "propped";
     }
 

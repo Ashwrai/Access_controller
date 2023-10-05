@@ -33,7 +33,7 @@ public class Locked extends State {
     }
 
     @Override
-    public String asString() {
+    public String getName() {
         return "locked";
     }
 }

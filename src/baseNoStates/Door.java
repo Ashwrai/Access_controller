@@ -64,7 +64,7 @@ public class Door {
   }
 
   public String getStateName() {
-    return state.asString();
+    return state.getName();
   }
 
   @Override

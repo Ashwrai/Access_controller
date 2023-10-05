@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/baseNoStates/state/Propped.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseNoStates/state/UnlockedShortly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/baseNoStates/Door.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/Door.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/baseNoStates/state/Locked.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/state/Locked.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/state/Propped.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/state/Propped.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/baseNoStates/state/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/state/State.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/baseNoStates/state/Unlocked.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/state/Unlocked.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/state/UnlockedShortly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/state/UnlockedShortly.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +54,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/dani/GitHub/Java/acs_practicum_DS",
+    "last_opened_file_path": "C:/Users/dimme/ideaProjects/acs_practicum_DS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -96,10 +97,16 @@
       <workItem from="1695894254512" duration="1369000" />
       <workItem from="1695898209772" duration="254000" />
       <workItem from="1696446297390" duration="5170000" />
+      <workItem from="1696487736922" duration="1634000" />
+      <workItem from="1696498404646" duration="2654000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
   </component>
 </project>
