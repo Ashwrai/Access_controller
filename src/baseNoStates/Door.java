@@ -17,6 +17,8 @@ public class Door {
     this.state = new Locked(this);
   }
 
+
+
   public void processRequest(RequestReader request) {
     // it is the Door that process the request because the door has and knows
     // its state, and if closed or open
@@ -87,4 +89,9 @@ public class Door {
   public void setState(State state) {
     this.state = state;
   }
+
+  public void spaceFrom() {}
+  public void spaceTo() {}
+
 }
+
