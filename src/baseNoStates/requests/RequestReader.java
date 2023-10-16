@@ -3,7 +3,7 @@ package baseNoStates.requests;
 import baseNoStates.DirectoryDoors;
 import baseNoStates.DirectoryUsers;
 import baseNoStates.Door;
-import baseNoStates.group.User;
+import baseNoStates.User;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
