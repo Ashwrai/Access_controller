@@ -1,11 +1,12 @@
 package baseNoStates;
 
+import baseNoStates.building.*;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public final class DirectoryDoors {
   private static ArrayList<Door> allDoors;
-
   public static void makeDoors() {
     // basement
     Door d1 = new Door("D1"); // exterior, parking

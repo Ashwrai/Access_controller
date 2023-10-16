@@ -4,17 +4,23 @@ import baseNoStates.requests.RequestReader;
 import baseNoStates.state.Locked;
 import baseNoStates.state.State;
 import org.json.JSONObject;
-
+import baseNoStates.building.*;
 
 public class Door {
   private final String id;
   private State state;
   private boolean closed;
 
-  public Door(String id) {
+  private Space from;
+  private Space to;
+
+  //todo cambiar from y to
+  public Door(String id, String from, String, to) {
     this.id = id;
     this.closed=true;
     this.state = new Locked(this);
+    this.from = new Space(from);
+    this.to = new Space(to);
   }
 
 
@@ -90,8 +96,19 @@ public class Door {
     this.state = state;
   }
 
-  public void spaceFrom() {}
-  public void spaceTo() {}
+  public void setFrom(Space from) {
+    this.from = from;
+  }
+  public void setTo(Space to) {
+    this.to = to;
+  }
 
+  public Space getFrom(){
+    return this.from;
+  }
+
+  public Space getTo() {
+    return this.to;
+  }
 }
 

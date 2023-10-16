@@ -4,8 +4,11 @@ import baseNoStates.Door;
 
 import java.util.ArrayList;
 
-public class Space {
+public class Space extends Area{
 
-    ArrayList<Door> doors;
+    private ArrayList<Door> doors;
 
+    public Space(String name) {
+        super(name);
+    }
 }

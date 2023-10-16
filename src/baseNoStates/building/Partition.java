@@ -1,4 +1,11 @@
 package baseNoStates.building;
 
-public class Partition {
+import java.util.ArrayList;
+
+public class Partition extends Area{
+  private ArrayList<Area> areas;
+
+  public Partition(String name) {
+    super(name);
+  }
 }

@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/DirectoryDoors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/DirectoryDoors.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/baseNoStates/Door.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/Door.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/state/Locked.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/state/Locked.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/state/Propped.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/state/Propped.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/state/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/state/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/state/Unlocked.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/state/Unlocked.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/state/UnlockedShortly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/state/UnlockedShortly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/building/Area.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/building/Area.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/building/Partition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/building/Partition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/building/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/building/Space.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,31 +38,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/dimme/ideaProjects/acs_practicum_DS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dimme/ideaProjects/acs_practicum_DS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="baseNoStates.Main" />
@@ -98,7 +95,9 @@
       <workItem from="1695898209772" duration="254000" />
       <workItem from="1696446297390" duration="5170000" />
       <workItem from="1696487736922" duration="1634000" />
-      <workItem from="1696498404646" duration="2654000" />
+      <workItem from="1696498404646" duration="4664000" />
+      <workItem from="1697010697736" duration="16000" />
+      <workItem from="1697452769247" duration="1873000" />
     </task>
     <servers />
   </component>
