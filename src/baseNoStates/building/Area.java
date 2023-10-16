@@ -1,6 +1,7 @@
 package baseNoStates.building;
 
-public class Area {
+
+public abstract class Area {
   private String name;
 
   public Area(String name){

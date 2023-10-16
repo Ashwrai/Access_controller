@@ -14,13 +14,13 @@ public class Door {
   private Space from;
   private Space to;
 
-  //todo cambiar from y to
-  public Door(String id, String from, String, to) {
+  public Door(String id, Space from, Space to) {
     this.id = id;
     this.closed=true;
     this.state = new Locked(this);
-    this.from = new Space(from);
-    this.to = new Space(to);
+    this.from = from;
+    this.to = to;
+    this.to.addDoor(this);
   }
 
 

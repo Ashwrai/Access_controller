@@ -10,5 +10,12 @@ public class Space extends Area{
 
     public Space(String name) {
         super(name);
+        this.doors = new ArrayList<Door>();
+    }
+    public void addDoor(Door door){
+        this.doors.add(door);
+    }
+    public ArrayList<Door> getDoors(){
+        return this.doors;
     }
 }

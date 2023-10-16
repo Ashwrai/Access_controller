@@ -7,5 +7,13 @@ public class Partition extends Area{
 
   public Partition(String name) {
     super(name);
+    this.areas = new ArrayList<Area>();
   }
+  public void addArea(Area area){
+    areas.add(area);
+  }
+  public ArrayList<Area> getAreas(){
+    return this.areas;
+  }
+
 }

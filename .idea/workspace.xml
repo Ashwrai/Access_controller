@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/baseNoStates/group/Group.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/baseNoStates/DirectoryDoors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/DirectoryDoors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/DirectoryUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/DirectoryUsers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/baseNoStates/Door.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/Door.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/group/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/baseNoStates/building/Area.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/building/Area.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/baseNoStates/building/Partition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/building/Partition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/baseNoStates/building/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/building/Space.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/requests/RequestReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/requests/RequestReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +74,7 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="baseNoStates.*" />
+          <option name="PATTERN" value="baseNoStates.group.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -98,6 +102,7 @@
       <workItem from="1696498404646" duration="4664000" />
       <workItem from="1697010697736" duration="16000" />
       <workItem from="1697452769247" duration="1873000" />
+      <workItem from="1697470540248" duration="4237000" />
     </task>
     <servers />
   </component>

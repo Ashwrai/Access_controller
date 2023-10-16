@@ -1,5 +1,7 @@
 package baseNoStates;
 
+import baseNoStates.group.User;
+
 import java.util.ArrayList;
 
 public final class DirectoryUsers {
