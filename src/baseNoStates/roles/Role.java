@@ -1,17 +1,47 @@
 package baseNoStates.roles;
 
-import java.util.ArrayList;
-import java.util.List;
+import baseNoStates.Reasons;
+import baseNoStates.building.Space;
+
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.HashSet;
 
 public abstract class Role {
-    protected List<Permission> permissions = new ArrayList<>();
+    protected Permission permission;
 
-    public boolean hasPermission(Permission checkPermission) {
-        for (Permission permission : permissions) {
-            if (permission.equals(checkPermission)) {
-                return true;
+    public HashSet<String> hasPermission(DayOfWeek day, LocalDate date, LocalTime time, Space accessed, String action) {
+        HashSet<String> reasons = new HashSet<>();
+        reasons.add(Reasons.NOT_WITHIN_DATE);
+        reasons.add(Reasons.NOT_WITHIN_TIME);
+        reasons.add(Reasons.RESTRICTED_AREA);
+        reasons.add(Reasons.NOT_WITHIN_DAY_OF_WEEK);
+        reasons.add(Reasons.ACTION_DISALLOWED);
+
+        // user has a permission that is specific to that area
+        if (permission.getSpaces().contains(accessed.getName())) {
+            reasons.remove(Reasons.RESTRICTED_AREA);
+
+            // user has a permission within that date range
+            if (permission.getStartDate().isBefore(date) && permission.getEndDate().isAfter(date)) {
+                reasons.remove(Reasons.NOT_WITHIN_DATE);
+            }
+
+            // the permission for that area is valid within today
+            if (permission.getDays().contains(day)) {
+                reasons.remove(Reasons.NOT_WITHIN_DAY_OF_WEEK);
+            }
+
+            // the permission is valid within the time range
+            if (time.isAfter(permission.getStartTime()) && time.isBefore(permission.getEndTime())) {
+                reasons.remove(Reasons.NOT_WITHIN_TIME);
+            }
+
+            if (permission.getActions().contains(action)) {
+                reasons.remove(Reasons.ACTION_DISALLOWED);
             }
         }
-        return false;
+        return reasons;
     }
 }

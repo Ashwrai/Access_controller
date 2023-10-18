@@ -7,4 +7,8 @@ public abstract class Area {
   public Area(String name){
     this.name = name;
   }
+
+  public String getName(){
+    return name;
+  }
 }

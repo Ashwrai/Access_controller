@@ -6,7 +6,11 @@ import baseNoStates.Door;
 import baseNoStates.User;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashSet;
 
+import baseNoStates.building.Space;
+import baseNoStates.roles.Permission;
+import baseNoStates.roles.Role;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -95,9 +99,16 @@ public class RequestReader implements Request {
       authorized = false;
       addReason("user doesn't exists");
     } else {
+      Role role = user.getRole();
+      HashSet<String> reasons = role.hasPermission(now.getDayOfWeek(), now.toLocalDate(), now.toLocalTime(), door.getTo(), action);
+
+      for (String reason: reasons) {
+        addReason(reason);
+      }
+
       //TODO: get the who, where, when and what in order to decide, and if not
       // authorized add the reason(s)
-      authorized = true;
+      authorized = reasons.isEmpty();
     }
   }
 }

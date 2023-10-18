@@ -1,18 +1,38 @@
 package baseNoStates.roles;
 
+import baseNoStates.Actions;
+
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Arrays;
 import java.util.List;
-
+import java.util.Set;
+import java.time.DayOfWeek;
 public class Permission {
+//    ArrayList<DayOfWeek> monToFri = new
+//            ArrayList<>(Arrays.asList(DayOfWeek.MONDAY,
+//            DayOfWeek.TUESDAY, DayOfWeek.WEDNESDAY,
+//            DayOfWeek.THURSDAY, DayOfWeek.FRIDAY));
+//    ArrayList<DayOfWeek> monToSat = (ArrayList<DayOfWeek>)
+//            monToFri.clone().add(DayOfWeek.SATURDAY);
+//    LocalDate d = LocalDate.of(2023, 9, 1); // Sept 1 2023
+//    LocalTime h = LocalTime.of(9, 0); // 9:00 AM
+//    LocalDateTime dt1 = LocalDateTime.now();
+//    //...
+//    LocalDateTime dt2 = LocalDateTime.now();
+//    Duration duration = Duration.between(dt1, dt2);
+    private LocalDate startDate;
+    private LocalDate endDate;
     private LocalTime startTime;
     private LocalTime endTime;
-    private List<String> days;  // ["Monday", "Tuesday", ...]
-    private List<String> actions;  // ["open", "close", ...]
-    private List<String> spaces;  // ["room1", "room2", "parking", ...]
+    private Set<DayOfWeek> days;  // ["Monday", "Tuesday", ...]
+    private Set<String> actions;  // ["open", "close", ...]
+    private Set<String> spaces;  // ["room1", "room2", "parking", ...]
 
-    public Permission(LocalTime startTime, LocalTime endTime, List<String> days,
-                      List<String> actions, List<String> spaces) {
+    public Permission(LocalDate startDate, LocalDate endDate, LocalTime startTime, LocalTime endTime, Set<DayOfWeek> days,
+                      Set<String> actions, Set<String> spaces) {
+        this.startDate=startDate;
+        this.endDate=endDate;
         this.startTime = startTime;
         this.endTime = endTime;
         this.days = days;
@@ -24,41 +44,31 @@ public class Permission {
         return startTime;
     }
 
-    public void setStartTime(LocalTime startTime) {
-        this.startTime = startTime;
-    }
-
     public LocalTime getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(LocalTime endTime) {
-        this.endTime = endTime;
-    }
 
-    public List<String> getDays() {
+    public Set<DayOfWeek> getDays() {
         return days;
     }
 
-    public void setDays(List<String> days) {
-        this.days = days;
-    }
-
-    public List<String> getActions() {
+    public Set<String> getActions() {
         return actions;
     }
 
-    public void setActions(List<String> actions) {
-        this.actions = actions;
+    public LocalDate getStartDate() {
+        return startDate;
     }
 
-    public List<String> getSpaces() {
+    public LocalDate getEndDate() {
+        return endDate;
+    }
+
+    public Set<String> getSpaces() {
         return spaces;
     }
 
-    public void setSpaces(List<String> spaces) {
-        this.spaces = spaces;
-    }
 
     @Override
     public String toString() {

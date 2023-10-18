@@ -17,6 +17,10 @@ public class User {
     return credential;
   }
 
+  public Role getRole(){
+    return this.role;
+  }
+
   @Override
   public String toString() {
     return "User{name=" + name + ", credential=" + credential + "}";

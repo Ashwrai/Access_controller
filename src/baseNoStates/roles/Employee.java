@@ -1,16 +1,24 @@
 package baseNoStates.roles;
+import baseNoStates.Actions;
+
+import java.time.DayOfWeek;
+import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.Month;
 import java.util.Arrays;
+import java.util.Set;
 
 
 public class Employee extends Role{
     public Employee() {
-        permissions.add(new Permission(
+        permission = (new Permission(
+                LocalDate.of(2023, Month.SEPTEMBER, 1),
+                LocalDate.of(2024, Month.MARCH, 1),
                 LocalTime.of(9, 0),
                 LocalTime.of(17, 0),
-                Arrays.asList("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"),
-                Arrays.asList("open", "close", "unlock shortly"),
-                Arrays.asList(
+                Set.of(DayOfWeek.MONDAY, DayOfWeek.TUESDAY, DayOfWeek.WEDNESDAY, DayOfWeek.THURSDAY, DayOfWeek.FRIDAY),
+                Set.of(Actions.OPEN, Actions.CLOSE, Actions.UNLOCK_SHORTLY),
+                Set.of(
                         "exterior",
                         "stairs",
                         "hall",

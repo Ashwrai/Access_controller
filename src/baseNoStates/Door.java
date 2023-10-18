@@ -10,7 +10,6 @@ public class Door {
   private final String id;
   private State state;
   private boolean closed;
-
   private Space from;
   private Space to;
 
