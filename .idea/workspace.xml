@@ -4,25 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/baseNoStates/Reasons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/Door.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/Door.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/building/Area.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/building/Area.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/requests/RequestReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/requests/RequestReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/roles/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/roles/Permission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/roles/Role.java" afterDir="false" />
-    </list>
-    <list id="3c1f1494-278c-4564-9b33-f821463487fa" name="Changes by quique" comment="">
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/requests/RequestReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/requests/RequestReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/roles/Administrator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/roles/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/roles/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/roles/Permission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/roles/Role.java" afterDir="false" />
-    </list>
+    <list default="true" id="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" name="Changes" comment="" />
+    <list id="3c1f1494-278c-4564-9b33-f821463487fa" name="Changes by quique" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,49 +21,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/baseNoStates/roles/Permission.java">
-      <ranges>
-        <range start1="2" end1="2" start2="2" end2="5" changelist="3c1f1494-278c-4564-9b33-f821463487fa" />
-        <range start1="5" end1="6" start2="8" end2="10" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
-        <range start1="7" end1="7" start2="11" end2="25" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
-        <range start1="9" end1="12" start2="27" end2="30" changelist="3c1f1494-278c-4564-9b33-f821463487fa" />
-        <range start1="13" end1="15" start2="31" end2="35" changelist="3c1f1494-278c-4564-9b33-f821463487fa" />
-        <range start1="25" end1="29" start2="45" end2="45" changelist="3c1f1494-278c-4564-9b33-f821463487fa" />
-        <range start1="34" end1="37" start2="50" end2="50" changelist="3c1f1494-278c-4564-9b33-f821463487fa" />
-        <range start1="38" end1="39" start2="51" end2="52" changelist="3c1f1494-278c-4564-9b33-f821463487fa" />
-        <range start1="42" end1="47" start2="55" end2="56" changelist="3c1f1494-278c-4564-9b33-f821463487fa" />
-        <range start1="50" end1="52" start2="59" end2="61" changelist="3c1f1494-278c-4564-9b33-f821463487fa" />
-        <range start1="54" end1="55" start2="63" end2="68" changelist="3c1f1494-278c-4564-9b33-f821463487fa" />
-        <range start1="58" end1="61" start2="71" end2="71" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/baseNoStates/roles/Role.java">
-      <ranges>
-        <range start1="2" end1="4" start2="2" end2="9" changelist="3c1f1494-278c-4564-9b33-f821463487fa" />
-        <range start1="6" end1="7" start2="11" end2="12" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
-        <range start1="8" end1="12" start2="13" end2="33" changelist="3c1f1494-278c-4564-9b33-f821463487fa" />
-        <range start1="13" end1="15" start2="34" end2="45" changelist="3c1f1494-278c-4564-9b33-f821463487fa" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/baseNoStates/requests/RequestReader.java">
-      <ranges>
-        <range start1="8" end1="8" start2="8" end2="9" changelist="3c1f1494-278c-4564-9b33-f821463487fa" />
-        <range start1="9" end1="9" start2="10" end2="13" changelist="3c1f1494-278c-4564-9b33-f821463487fa" />
-        <range start1="97" end1="97" start2="101" end2="108" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
-        <range start1="99" end1="100" start2="110" end2="111" changelist="3c1f1494-278c-4564-9b33-f821463487fa" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/baseNoStates/roles/Employee.java">
-      <ranges>
-        <range start1="1" end1="1" start2="1" end2="5" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
-        <range start1="2" end1="2" start2="6" end2="7" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
-        <range start1="3" end1="3" start2="8" end2="9" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
-        <range start1="7" end1="8" start2="13" end2="16" changelist="3c1f1494-278c-4564-9b33-f821463487fa" />
-        <range start1="10" end1="13" start2="18" end2="21" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
-      </ranges>
-    </file>
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -94,6 +34,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Downloaded.Files.Path.Enabled": "false",
     "Repository.Attach.Annotations": "false",
@@ -106,7 +47,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/dimme/ideaProjects/acs_practicum_DS",
+    "last_opened_file_path": "C:/Users/dani/GitHub/Java/acs_practicum_DS/src/baseNoStates/uml/Prueba.plantuml",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -155,6 +96,7 @@
       <workItem from="1697452769247" duration="1873000" />
       <workItem from="1697470540248" duration="4237000" />
       <workItem from="1697649548891" duration="5535000" />
+      <workItem from="1697655398503" duration="352000" />
     </task>
     <servers />
   </component>

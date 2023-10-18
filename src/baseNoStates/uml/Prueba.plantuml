@@ -1,0 +1,247 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class Actions {
+  + Actions(): 
+}
+class Administrator {
+  + Administrator(): 
+  + hasPermission(DayOfWeek, LocalDate, LocalTime, Space, String): HashSet<String>
+}
+class Area {
+  + Area(String): 
+  - name: String
+   name: String
+}
+class Blank {
+  + Blank(): 
+}
+class DirectoryDoors {
+  + DirectoryDoors(): 
+  - allDoors: ArrayList<Door>
+  + findDoorById(String): Door?
+  + makeDoors(): void
+   allDoors: ArrayList<Door>
+}
+class DirectoryUsers {
+  + DirectoryUsers(): 
+  + makeUsers(): void
+  + findUserByCredential(String): User?
+}
+class Door {
+  + Door(String, Space, Space): 
+  - closed: boolean
+  - state: State
+  - from: Space
+  - to: Space
+  - id: String
+  + toJson(): JSONObject
+  + processRequest(RequestReader): void
+  + toString(): String
+  - doAction(String): void
+   stateName: String
+   from: Space
+   closed: boolean
+   state: State
+   close: boolean
+   to: Space
+   id: String
+}
+class Employee {
+  + Employee(): 
+}
+class Locked {
+  + Locked(Door): 
+  + lock(): void
+  + unlockShortly(): void
+  + unlock(): void
+  + close(): void
+  + open(): void
+   name: String
+}
+class Main {
+  + Main(): 
+  + main(String[]): void
+}
+class Manager {
+  + Manager(): 
+}
+class Partition {
+  + Partition(String): 
+  - areas: ArrayList<Area>
+  + addArea(Area): void
+   areas: ArrayList<Area>
+}
+class Permission {
+  + Permission(LocalDate, LocalDate, LocalTime, LocalTime, Set<DayOfWeek>, Set<String>, Set<String>): 
+  - startDate: LocalDate
+  - endDate: LocalDate
+  - days: Set<DayOfWeek>
+  - actions: Set<String>
+  - spaces: Set<String>
+  - endTime: LocalTime
+  - startTime: LocalTime
+  + toString(): String
+   startDate: LocalDate
+   endTime: LocalTime
+   spaces: Set<String>
+   endDate: LocalDate
+   days: Set<DayOfWeek>
+   startTime: LocalTime
+   actions: Set<String>
+}
+class Propped {
+  ~ Propped(Door): 
+  + lock(): void
+  + open(): void
+  + unlockShortly(): void
+  + close(): void
+  + unlock(): void
+   name: String
+}
+class Reasons {
+  + Reasons(): 
+}
+interface Request << interface >> {
+  + toString(): String
+  + answerToJson(): JSONObject
+  + process(): void
+}
+class RequestArea {
+  + RequestArea(String, String, LocalDateTime, String): 
+  - action: String
+  + answerToJson(): JSONObject
+  + toString(): String
+  + process(): void
+   action: String
+}
+class RequestReader {
+  + RequestReader(String, String, LocalDateTime, String): 
+  - action: String
+  - doorStateName: String
+  - authorized: boolean
+  - authorize(User, Door): void
+  + process(): void
+  + addReason(String): void
+  + toString(): String
+  + answerToJson(): JSONObject
+   authorized: boolean
+   action: String
+   doorStateName: String
+}
+class RequestRefresh {
+  + RequestRefresh(): 
+  + process(): void
+  + answerToJson(): JSONObject
+  + toString(): String
+}
+class Role {
+  + Role(): 
+  + hasPermission(DayOfWeek, LocalDate, LocalTime, Space, String): HashSet<String>
+}
+class SocketThread {
+  ~ SocketThread(Socket): 
+  - makeRequest(String[]): Request
+  + run(): void
+  - makeJsonAnswer(Request): String
+  - makeRequestReader(String[]): RequestReader
+  - makeRequestArea(String[]): RequestArea
+  - makeHeaderAnswer(): String
+}
+class Space {
+  + Space(String): 
+  - doors: ArrayList<Door>
+  + addDoor(Door): void
+   doors: ArrayList<Door>
+}
+class State {
+  ~ State(Door): 
+  + unlockShortly(): void
+  + open(): void
+  + unlock(): void
+  + close(): void
+  + lock(): void
+   name: String
+}
+class Unlocked {
+  ~ Unlocked(Door): 
+  + unlockShortly(): void
+  + close(): void
+  + lock(): void
+  + unlock(): void
+  + open(): void
+   name: String
+}
+class UnlockedShortly {
+  ~ UnlockedShortly(Door): 
+  + close(): void
+  + open(): void
+  + unlock(): void
+  + unlockShortly(): void
+  + lock(): void
+   name: String
+}
+class User {
+  + User(String, String, Role): 
+  - role: Role
+  - credential: String
+  + toString(): String
+   role: Role
+   credential: String
+}
+class WebServer {
+  + WebServer(): 
+}
+class node7 as "package  baseNoStates.uml" << package >>
+
+Administrator    -[#000082,plain]-^  Role            
+Blank            -[#000082,plain]-^  Role            
+DirectoryDoors  "1" *-[#595959,plain]-> "allDoors\n*" Door            
+DirectoryDoors   -[#595959,dashed]->  Door            : "«create»"
+DirectoryDoors   -[#595959,dashed]->  Partition       : "«create»"
+DirectoryDoors   -[#595959,dashed]->  Space           : "«create»"
+DirectoryUsers   -[#595959,dashed]->  Administrator   : "«create»"
+DirectoryUsers   -[#595959,dashed]->  Blank           : "«create»"
+DirectoryUsers   -[#595959,dashed]->  Employee        : "«create»"
+DirectoryUsers   -[#595959,dashed]->  Manager         : "«create»"
+DirectoryUsers  "1" *-[#595959,plain]-> "users\n*" User            
+DirectoryUsers   -[#595959,dashed]->  User            : "«create»"
+Door             -[#595959,dashed]->  Locked          : "«create»"
+Door            "1" *-[#595959,plain]-> "from\n1" Space           
+Door            "1" *-[#595959,plain]-> "state\n1" State           
+Employee         -[#595959,dashed]->  Permission      : "«create»"
+Employee         -[#000082,plain]-^  Role            
+Locked           -[#000082,plain]-^  State           
+Locked           -[#595959,dashed]->  Unlocked        : "«create»"
+Locked           -[#595959,dashed]->  UnlockedShortly : "«create»"
+Main             -[#595959,dashed]->  WebServer       : "«create»"
+Manager          -[#595959,dashed]->  Permission      : "«create»"
+Manager          -[#000082,plain]-^  Role            
+Partition        -[#000082,plain]-^  Area            
+Partition       "1" *-[#595959,plain]-> "areas\n*" Area            
+Propped          -[#595959,dashed]->  Locked          : "«create»"
+Propped          -[#000082,plain]-^  State           
+RequestArea      -[#008200,dashed]-^  Request         
+RequestArea     "1" *-[#595959,plain]-> "requests\n*" RequestReader   
+RequestReader    -[#008200,dashed]-^  Request         
+RequestRefresh   -[#008200,dashed]-^  Request         
+Role            "1" *-[#595959,plain]-> "permission\n1" Permission      
+SocketThread     -[#595959,dashed]->  RequestArea     : "«create»"
+SocketThread     -[#595959,dashed]->  RequestReader   : "«create»"
+SocketThread     -[#595959,dashed]->  RequestRefresh  : "«create»"
+SocketThread     +-[#820000,plain]-  WebServer       
+Space            -[#000082,plain]-^  Area            
+Space           "1" *-[#595959,plain]-> "doors\n*" Door            
+State           "1" *-[#595959,plain]-> "door\n1" Door            
+Unlocked         -[#595959,dashed]->  Locked          : "«create»"
+Unlocked         -[#000082,plain]-^  State           
+Unlocked         -[#595959,dashed]->  UnlockedShortly : "«create»"
+UnlockedShortly  -[#595959,dashed]->  Locked          : "«create»"
+UnlockedShortly  -[#595959,dashed]->  Propped         : "«create»"
+UnlockedShortly  -[#000082,plain]-^  State           
+User            "1" *-[#595959,plain]-> "role\n1" Role            
+WebServer        -[#595959,dashed]->  SocketThread    : "«create»"
+@enduml
