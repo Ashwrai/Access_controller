@@ -4,28 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/baseNoStates/DirectoryAreas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseNoStates/roles/RoleId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/DirectoryUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/DirectoryUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/Reasons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/roles/Reasons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/building/Area.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/building/Area.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/building/Partition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/building/Partition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/building/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/building/Space.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/requests/RequestArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/requests/RequestArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Administrator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Blank.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Manager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/roles/Permission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/roles/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/state/Propped.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/state/Propped.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/state/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/state/State.java" afterDir="false" />
-    </list>
+    <list default="true" id="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" name="Changes" comment="yes" />
     <list id="3c1f1494-278c-4564-9b33-f821463487fa" name="Changes by quique" comment="" />
-    <list id="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" name="Changes by quiquelhappy" comment="">
+    <list id="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" name="Changes by quiquelhappy" comment="Changes by quiquelhappy">
       <change beforePath="$PROJECT_DIR$/src/baseNoStates/DirectoryDoors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/DirectoryDoors.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/baseNoStates/DirectoryUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/DirectoryUsers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/baseNoStates/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/Main.java" afterDir="false" />
@@ -48,53 +29,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/baseNoStates/requests/RequestArea.java">
-      <ranges>
-        <range start1="3" end1="3" start2="3" end2="6" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
-        <range start1="41" end1="42" start2="44" end2="44" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
-        <range start1="67" end1="69" start2="69" end2="69" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
-        <range start1="71" end1="72" start2="71" end2="72" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
-        <range start1="79" end1="80" start2="79" end2="80" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
-        <range start1="87" end1="88" start2="87" end2="88" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/baseNoStates/DirectoryUsers.java">
-      <ranges>
-        <range start1="4" end1="4" start2="4" end2="8" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
-        <range start1="5" end1="5" start2="9" end2="10" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
-        <range start1="10" end1="12" start2="15" end2="15" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
-        <range start1="16" end1="17" start2="19" end2="20" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
-        <range start1="25" end1="26" start2="28" end2="46" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
-        <range start1="35" end1="36" start2="55" end2="64" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
-        <range start1="44" end1="45" start2="72" end2="73" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/baseNoStates/building/Space.java">
-      <ranges>
-        <range start1="5" end1="5" start2="5" end2="7" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
-        <range start1="7" end1="9" start2="9" end2="11" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
-        <range start1="12" end1="13" start2="14" end2="15" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
-        <range start1="17" end1="18" start2="19" end2="20" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/baseNoStates/roles/Role.java">
-      <ranges>
-        <range start1="2" end1="3" start2="2" end2="2" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
-        <range start1="10" end1="11" start2="9" end2="13" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
-        <range start1="12" end1="12" start2="14" end2="22" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
-        <range start1="15" end1="15" start2="25" end2="30" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/baseNoStates/building/Partition.java">
-      <ranges>
-        <range start1="2" end1="2" start2="2" end2="4" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
-        <range start1="3" end1="3" start2="5" end2="7" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
-        <range start1="5" end1="5" start2="9" end2="10" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
-        <range start1="17" end1="17" start2="22" end2="30" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -173,6 +107,15 @@
       <workItem from="1697649548891" duration="5535000" />
       <workItem from="1697655398503" duration="352000" />
     </task>
+    <task id="LOCAL-00001" summary="yes">
+      <option name="closed" value="true" />
+      <created>1697715240311</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697715240311</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,5 +124,10 @@
   <component name="UnknownFeatures">
     <option featureType="dependencySupport" implementationName="executable:docker" />
     <option featureType="dependencySupport" implementationName="executable:kubectl" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="yes" />
+    <MESSAGE value="Changes by quiquelhappy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by quiquelhappy" />
   </component>
 </project>

@@ -12,9 +12,22 @@ public class Role {
     // User from its credentials
     // TODO hacer los condition checks dentro de la clase permission directamente
     protected Permission permission;
+    protected String id;
+    protected boolean superuser;
+
+    public Role(String id, Permission permission, boolean superuser){
+        this.id=id;
+        this.permission=permission;
+        this.superuser=superuser;
+    }
 
     public HashSet<String> hasPermission(DayOfWeek day, LocalDate date, LocalTime time, Space accessed, String action) {
         HashSet<String> reasons = new HashSet<>();
+        if(superuser) return reasons;
+        if(permission==null){
+            reasons.add(Reasons.NO_ROLE_GRANTED);
+            return reasons;
+        }
         reasons.add(Reasons.NOT_WITHIN_DATE);
         reasons.add(Reasons.NOT_WITHIN_TIME);
         reasons.add(Reasons.RESTRICTED_AREA);
