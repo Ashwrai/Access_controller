@@ -5,7 +5,6 @@ import baseNoStates.Door;
 import java.util.Timer;
 import java.util.TimerTask;
 
-// TODO check if this class is actually necessary, and its additional functions added to all state classes (propped())
 public class Propped extends State {
 
     Propped(Door door) {

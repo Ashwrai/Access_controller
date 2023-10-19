@@ -1,6 +1,5 @@
 package baseNoStates.roles;
 
-import baseNoStates.Reasons;
 import baseNoStates.building.Space;
 
 import java.time.DayOfWeek;
@@ -8,7 +7,10 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.HashSet;
 
-public abstract class Role {
+public class Role {
+    // Class role is added as an attribute in User, so it is more easily accessed to get its permission once we get the
+    // User from its credentials
+    // TODO hacer los condition checks dentro de la clase permission directamente
     protected Permission permission;
 
     public HashSet<String> hasPermission(DayOfWeek day, LocalDate date, LocalTime time, Space accessed, String action) {

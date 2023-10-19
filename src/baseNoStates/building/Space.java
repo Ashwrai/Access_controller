@@ -5,8 +5,8 @@ import baseNoStates.Door;
 import java.util.ArrayList;
 
 public class Space extends Area{
-
-    private ArrayList<Door> doors;
+    // A Space is a room which has door(s) that access to it.
+    private Set<Door> doors;
 
     public Space(String name) {
         super(name);

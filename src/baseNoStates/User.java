@@ -5,7 +5,7 @@ import baseNoStates.roles.Role;
 public class User {
   private final String name;
   private final String credential;
-  private final Role role;
+  private Role role;
 
   public User(String name, String credential, Role role) {
     this.name = name;
@@ -21,6 +21,9 @@ public class User {
     return this.role;
   }
 
+  public void setRole(Role role){
+    this.role = role;
+  }
   @Override
   public String toString() {
     return "User{name=" + name + ", credential=" + credential + "}";

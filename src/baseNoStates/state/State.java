@@ -3,7 +3,8 @@ package baseNoStates.state;
 import baseNoStates.Door;
 
 public abstract class State {
-
+    // Class State is used to create new States to add to the door, each action allowed to perform have its method in
+    // each state to handle it.
     protected Door door;
 
     State(Door door){

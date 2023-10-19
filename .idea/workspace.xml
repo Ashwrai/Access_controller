@@ -4,8 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" name="Changes" comment="" />
+    <list default="true" id="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/baseNoStates/DirectoryAreas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/baseNoStates/roles/RoleId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/DirectoryUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/DirectoryUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/Reasons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/roles/Reasons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/building/Area.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/building/Area.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/building/Partition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/building/Partition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/building/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/building/Space.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/requests/RequestArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/requests/RequestArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Administrator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Blank.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Manager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/roles/Permission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/roles/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/state/Propped.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/state/Propped.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/state/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/state/State.java" afterDir="false" />
+    </list>
     <list id="3c1f1494-278c-4564-9b33-f821463487fa" name="Changes by quique" comment="" />
+    <list id="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" name="Changes by quiquelhappy" comment="">
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/DirectoryDoors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/DirectoryDoors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/DirectoryUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/DirectoryUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/building/Partition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/building/Partition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/building/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/building/Space.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/requests/RequestArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/requests/RequestArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseNoStates/roles/Role.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +49,53 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/baseNoStates/requests/RequestArea.java">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="6" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
+        <range start1="41" end1="42" start2="44" end2="44" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
+        <range start1="67" end1="69" start2="69" end2="69" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
+        <range start1="71" end1="72" start2="71" end2="72" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
+        <range start1="79" end1="80" start2="79" end2="80" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
+        <range start1="87" end1="88" start2="87" end2="88" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/baseNoStates/DirectoryUsers.java">
+      <ranges>
+        <range start1="4" end1="4" start2="4" end2="8" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
+        <range start1="5" end1="5" start2="9" end2="10" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
+        <range start1="10" end1="12" start2="15" end2="15" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
+        <range start1="16" end1="17" start2="19" end2="20" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
+        <range start1="25" end1="26" start2="28" end2="46" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
+        <range start1="35" end1="36" start2="55" end2="64" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
+        <range start1="44" end1="45" start2="72" end2="73" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/baseNoStates/building/Space.java">
+      <ranges>
+        <range start1="5" end1="5" start2="5" end2="7" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
+        <range start1="7" end1="9" start2="9" end2="11" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
+        <range start1="12" end1="13" start2="14" end2="15" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
+        <range start1="17" end1="18" start2="19" end2="20" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/baseNoStates/roles/Role.java">
+      <ranges>
+        <range start1="2" end1="3" start2="2" end2="2" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
+        <range start1="10" end1="11" start2="9" end2="13" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
+        <range start1="12" end1="12" start2="14" end2="22" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
+        <range start1="15" end1="15" start2="25" end2="30" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/baseNoStates/building/Partition.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="4" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
+        <range start1="3" end1="3" start2="5" end2="7" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
+        <range start1="5" end1="5" start2="9" end2="10" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
+        <range start1="17" end1="17" start2="22" end2="30" changelist="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -32,33 +107,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/dani/GitHub/Java/acs_practicum_DS/src/baseNoStates/uml/Prueba.plantuml",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dani/GitHub/Java/acs_practicum_DS/src/baseNoStates/uml/Prueba.plantuml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="baseNoStates.Main" />
