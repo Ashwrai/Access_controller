@@ -5,6 +5,9 @@ import baseNoStates.Door;
 import java.util.Timer;
 import java.util.TimerTask;
 
+
+// This class represents the UnlockedShortly state of a door.
+
 public class UnlockedShortly extends State{
     UnlockedShortly(Door door2) {
         super(door2);

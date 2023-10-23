@@ -5,7 +5,12 @@ import baseNoStates.Door;
 import java.util.Timer;
 import java.util.TimerTask;
 
+// This class represents the propped state of a door.
+
+
 public class Propped extends State {
+
+    // The propped state can only be closed.
 
     Propped(Door door) {
         super(door);

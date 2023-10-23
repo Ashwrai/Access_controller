@@ -34,6 +34,5 @@ public class RequestRefresh implements Request {
     for (Door door : DirectoryDoors.getAllDoors()) {
       jsonsDoors.add(door.toJson());
     }
-    System.out.println("no entra aqui juanpepe");
   }
 }

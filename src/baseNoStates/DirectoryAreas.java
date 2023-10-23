@@ -6,6 +6,7 @@ import baseNoStates.building.Space;
 
 import java.util.Set;
 
+/*Declare all parts of the area*/
 public class DirectoryAreas {
 
   private static Set<Area> areas;
