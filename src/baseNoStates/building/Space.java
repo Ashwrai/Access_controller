@@ -7,7 +7,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Space extends Area{
-    // A Space is a room which has door(s) that access to it.
+    // - Purpose:
+    //    Represents a single room or space
+    //    in the building which can be accessed through one or more doors.
     private Set<Door> doors;
 
     public Space(String name) {

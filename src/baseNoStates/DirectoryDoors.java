@@ -4,6 +4,12 @@ import baseNoStates.building.*;
 
 import java.util.Set;
 
+/*- Purpose:
+    Manages and holds the information about different doors in the building.
+- Design Pattern:
+    Singleton Pattern: We're using a private static variable and public static methods to manage the doors.
+*/
+
 public final class DirectoryDoors {
   private static Set<Door> allDoors;
   public static void makeDoors() {

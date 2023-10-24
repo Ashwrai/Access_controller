@@ -9,6 +9,11 @@ import java.time.Month;
 import java.util.ArrayList;
 import java.util.Set;
 
+/*- Purpose:
+    Manages and holds the information about users and their permissions in the building.
+- Design Pattern:
+    Singleton Pattern: Similar to above classes, we're using a private static variable and public static methods to manage the users.*/
+
 public final class DirectoryUsers {
   private static final ArrayList<User> users = new ArrayList<>();
 

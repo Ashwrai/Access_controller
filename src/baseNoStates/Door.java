@@ -98,9 +98,11 @@ public class Door {
   public void setFrom(Space from) {
     this.from = from;
   }
+
   public void setTo(Space to) {
     this.to = to;
   }
+
 
   public Space getFrom(){
     return this.from;

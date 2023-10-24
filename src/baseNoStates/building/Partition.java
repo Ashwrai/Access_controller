@@ -7,7 +7,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Partition extends Area{
-  // A partition is a group of spaces that makes a group, like a floor of a building
+  // - Purpose:
+  //   Represents a partition (a group of spaces) in the building.
+  //   For example, a floor can be a partition that groups several rooms/spaces.
   private ArrayList<Area> areas;
 
   public Partition(String name) {

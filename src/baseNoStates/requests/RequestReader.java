@@ -89,7 +89,7 @@ public class RequestReader implements Request {
     door.processRequest(this);
     // even if not authorized we process the request, so that if desired we could log all
     // the requests made to the server as part of processing the request
-    doorClosed = door.isClosed();
+    doorClosed = door.isClosed(); //saber en qué estado quedó la puerta
   }
 
   // the result is put into the request object plus, if not authorized, why not,
@@ -99,6 +99,8 @@ public class RequestReader implements Request {
       authorized = false;
       addReason("user doesn't exists");
     } else {
+      //TODO: get the who, where, when and what in order to decide, and if not
+      // authorized add the reason(s)
       Role role = user.getRole();
       HashSet<String> reasons = role.hasPermission(now.getDayOfWeek(), now.toLocalDate(), now.toLocalTime(), door.getTo(), action);
 
@@ -106,8 +108,7 @@ public class RequestReader implements Request {
         addReason(reason);
       }
 
-      //TODO: get the who, where, when and what in order to decide, and if not
-      // authorized add the reason(s)
+
       authorized = reasons.isEmpty();
     }
   }
