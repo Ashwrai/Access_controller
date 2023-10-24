@@ -42,6 +42,7 @@ public class DirectoryAreas {
     groundFloor.addArea(hall);
     groundFloor.addArea(room1);
     groundFloor.addArea(room2);
+    groundFloor.addArea(stairs);
 
     firstFloor.addArea(room3);
     firstFloor.addArea(corridor);
