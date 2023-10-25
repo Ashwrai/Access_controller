@@ -18,10 +18,10 @@ public final class DirectoryDoors {
     Space parking = DirectoryAreas.getSpaceByName("parking");
     Space stairs = DirectoryAreas.getSpaceByName("stairs");
     Space hall = DirectoryAreas.getSpaceByName("hall");
-    Space room1 = DirectoryAreas.getSpaceByName("room 1");
-    Space room2 = DirectoryAreas.getSpaceByName("room 2");
+    Space room1 = DirectoryAreas.getSpaceByName("room1");
+    Space room2 = DirectoryAreas.getSpaceByName("room2");
     Space corridor = DirectoryAreas.getSpaceByName("corridor");
-    Space room3 = DirectoryAreas.getSpaceByName("room 3");
+    Space room3 = DirectoryAreas.getSpaceByName("room3");
     Space IT = DirectoryAreas.getSpaceByName("IT");
 
     // basement

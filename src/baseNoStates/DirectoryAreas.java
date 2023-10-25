@@ -19,16 +19,16 @@ public class DirectoryAreas {
   public static void makeAreas(){
     Partition building = new Partition("building");
     Partition basement = new Partition("basement");
-    Partition groundFloor = new Partition("ground floor");
-    Partition firstFloor = new Partition("floor 1");
+    Partition groundFloor = new Partition("ground_floor");
+    Partition firstFloor = new Partition("floor1");
     Space exterior = new Space("exterior");
     Space parking = new Space("parking");
     Space stairs = new Space("stairs");
     Space hall = new Space("hall");
-    Space room1 = new Space("room 1");
-    Space room2 = new Space("room 2");
+    Space room1 = new Space("room1");
+    Space room2 = new Space("room2");
     Space corridor = new Space("corridor");
-    Space room3 = new Space("room 3");
+    Space room3 = new Space("room3");
     Space IT = new Space("IT");
 
     building.addArea(basement);
@@ -42,7 +42,6 @@ public class DirectoryAreas {
     groundFloor.addArea(hall);
     groundFloor.addArea(room1);
     groundFloor.addArea(room2);
-    groundFloor.addArea(stairs);
 
     firstFloor.addArea(room3);
     firstFloor.addArea(corridor);
@@ -82,7 +81,7 @@ public class DirectoryAreas {
         return area;
       }
     }
-    System.out.println("area with name " +name + " not found");
+    System.out.println("area with name " + name + " not found");
     return null; // otherwise we get a Java error
   }
 
