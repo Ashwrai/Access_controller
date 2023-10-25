@@ -7,23 +7,23 @@ import java.util.Observer;
 
 
 
-// This class represents the UnlockedShortly state of a door.
+// Represents the UnlockedShortly state of a door, observing changes from a Clock instance.
 
-public class UnlockedShortly extends State{
-    UnlockedShortly(Door door2) {
-        super(door2);
-        Timer timer= new Timer();
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                if (door.isClosed())
-                    door.setState(new Locked(door));
-                else {
-                    door.setState(new Propped(door));
-                    System.out.println("Can't lock door " + door.getId() + "Because is open/propped");
-                }
-            }
-        }, 10000);
+public class UnlockedShortly extends State implements Observer {
+
+    private int timer; // Timer counter.
+    private static Clock clock; // Shared clock instance.
+    private static final int MAX_TIME = 10; // Maximum time before changing the door state.
+
+    // Constructor that initializes the state and registers with the clock.
+    UnlockedShortly(Door door) {
+        super(door);
+        timer=0;
+        if(UnlockedShortly.clock==null){
+            UnlockedShortly.clock=new Clock(1);
+            UnlockedShortly.clock.start();
+        }
+        UnlockedShortly.clock.addObserver(this);
     }
 
     // Called when the observed Clock notifies of changes.
