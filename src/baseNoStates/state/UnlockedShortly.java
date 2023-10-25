@@ -2,8 +2,9 @@ package baseNoStates.state;
 
 import baseNoStates.Door;
 
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.Observable;
+import java.util.Observer;
+
 
 
 // This class represents the UnlockedShortly state of a door.
@@ -23,6 +24,20 @@ public class UnlockedShortly extends State{
                 }
             }
         }, 10000);
+    }
+
+    // Called when the observed Clock notifies of changes.
+    public void update(Observable observable, Object arg){
+        if(timer<MAX_TIME){
+            timer++;
+        } else {
+            if(!door.isClosed()) {
+                door.setState(new Propped(door));
+            } else {
+                door.setState(new Locked(door));
+            }
+            UnlockedShortly.clock.deleteObserver(this);
+        }
     }
 
     @Override

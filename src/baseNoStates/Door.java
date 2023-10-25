@@ -1,6 +1,7 @@
 package baseNoStates;
 
 import baseNoStates.requests.RequestReader;
+import baseNoStates.state.Clock;
 import baseNoStates.state.Locked;
 import baseNoStates.state.State;
 import org.json.JSONObject;
@@ -21,8 +22,6 @@ public class Door {
     this.to = to;
     this.to.addDoor(this);
   }
-
-
 
   public void processRequest(RequestReader request) {
     // it is the Door that process the request because the door has and knows
