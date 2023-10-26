@@ -20,7 +20,7 @@ public class UnlockedShortly extends State implements Observer {
         super(door);
         timer=0;
         if(UnlockedShortly.clock==null){
-            UnlockedShortly.clock=new Clock(1);
+            UnlockedShortly.clock=Clock.getInstance();
             UnlockedShortly.clock.start();
         }
         UnlockedShortly.clock.addObserver(this);

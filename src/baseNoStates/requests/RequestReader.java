@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 import baseNoStates.building.Space;
-import baseNoStates.roles.Permission;
+import baseNoStates.roles.Reasons;
 import baseNoStates.roles.Role;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -102,12 +102,11 @@ public class RequestReader implements Request {
       //TODO: get the who, where, when and what in order to decide, and if not
       // authorized add the reason(s)
       Role role = user.getRole();
-      HashSet<String> reasons = role.hasPermission(now.getDayOfWeek(), now.toLocalDate(), now.toLocalTime(), door.getTo(), action);
+      HashSet<String> reasons = role.hasPermission(now.getDayOfWeek(), now.toLocalDate(), now.toLocalTime(), door.getTo(), door.getFrom(), action);
 
       for (String reason: reasons) {
         addReason(reason);
       }
-
 
       authorized = reasons.isEmpty();
     }

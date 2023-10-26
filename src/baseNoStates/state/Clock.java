@@ -8,13 +8,20 @@ import java.util.TimerTask;
 // Represents a clock that notifies its observers every fixed period of time.
 public class Clock extends Observable {
 
+    private static Clock globalInstance;
+
     private LocalDateTime date;
     private Timer timer;
     private int period; // Period in seconds after which observers are notified.
 
-    public Clock(int period){
+    private Clock(int period){
         this.period=period;
         timer=new Timer();
+    }
+
+    public static Clock getInstance(){
+        if(Clock.globalInstance==null) Clock.globalInstance=new Clock(1);
+        return Clock.globalInstance;
     }
 
     public void start(){

@@ -22,7 +22,7 @@ public final class DirectoryUsers {
     // users without any privilege, just to keep temporally users instead of deleting them,
     // this is to withdraw all permissions but still to keep user data to give back
     // permissions later
-    Role blank = new Role(RoleId.BLANK, null, false);
+    Role blank = new Role(RoleId.BLANK);
     users.add(new User("Bernat", "12345",blank));
     users.add(new User("Blai", "77532", blank));
 
@@ -31,24 +31,18 @@ public final class DirectoryUsers {
     // week days 9-17h
     // just shortly unlock
     // ground floor, floor1, exterior, stairs (this, for all), that is, everywhere but the parking
-    Role employee = new Role(RoleId.EMPLOYEE, new Permission(
-        LocalDate.of(2023, Month.SEPTEMBER, 1),
-        LocalDate.of(2024, Month.MARCH, 1),
-        LocalTime.of(9, 0),
-        LocalTime.of(17, 0),
-        Set.of(DayOfWeek.MONDAY, DayOfWeek.TUESDAY, DayOfWeek.WEDNESDAY, DayOfWeek.THURSDAY, DayOfWeek.FRIDAY),
+    Role employee = new Role(
+        RoleId.EMPLOYEE,
+        new Schedule(
+          LocalDate.of(2023, Month.SEPTEMBER, 1),
+          LocalDate.of(2024, Month.MARCH, 1),
+          LocalTime.of(9, 0),
+          LocalTime.of(17, 0),
+          Set.of(DayOfWeek.MONDAY, DayOfWeek.TUESDAY, DayOfWeek.WEDNESDAY, DayOfWeek.THURSDAY, DayOfWeek.FRIDAY)
+        ),
         Set.of(Actions.OPEN, Actions.CLOSE, Actions.UNLOCK_SHORTLY),
-        Set.of(
-            "exterior",
-            "stairs",
-            "hall",
-            "room 1",
-            "room 2",
-            "corridor",
-            "room 3",
-            "IT"
-        )
-    ), false);
+        Set.of("exterior", "stairs", "hall", "room 1", "room 2", "corridor", "room 3", "IT")
+    );
     users.add(new User("Ernest", "74984", employee));
     users.add(new User("Eulalia", "43295", employee));
 
@@ -75,7 +69,7 @@ public final class DirectoryUsers {
     // all days of the week
     // all actions
     // all spaces
-    Role administrator = new Role(RoleId.ADMINISTRATOR, null, true);
+    Role administrator = new Role(RoleId.ADMINISTRATOR);
     users.add(new User("Ana", "11343", administrator));
   }
 

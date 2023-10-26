@@ -1,5 +1,4 @@
 package baseNoStates;
-
 import baseNoStates.building.*;
 
 import java.util.Set;
