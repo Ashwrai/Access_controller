@@ -52,15 +52,18 @@ public final class DirectoryUsers {
     // week days + saturday, 8-20h
     // all actions
     // all spaces
-    Role manager = new Role(RoleId.MANAGER, new Permission(
+    Role manager = new Role(
+      RoleId.MANAGER,
+      new Schedule(
         LocalDate.of(2023, Month.SEPTEMBER, 1),
         LocalDate.of(2024, Month.MARCH, 1),
         LocalTime.of(8, 0),
         LocalTime.of(20, 0),
-        Set.of(DayOfWeek.MONDAY, DayOfWeek.TUESDAY, DayOfWeek.WEDNESDAY, DayOfWeek.THURSDAY, DayOfWeek.FRIDAY, DayOfWeek.SATURDAY),
-        Set.of(Actions.OPEN, Actions.CLOSE, Actions.UNLOCK, Actions.LOCK, Actions.UNLOCK_SHORTLY),
-        Set.of("room 1", "room 2", "room 3", "hall", "parking", "stairs", "exterior", "corridor", "IT")
-    ), false);
+        Set.of(DayOfWeek.MONDAY, DayOfWeek.TUESDAY, DayOfWeek.WEDNESDAY, DayOfWeek.THURSDAY, DayOfWeek.FRIDAY, DayOfWeek.SATURDAY)
+      ),
+      Set.of(Actions.OPEN, Actions.CLOSE, Actions.UNLOCK, Actions.LOCK, Actions.UNLOCK_SHORTLY),
+      Set.of("room 1", "room 2", "room 3", "hall", "parking", "stairs", "exterior", "corridor", "IT")
+    );
     users.add(new User("Manel", "95783", manager));
     users.add(new User("Marta", "05827", manager));
 
