@@ -1,23 +1,20 @@
-package baseNoStates.requests;
-
-import baseNoStates.Actions;
-import baseNoStates.DirectoryAreas;
-import baseNoStates.Door;
-import baseNoStates.building.Area;
-import org.json.JSONArray;
-import org.json.JSONObject;
+package server.requests;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-
+import org.json.JSONArray;
+import org.json.JSONObject;
+import server.Actions;
+import server.DirectoryAreas;
+import server.Door;
+import server.building.Area;
 
 public class RequestArea implements Request {
   private final String credential;
   private final String action;
   private final String areaId;
   private final LocalDateTime now;
-  private ArrayList<RequestReader> requests = new ArrayList<>();
-
+  private final ArrayList<RequestReader> requests = new ArrayList<>();
 
   public RequestArea(String credential, String action, LocalDateTime now, String areaId) {
     this.credential = credential;
@@ -48,7 +45,7 @@ public class RequestArea implements Request {
   @Override
   public String toString() {
     String requestsDoorsStr;
-    if (requests.size() == 0) {
+    if (requests.isEmpty()) {
       requestsDoorsStr = "";
     } else {
       requestsDoorsStr = requests.toString();

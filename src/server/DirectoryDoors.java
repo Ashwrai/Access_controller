@@ -1,5 +1,6 @@
-package baseNoStates;
-import baseNoStates.building.*;
+package server;
+
+import server.building.*;
 
 import java.util.Set;
 
@@ -11,6 +12,7 @@ import java.util.Set;
 
 public final class DirectoryDoors {
   private static Set<Door> allDoors;
+
   public static void makeDoors() {
 
     Space exterior = DirectoryAreas.getSpaceByName("exterior");

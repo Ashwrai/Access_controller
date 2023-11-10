@@ -1,11 +1,10 @@
-package baseNoStates;
+package server;
 
-import baseNoStates.requests.RequestReader;
-import baseNoStates.state.Clock;
-import baseNoStates.state.Locked;
-import baseNoStates.state.State;
+import server.requests.RequestReader;
+import server.state.Locked;
+import server.state.State;
 import org.json.JSONObject;
-import baseNoStates.building.*;
+import server.building.*;
 
 public class Door {
   private final String id;
@@ -16,7 +15,7 @@ public class Door {
 
   public Door(String id, Space from, Space to) {
     this.id = id;
-    this.closed=true;
+    this.closed = true;
     this.state = new Locked(this);
     this.from = from;
     this.to = to;
@@ -58,9 +57,10 @@ public class Door {
     }
   }
 
-  public void setClose(boolean c){
+  public void setClose(boolean c) {
     closed = c;
   }
+
   public boolean isClosed() {
     return closed;
   }
@@ -103,7 +103,7 @@ public class Door {
   }
 
 
-  public Space getFrom(){
+  public Space getFrom() {
     return this.from;
   }
 

@@ -1,8 +1,8 @@
-package baseNoStates;
+package server;
 
-import baseNoStates.building.Area;
-import baseNoStates.building.Partition;
-import baseNoStates.building.Space;
+import server.building.Area;
+import server.building.Partition;
+import server.building.Space;
 
 import java.util.Set;
 
@@ -16,7 +16,7 @@ public class DirectoryAreas {
   private static Set<Area> areas;
 
   // This method initializes the areas in the building.
-  public static void makeAreas(){
+  public static void makeAreas() {
     Partition building = new Partition("building");
     Partition basement = new Partition("basement");
     Partition groundFloor = new Partition("ground_floor");
@@ -47,7 +47,7 @@ public class DirectoryAreas {
     firstFloor.addArea(corridor);
     firstFloor.addArea(IT);
 
-    DirectoryAreas.areas=Set.of(
+    DirectoryAreas.areas = Set.of(
         building,
         basement,
         groundFloor,
@@ -67,10 +67,10 @@ public class DirectoryAreas {
   // Returns a specific space by its name.
   public static Space getSpaceByName(String name) {
     Area area = DirectoryAreas.findAreaByName(name);
-    if(area instanceof Space){
+    if (area instanceof Space) {
       return (Space) area;
     }
-    System.out.println("space with name " +name + " not found");
+    System.out.println("space with name " + name + " not found");
     return null;
   }
 

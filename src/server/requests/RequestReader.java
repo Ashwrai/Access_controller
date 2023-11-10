@@ -1,18 +1,15 @@
-package baseNoStates.requests;
+package server.requests;
 
-import baseNoStates.DirectoryDoors;
-import baseNoStates.DirectoryUsers;
-import baseNoStates.Door;
-import baseNoStates.User;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashSet;
-
-import baseNoStates.building.Space;
-import baseNoStates.roles.Reasons;
-import baseNoStates.roles.Role;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import server.DirectoryDoors;
+import server.DirectoryUsers;
+import server.Door;
+import server.User;
+import server.roles.Role;
 
 public class RequestReader implements Request {
   private final String credential; // who
@@ -104,7 +101,7 @@ public class RequestReader implements Request {
       Role role = user.getRole();
       HashSet<String> reasons = role.hasPermission(now.getDayOfWeek(), now.toLocalDate(), now.toLocalTime(), door.getTo(), door.getFrom(), action);
 
-      for (String reason: reasons) {
+      for (String reason : reasons) {
         addReason(reason);
       }
 

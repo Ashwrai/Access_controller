@@ -1,6 +1,6 @@
-package baseNoStates;
+package server;
 
-import baseNoStates.roles.Role;
+import server.roles.Role;
 
 public class User {
   private final String name;
@@ -17,13 +17,14 @@ public class User {
     return credential;
   }
 
-  public Role getRole(){
+  public Role getRole() {
     return this.role;
   }
 
-  public void setRole(Role role){
+  public void setRole(Role role) {
     this.role = role;
   }
+
   @Override
   public String toString() {
     return "User{name=" + name + ", credential=" + credential + "}";
