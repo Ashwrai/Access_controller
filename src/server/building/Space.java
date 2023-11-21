@@ -2,7 +2,6 @@ package server.building;
 
 import java.util.HashSet;
 import java.util.Set;
-
 import server.Door;
 import server.Visitor;
 

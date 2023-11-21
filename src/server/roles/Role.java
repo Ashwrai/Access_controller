@@ -1,13 +1,13 @@
 package server.roles;
 
-import server.building.Space;
-
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+import server.building.Space;
+
 
 public class Role {
   // Class role is added as an attribute in User, so it is more easily accessed to get its permission once we get the

@@ -1,8 +1,8 @@
 package server;
 
-import server.building.*;
-
 import java.util.Set;
+import server.building.Space;
+
 
 /*- Purpose:
     Manages and holds the information about different doors in the building.

@@ -1,10 +1,11 @@
 package server;
 
+import org.json.JSONObject;
+import server.building.Space;
 import server.requests.RequestReader;
 import server.state.Locked;
 import server.state.State;
-import org.json.JSONObject;
-import server.building.*;
+
 
 public class Door {
   private final String id;

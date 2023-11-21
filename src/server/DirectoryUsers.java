@@ -1,6 +1,8 @@
 package server;
 
-import server.roles.*;
+import server.roles.Role;
+import server.roles.RoleId;
+import server.roles.Schedule;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
@@ -8,6 +10,7 @@ import java.time.LocalTime;
 import java.time.Month;
 import java.util.ArrayList;
 import java.util.Set;
+
 
 /*- Purpose:
     Manages and holds the information about users and their permissions in the building.

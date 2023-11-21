@@ -8,40 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" name="Changes" comment="yes">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/Visitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Casos_de_Uso.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Actions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/DirectoryAreas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/DirectoryAreas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/DirectoryDoors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/DirectoryDoors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/DirectoryUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/DirectoryUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/Door.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Door.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/WebServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/WebServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/building/Area.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/building/Area.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/building/Partition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/building/Partition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/building/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/building/Space.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/requests/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/requests/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/requests/RequestArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/requests/RequestArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/requests/RequestReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/requests/RequestReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/requests/RequestRefresh.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/requests/RequestRefresh.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Reasons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/roles/Reasons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/roles/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/RoleId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/roles/RoleId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/roles/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/roles/Schedule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/state/Clock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/state/Clock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/state/Locked.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/state/Locked.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/state/Propped.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/state/Propped.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/state/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/state/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/state/Unlocked.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/state/Unlocked.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/state/UnlockedShortly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/state/UnlockedShortly.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/uml/Prueba.plantuml" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/uml/Prueba.plantuml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/uml/base_no_states.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/uml/base_no_states.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/uml/base_no_states.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/uml/base_no_states.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/uml/package_requests.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/uml/package_requests.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseNoStates/uml/package_requests.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/uml/package_requests.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/DirectoryDoors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/DirectoryDoors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/DirectoryUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/DirectoryUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/Door.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Door.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/building/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/building/Space.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/requests/RequestRefresh.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/requests/RequestRefresh.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/roles/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/roles/Role.java" afterDir="false" />
     </list>
     <list id="3c1f1494-278c-4564-9b33-f821463487fa" name="Changes by quique" comment="" />
     <list id="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" name="Changes by quiquelhappy" comment="Changes by quiquelhappy" />
@@ -95,7 +70,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
+    "settings.editor.selected.configurable": "org.infernus.idea.checkstyle.CheckStyleConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -144,7 +119,8 @@
       <workItem from="1698917837334" duration="256000" />
       <workItem from="1698918258633" duration="23000" />
       <workItem from="1698924074706" duration="1195000" />
-      <workItem from="1699605321013" duration="2821000" />
+      <workItem from="1699605321013" duration="3063000" />
+      <workItem from="1700134462783" duration="1999000" />
     </task>
     <task id="LOCAL-00001" summary="yes">
       <option name="closed" value="true" />

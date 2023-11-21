@@ -1,0 +1,9 @@
+Casos de uso para preparar:
+
+- Comments
+- Checkstyle (error as warning)
+- Loggers (2 types of loggers (trace, debug, info, warning, error)
+- Escribir los logs en txt y html
+- Singleton (Reloj)
+-
+
