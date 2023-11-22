@@ -1,9 +1,9 @@
-package baseNoStates;
+package server;
 
-import baseNoStates.building.Area;
-import baseNoStates.building.AreaIdFinder;
-import baseNoStates.building.Partition;
-import baseNoStates.building.Space;
+import server.building.Area;
+import server.building.AreaIdFinder;
+import server.building.Partition;
+import server.building.Space;
 
 import java.util.Set;
 

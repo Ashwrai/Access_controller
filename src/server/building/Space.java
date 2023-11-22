@@ -16,15 +16,14 @@ public class Space extends Area {
     this.doors = new HashSet<>();
   }
 
-  public void addDoor(Door door) {
+
+  public void accept(final AreaVisitor visitor) {
+    visitor.visit(this);
+  }
+  public void addDoor(Door door){
     this.doors.add(door);
   }
-
-  public Set<Door> getDoors() {
+  public Set<Door> getDoors(){
     return this.doors;
-  }
-
-  public void acceptVisitor(Visitor v) {
-    v.visitSpace(this);
   }
 }

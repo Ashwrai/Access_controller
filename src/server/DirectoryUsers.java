@@ -1,6 +1,6 @@
-package baseNoStates;
+package server;
 
-import baseNoStates.roles.*;
+import server.roles.*;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;

@@ -1,18 +1,18 @@
-package baseNoStates.requests;
+package server.requests;
 
-import baseNoStates.AccessDoorVisitor;
-import baseNoStates.Actions;
-import baseNoStates.DirectoryAreas;
-import baseNoStates.Door;
-import baseNoStates.building.Area;
-import baseNoStates.building.AreaIdFinder;
+import server.AccessDoorVisitor;
+import server.Actions;
+import server.DirectoryAreas;
+import server.Door;
+import server.building.Area;
+import server.building.AreaIdFinder;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-import static baseNoStates.DirectoryAreas.getRootArea;
+import static server.DirectoryAreas.getRootArea;
 
 
 public class RequestArea implements Request {

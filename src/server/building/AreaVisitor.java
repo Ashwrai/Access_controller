@@ -1,4 +1,4 @@
-package baseNoStates.building;
+package server.building;
 
 public interface AreaVisitor {
   /**
