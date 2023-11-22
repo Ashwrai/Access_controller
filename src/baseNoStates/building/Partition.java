@@ -31,4 +31,8 @@ public class Partition extends Area{
     return doors;
   }
 
+  @Override
+  public void accept(final AreaVisitor visitor) {
+    visitor.visit(this);
+  }
 }

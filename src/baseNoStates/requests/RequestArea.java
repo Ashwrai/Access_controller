@@ -1,14 +1,18 @@
 package baseNoStates.requests;
 
+import baseNoStates.AccessDoorVisitor;
 import baseNoStates.Actions;
 import baseNoStates.DirectoryAreas;
 import baseNoStates.Door;
 import baseNoStates.building.Area;
+import baseNoStates.building.AreaIdFinder;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+
+import static baseNoStates.DirectoryAreas.getRootArea;
 
 
 public class RequestArea implements Request {
@@ -69,7 +73,9 @@ public class RequestArea implements Request {
     // commented out until Area, Space and Partition are implemented
     // make the door requests and put them into the area request to be authorized later and
     // processed later
-    Area area = DirectoryAreas.findAreaByName(areaId);
+    AreaIdFinder findAreaVisitor = new AreaIdFinder(areaId);
+    getRootArea().accept(findAreaVisitor);
+    Area area = findAreaVisitor.getResult();
     // an Area is a Space or a Partition
     if (area != null) {
       // is null when from the app we click on an action but no place is selected because
@@ -77,12 +83,15 @@ public class RequestArea implements Request {
 
       // Make all the door requests, one for each door in the area, and process them.
       // Look for the doors in the spaces of this area that give access to them.
+      AccessDoorVisitor doorVisitor =  new AccessDoorVisitor();
+      area.accept(doorVisitor);
+      ArrayList<Door> doors = doorVisitor.getDoors();
       for (Door door : area.getDoors()) {
         RequestReader requestReader = new RequestReader(credential, action, now, door.getId());
         requestReader.process();
         // after process() the area request contains the answer as the answer
         // to each individual door request, that is read by the simulator/Flutter app
-        requests.add(requestReader);
+        //requests.add(requestReader);
       }
     }
     

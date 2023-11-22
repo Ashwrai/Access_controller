@@ -27,6 +27,7 @@ public class Role {
         this.schedule=schedule;
         this.actions = actions;
         this.spaces = spaces;
+
     }
 
     public Role(String id){
@@ -36,6 +37,8 @@ public class Role {
         this.actions = null;
         this.spaces = null;
     }
+
+
 
 
     public Set<String> getActions() {
@@ -76,24 +79,13 @@ public class Role {
         if (getSpaces().contains(accessed.getName())) {
             reasons.remove(Reasons.RESTRICTED_AREA);
 
-            // user has a permission within that date range
-            if (schedule.getStartDate().isBefore(date) && schedule.getEndDate().isAfter(date)) {
-                reasons.remove(Reasons.NOT_WITHIN_DATE);
-            }
+            if (schedule.isWithinDate(date)) reasons.remove(Reasons.NOT_WITHIN_DATE);
 
-            // the permission for that area is valid within today
-            if (schedule.getDays().contains(day)) {
-                reasons.remove(Reasons.NOT_WITHIN_DAY_OF_WEEK);
-            }
+            if (schedule.isWithinDayOfWeek(day)) reasons.remove(Reasons.NOT_WITHIN_DAY_OF_WEEK);
 
-            // the permission is valid within the time range
-            if (time.isAfter(schedule.getStartTime()) && time.isBefore(schedule.getEndTime())) {
-                reasons.remove(Reasons.NOT_WITHIN_TIME);
-            }
+            if (schedule.isWithinTime(time)) reasons.remove(Reasons.NOT_WITHIN_TIME);
 
-            if (getActions().contains(action)) {
-                reasons.remove(Reasons.ACTION_DISALLOWED);
-            }
+            if (getActions().contains(action)) reasons.remove(Reasons.ACTION_DISALLOWED);
         }
         return reasons;
     }

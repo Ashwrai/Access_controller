@@ -1,0 +1,5 @@
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-api</artifactId>
+    <version>1.7.32</version> <!-- Use the latest version available -->
+</dependency>

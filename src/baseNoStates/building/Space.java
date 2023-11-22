@@ -16,6 +16,10 @@ public class Space extends Area{
         super(name);
         this.doors = new HashSet<>();
     }
+
+    public void accept(final AreaVisitor visitor) {
+        visitor.visit(this);
+    }
     public void addDoor(Door door){
         this.doors.add(door);
     }

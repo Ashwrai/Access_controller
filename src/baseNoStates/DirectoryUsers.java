@@ -41,7 +41,7 @@ public final class DirectoryUsers {
           Set.of(DayOfWeek.MONDAY, DayOfWeek.TUESDAY, DayOfWeek.WEDNESDAY, DayOfWeek.THURSDAY, DayOfWeek.FRIDAY)
         ),
         Set.of(Actions.OPEN, Actions.CLOSE, Actions.UNLOCK_SHORTLY),
-        Set.of("exterior", "stairs", "hall", "room 1", "room 2", "corridor", "room 3", "IT")
+        Set.of("exterior", "stairs", "hall", "room1", "room2", "corridor", "room3", "IT")
     );
     users.add(new User("Ernest", "74984", employee));
     users.add(new User("Eulalia", "43295", employee));
@@ -62,7 +62,7 @@ public final class DirectoryUsers {
         Set.of(DayOfWeek.MONDAY, DayOfWeek.TUESDAY, DayOfWeek.WEDNESDAY, DayOfWeek.THURSDAY, DayOfWeek.FRIDAY, DayOfWeek.SATURDAY)
       ),
       Set.of(Actions.OPEN, Actions.CLOSE, Actions.UNLOCK, Actions.LOCK, Actions.UNLOCK_SHORTLY),
-      Set.of("room 1", "room 2", "room 3", "hall", "parking", "stairs", "exterior", "corridor", "IT")
+      Set.of("room1", "room2", "room3", "hall", "parking", "stairs", "exterior", "corridor", "IT")
     );
     users.add(new User("Manel", "95783", manager));
     users.add(new User("Marta", "05827", manager));

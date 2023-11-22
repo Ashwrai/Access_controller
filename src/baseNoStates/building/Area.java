@@ -20,4 +20,5 @@ public abstract class Area {
   }
 
   public abstract Set<Door> getDoors();
+  public abstract void accept(AreaVisitor visitor);
 }

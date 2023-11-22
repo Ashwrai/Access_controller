@@ -1,10 +1,12 @@
 package baseNoStates;
 
 import baseNoStates.building.Area;
+import baseNoStates.building.AreaIdFinder;
 import baseNoStates.building.Partition;
 import baseNoStates.building.Space;
 
 import java.util.Set;
+
 
 /*- Purpose:
     Manages and holds the information about different areas in the building. These areas can be both partitions and spaces.
@@ -12,7 +14,7 @@ import java.util.Set;
     Singleton Pattern: Ensures that a class has only one instance and provides a global point to this instance.
     This is evident in the usage of a private static variable for areas and public static methods to access and manipulate it.*/
 public class DirectoryAreas {
-
+  private static Area rootArea;
   private static Set<Area> areas;
 
   // This method initializes the areas in the building.
@@ -64,6 +66,12 @@ public class DirectoryAreas {
     );
   }
 
+  public static Area findAreaById(final String id) {
+    AreaIdFinder visitor = new AreaIdFinder(id);
+    rootArea.accept(visitor);
+    return visitor.getResult();
+  }
+
   // Returns a specific space by its name.
   public static Space getSpaceByName(String name) {
     Area area = DirectoryAreas.findAreaByName(name);
@@ -91,5 +99,8 @@ public class DirectoryAreas {
     return DirectoryAreas.areas;
   }
 
+  public static Area getRootArea() {
+    return rootArea;
+  }
 
 }
