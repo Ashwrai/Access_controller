@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 import server.Door;
+import server.building.visitor.Visitor;
 
 public class Partition extends Area {
   // - Purpose:
@@ -21,6 +22,10 @@ public class Partition extends Area {
   }
 
   public ArrayList<Area> getAreas() {
+    logger.debug("queried area list");
+    for (Area area : areas) {
+      logger.debug("> " + area.getName());
+    }
     return this.areas;
   }
 
@@ -29,11 +34,16 @@ public class Partition extends Area {
     for (Area area : this.areas) {
       doors.addAll(area.getDoors());
     }
+    logger.debug("queried all doors");
+    for (Door door : doors) {
+      logger.debug("> " + door.getId());
+    }
     return doors;
   }
 
   @Override
-  public void accept(final AreaVisitor visitor) {
-    visitor.visit(this);
+  public void accept(final Visitor visitor) {
+    logger.debug("Visitor accepted");
+    visitor.visitPartition(this);
   }
 }

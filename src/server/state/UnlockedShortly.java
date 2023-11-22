@@ -2,6 +2,8 @@ package server.state;
 
 import java.util.Observable;
 import java.util.Observer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import server.Door;
 
 
@@ -9,14 +11,14 @@ import server.Door;
 // Represents the UnlockedShortly state of a door, observing changes from a Clock instance.
 
 public class UnlockedShortly extends State implements Observer {
-
+  // The unlocked shorly functions exactly as unlocked state, only for 10 seconds.
   private int timer; // Timer counter.
   private static Clock clock; // Shared clock instance.
-  private static final int MAX_TIME = 10; // Maximum time before changing the door state.
+  private static final int MAX_TIME = 10;
 
-  // Constructor that initializes the state and registers with the clock.
   UnlockedShortly(Door door) {
     super(door);
+    logger.info(door.getId() + " was unlocked shortly");
     timer = 0;
     if (UnlockedShortly.clock == null) {
       UnlockedShortly.clock = Clock.getInstance();
@@ -31,8 +33,10 @@ public class UnlockedShortly extends State implements Observer {
       timer++;
     } else {
       if (!door.isClosed()) {
+        logger.info(door.getId() + " is propped");
         door.setState(new Propped(door));
       } else {
+        logger.info(door.getId() + " is locked");
         door.setState(new Locked(door));
       }
       UnlockedShortly.clock.deleteObserver(this);
@@ -42,18 +46,20 @@ public class UnlockedShortly extends State implements Observer {
   @Override
   public void open() {
     if (door.isClosed()) {
+      logger.info(door.getId() + " was opened");
       door.setClose(false);
     } else {
-      System.out.println("Can't open door " + door.getId() + " because it's already open");
+      logger.warn("Can't open door " + door.getId() + " because it's already open");
     }
   }
 
   @Override
   public void close() {
     if (!door.isClosed()) {
+      logger.info(door.getId() + " was closed");
       door.setClose(true);
     } else {
-      System.out.println(door.getId() + " is already closed");
+      logger.warn(door.getId() + " is already closed");
     }
   }
 
@@ -64,15 +70,16 @@ public class UnlockedShortly extends State implements Observer {
 
   @Override
   public void unlock() {
-    System.out.println("already unlocked");
+    logger.warn(door.getId() + " was already unlocked");
   }
 
   @Override
   public void lock() {
     if (door.isClosed()) {
+      logger.info(door.getId() + " was locked");
       door.setState(new Locked(door));
     } else {
-      System.out.println(door.getId() + " can't be locked, it's open");
+      logger.warn(door.getId() + " can't be locked, it's open");
     }
   }
 

@@ -1,16 +1,14 @@
 package server;
 
 import java.util.Set;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import server.building.Space;
 
 
-/*- Purpose:
-    Manages and holds the information about different doors in the building.
-- Design Pattern:
-    Singleton Pattern: We're using a private static variable and public static methods to manage the doors.
-*/
-
 public final class DirectoryDoors {
+
+  private static Logger logger = LoggerFactory.getLogger(DirectoryDoors.class);
   private static Set<Door> allDoors;
 
   public static void makeDoors() {
@@ -49,13 +47,16 @@ public final class DirectoryDoors {
         return door;
       }
     }
-    System.out.println("door with id " + id + " not found");
+    logger.warn("door with id " + id + " not found");
     return null; // otherwise we get a Java error
   }
 
   // this is needed by RequestRefresh
   public static Set<Door> getAllDoors() {
-    System.out.println(allDoors);
+    logger.debug("queried all doors");
+    for (Door door : allDoors) {
+      logger.debug("> " + door.getId());
+    }
     return allDoors;
   }
 

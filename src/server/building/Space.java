@@ -3,12 +3,12 @@ package server.building;
 import java.util.HashSet;
 import java.util.Set;
 import server.Door;
-import server.Visitor;
+import server.building.visitor.Visitor;
 
-// - Purpose:
-//    Represents a single room or space
-//    in the building which can be accessed through one or more doors.
 public class Space extends Area {
+  // - Purpose:
+  //    Represents a single room or space
+  //    in the building which can be accessed through one or more doors.
   private final Set<Door> doors;
 
   public Space(String name) {
@@ -16,14 +16,16 @@ public class Space extends Area {
     this.doors = new HashSet<>();
   }
 
-
-  public void accept(final AreaVisitor visitor) {
-    visitor.visit(this);
-  }
-  public void addDoor(Door door){
+  public void addDoor(Door door) {
     this.doors.add(door);
   }
-  public Set<Door> getDoors(){
+
+  public Set<Door> getDoors() {
     return this.doors;
+  }
+
+  public void accept(final Visitor visitor) {
+    logger.debug("Visitor accepted");
+    visitor.visitSpace(this);
   }
 }

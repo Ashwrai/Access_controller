@@ -4,12 +4,15 @@ import java.time.LocalDateTime;
 import java.util.Observable;
 import java.util.Timer;
 import java.util.TimerTask;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import server.DirectoryAreas;
 
 // Represents a clock that notifies its observers every fixed period of time.
 public class Clock extends Observable {
 
+  private static Logger logger = LoggerFactory.getLogger(Clock.class);
   private static Clock globalInstance;
-
   private LocalDateTime date;
   private final Timer timer;
   private final int period; // Period in seconds after which observers are notified.
@@ -21,6 +24,7 @@ public class Clock extends Observable {
 
   public static Clock getInstance() {
     if (Clock.globalInstance == null) {
+      logger.debug("clock created");
       Clock.globalInstance = new Clock(1);
     }
     return Clock.globalInstance;
@@ -30,8 +34,8 @@ public class Clock extends Observable {
     TimerTask repeatedTask = new TimerTask() {
       @Override
       public void run() {
+        logger.debug("clock ticked");
         date = LocalDateTime.now();
-        System.out.println("run() executed at " + date);
         setChanged();  // Mark that this object has changed.
         notifyObservers(); // Notify all registered observers.
       }

@@ -1,0 +1,873 @@
+19:59:28.680 [Timer-0] WARN  server.state.Propped - D5 was propped
+20:02:02.476 [Thread-1] WARN  server.state.Propped - Can't close door D5 because it's already closed
+20:02:45.882 [Timer-0] WARN  server.state.Propped - D5 was propped
+20:03:38.277 [Thread-7] WARN  server.state.Propped - Can't close door D5 because it's already closed
+20:03:38.550 [Thread-8] WARN  server.state.Propped - Can't close door D5 because it's already closed
+20:03:39.045 [Thread-9] WARN  server.state.Propped - Can't close door D5 because it's already closed
+20:03:39.241 [Thread-10] WARN  server.state.Propped - Can't close door D5 because it's already closed
+20:03:42.802 [Thread-11] WARN  server.DirectoryUsers - user with credential 00112 not found
+20:03:42.811 [Thread-11] WARN  server.Door - unauthorized request for door D5
+20:04:06.035 [Thread-12] WARN  server.DirectoryUsers - user with credential 00112 not found
+20:04:06.035 [Thread-12] WARN  server.Door - unauthorized request for door D5
+20:04:08.358 [Thread-13] WARN  server.DirectoryUsers - user with credential 00112 not found
+20:04:08.358 [Thread-13] WARN  server.Door - unauthorized request for door D5
+20:05:31.566 [main] INFO  server.state.Propped - D1 was locked
+20:05:31.568 [main] INFO  server.state.Propped - D2 was locked
+20:05:31.568 [main] INFO  server.state.Propped - D3 was locked
+20:05:31.568 [main] INFO  server.state.Propped - D4 was locked
+20:05:31.568 [main] INFO  server.state.Propped - D5 was locked
+20:05:31.568 [main] INFO  server.state.Propped - D6 was locked
+20:05:31.568 [main] INFO  server.state.Propped - D7 was locked
+20:05:31.568 [main] INFO  server.state.Propped - D8 was locked
+20:05:31.568 [main] INFO  server.state.Propped - D9 was locked
+20:05:31.569 [main] DEBUG server.roles.Role - Rolesblankcreated
+20:05:31.570 [main] INFO  server.User - created user Bernat
+20:05:31.570 [main] INFO  server.User - created user Blai
+20:05:31.601 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.601 [main] DEBUG server.building.Area - queried area list
+20:05:31.601 [main] DEBUG server.building.Area - > basement
+20:05:31.601 [main] DEBUG server.building.Area - > ground_floor
+20:05:31.601 [main] DEBUG server.building.Area - > floor1
+20:05:31.601 [main] DEBUG server.building.Area - > exterior
+20:05:31.601 [main] DEBUG server.building.Area - > stairs
+20:05:31.601 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.601 [main] DEBUG server.building.Area - queried area list
+20:05:31.601 [main] DEBUG server.building.Area - > parking
+20:05:31.601 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.601 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.601 [main] DEBUG server.building.Area - queried area list
+20:05:31.601 [main] DEBUG server.building.Area - > hall
+20:05:31.602 [main] DEBUG server.building.Area - > room1
+20:05:31.602 [main] DEBUG server.building.Area - > room2
+20:05:31.602 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.602 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.602 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.602 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.602 [main] DEBUG server.building.Area - queried area list
+20:05:31.602 [main] DEBUG server.building.Area - > basement
+20:05:31.602 [main] DEBUG server.building.Area - > ground_floor
+20:05:31.602 [main] DEBUG server.building.Area - > floor1
+20:05:31.602 [main] DEBUG server.building.Area - > exterior
+20:05:31.602 [main] DEBUG server.building.Area - > stairs
+20:05:31.602 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.602 [main] DEBUG server.building.Area - queried area list
+20:05:31.602 [main] DEBUG server.building.Area - > parking
+20:05:31.602 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.602 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.602 [main] DEBUG server.building.Area - queried area list
+20:05:31.602 [main] DEBUG server.building.Area - > hall
+20:05:31.602 [main] DEBUG server.building.Area - > room1
+20:05:31.602 [main] DEBUG server.building.Area - > room2
+20:05:31.602 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.602 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.602 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.602 [main] DEBUG server.building.Area - queried area list
+20:05:31.602 [main] DEBUG server.building.Area - > basement
+20:05:31.602 [main] DEBUG server.building.Area - > ground_floor
+20:05:31.602 [main] DEBUG server.building.Area - > floor1
+20:05:31.602 [main] DEBUG server.building.Area - > exterior
+20:05:31.602 [main] DEBUG server.building.Area - > stairs
+20:05:31.602 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.602 [main] DEBUG server.building.Area - queried area list
+20:05:31.602 [main] DEBUG server.building.Area - > parking
+20:05:31.602 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.602 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.602 [main] DEBUG server.building.Area - queried area list
+20:05:31.602 [main] DEBUG server.building.Area - > hall
+20:05:31.602 [main] DEBUG server.building.Area - > room1
+20:05:31.602 [main] DEBUG server.building.Area - > room2
+20:05:31.602 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.602 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.602 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - queried area list
+20:05:31.603 [main] DEBUG server.building.Area - > room3
+20:05:31.603 [main] DEBUG server.building.Area - > corridor
+20:05:31.603 [main] DEBUG server.building.Area - > IT
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - queried area list
+20:05:31.603 [main] DEBUG server.building.Area - > basement
+20:05:31.603 [main] DEBUG server.building.Area - > ground_floor
+20:05:31.603 [main] DEBUG server.building.Area - > floor1
+20:05:31.603 [main] DEBUG server.building.Area - > exterior
+20:05:31.603 [main] DEBUG server.building.Area - > stairs
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - queried area list
+20:05:31.603 [main] DEBUG server.building.Area - > parking
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - queried area list
+20:05:31.603 [main] DEBUG server.building.Area - > hall
+20:05:31.603 [main] DEBUG server.building.Area - > room1
+20:05:31.603 [main] DEBUG server.building.Area - > room2
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - queried area list
+20:05:31.603 [main] DEBUG server.building.Area - > room3
+20:05:31.603 [main] DEBUG server.building.Area - > corridor
+20:05:31.603 [main] DEBUG server.building.Area - > IT
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - queried area list
+20:05:31.603 [main] DEBUG server.building.Area - > basement
+20:05:31.603 [main] DEBUG server.building.Area - > ground_floor
+20:05:31.603 [main] DEBUG server.building.Area - > floor1
+20:05:31.603 [main] DEBUG server.building.Area - > exterior
+20:05:31.603 [main] DEBUG server.building.Area - > stairs
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - queried area list
+20:05:31.603 [main] DEBUG server.building.Area - > parking
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - queried area list
+20:05:31.603 [main] DEBUG server.building.Area - > hall
+20:05:31.603 [main] DEBUG server.building.Area - > room1
+20:05:31.603 [main] DEBUG server.building.Area - > room2
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - queried area list
+20:05:31.603 [main] DEBUG server.building.Area - > room3
+20:05:31.603 [main] DEBUG server.building.Area - > corridor
+20:05:31.603 [main] DEBUG server.building.Area - > IT
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - queried area list
+20:05:31.603 [main] DEBUG server.building.Area - > basement
+20:05:31.603 [main] DEBUG server.building.Area - > ground_floor
+20:05:31.603 [main] DEBUG server.building.Area - > floor1
+20:05:31.603 [main] DEBUG server.building.Area - > exterior
+20:05:31.603 [main] DEBUG server.building.Area - > stairs
+20:05:31.603 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.603 [main] DEBUG server.building.Area - queried area list
+20:05:31.603 [main] DEBUG server.building.Area - > parking
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - queried area list
+20:05:31.605 [main] DEBUG server.building.Area - > hall
+20:05:31.605 [main] DEBUG server.building.Area - > room1
+20:05:31.605 [main] DEBUG server.building.Area - > room2
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - queried area list
+20:05:31.605 [main] DEBUG server.building.Area - > room3
+20:05:31.605 [main] DEBUG server.building.Area - > corridor
+20:05:31.605 [main] DEBUG server.building.Area - > IT
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - queried area list
+20:05:31.605 [main] DEBUG server.building.Area - > basement
+20:05:31.605 [main] DEBUG server.building.Area - > ground_floor
+20:05:31.605 [main] DEBUG server.building.Area - > floor1
+20:05:31.605 [main] DEBUG server.building.Area - > exterior
+20:05:31.605 [main] DEBUG server.building.Area - > stairs
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - queried area list
+20:05:31.605 [main] DEBUG server.building.Area - > parking
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - queried area list
+20:05:31.605 [main] DEBUG server.building.Area - > hall
+20:05:31.605 [main] DEBUG server.building.Area - > room1
+20:05:31.605 [main] DEBUG server.building.Area - > room2
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - queried area list
+20:05:31.605 [main] DEBUG server.building.Area - > basement
+20:05:31.605 [main] DEBUG server.building.Area - > ground_floor
+20:05:31.605 [main] DEBUG server.building.Area - > floor1
+20:05:31.605 [main] DEBUG server.building.Area - > exterior
+20:05:31.605 [main] DEBUG server.building.Area - > stairs
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - queried area list
+20:05:31.605 [main] DEBUG server.building.Area - > parking
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - queried area list
+20:05:31.605 [main] DEBUG server.building.Area - > hall
+20:05:31.605 [main] DEBUG server.building.Area - > room1
+20:05:31.605 [main] DEBUG server.building.Area - > room2
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.building.Area - queried area list
+20:05:31.605 [main] DEBUG server.building.Area - > room3
+20:05:31.605 [main] DEBUG server.building.Area - > corridor
+20:05:31.605 [main] DEBUG server.building.Area - > IT
+20:05:31.605 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.605 [main] DEBUG server.roles.Role - Rolesemployeecreated
+20:05:31.605 [main] INFO  server.User - created user Ernest
+20:05:31.605 [main] INFO  server.User - created user Eulalia
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - queried area list
+20:05:31.606 [main] DEBUG server.building.Area - > basement
+20:05:31.606 [main] DEBUG server.building.Area - > ground_floor
+20:05:31.606 [main] DEBUG server.building.Area - > floor1
+20:05:31.606 [main] DEBUG server.building.Area - > exterior
+20:05:31.606 [main] DEBUG server.building.Area - > stairs
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - queried area list
+20:05:31.606 [main] DEBUG server.building.Area - > parking
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - queried area list
+20:05:31.606 [main] DEBUG server.building.Area - > hall
+20:05:31.606 [main] DEBUG server.building.Area - > room1
+20:05:31.606 [main] DEBUG server.building.Area - > room2
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - queried area list
+20:05:31.606 [main] DEBUG server.building.Area - > basement
+20:05:31.606 [main] DEBUG server.building.Area - > ground_floor
+20:05:31.606 [main] DEBUG server.building.Area - > floor1
+20:05:31.606 [main] DEBUG server.building.Area - > exterior
+20:05:31.606 [main] DEBUG server.building.Area - > stairs
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - queried area list
+20:05:31.606 [main] DEBUG server.building.Area - > parking
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - queried area list
+20:05:31.606 [main] DEBUG server.building.Area - > hall
+20:05:31.606 [main] DEBUG server.building.Area - > room1
+20:05:31.606 [main] DEBUG server.building.Area - > room2
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - queried area list
+20:05:31.606 [main] DEBUG server.building.Area - > room3
+20:05:31.606 [main] DEBUG server.building.Area - > corridor
+20:05:31.606 [main] DEBUG server.building.Area - > IT
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - queried area list
+20:05:31.606 [main] DEBUG server.building.Area - > basement
+20:05:31.606 [main] DEBUG server.building.Area - > ground_floor
+20:05:31.606 [main] DEBUG server.building.Area - > floor1
+20:05:31.606 [main] DEBUG server.building.Area - > exterior
+20:05:31.606 [main] DEBUG server.building.Area - > stairs
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - queried area list
+20:05:31.606 [main] DEBUG server.building.Area - > parking
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - queried area list
+20:05:31.606 [main] DEBUG server.building.Area - > hall
+20:05:31.606 [main] DEBUG server.building.Area - > room1
+20:05:31.606 [main] DEBUG server.building.Area - > room2
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.606 [main] DEBUG server.building.Area - queried area list
+20:05:31.606 [main] DEBUG server.building.Area - > room3
+20:05:31.606 [main] DEBUG server.building.Area - > corridor
+20:05:31.606 [main] DEBUG server.building.Area - > IT
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - queried area list
+20:05:31.607 [main] DEBUG server.building.Area - > basement
+20:05:31.607 [main] DEBUG server.building.Area - > ground_floor
+20:05:31.607 [main] DEBUG server.building.Area - > floor1
+20:05:31.607 [main] DEBUG server.building.Area - > exterior
+20:05:31.607 [main] DEBUG server.building.Area - > stairs
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - queried area list
+20:05:31.607 [main] DEBUG server.building.Area - > parking
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - queried area list
+20:05:31.607 [main] DEBUG server.building.Area - > hall
+20:05:31.607 [main] DEBUG server.building.Area - > room1
+20:05:31.607 [main] DEBUG server.building.Area - > room2
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - queried area list
+20:05:31.607 [main] DEBUG server.building.Area - > room3
+20:05:31.607 [main] DEBUG server.building.Area - > corridor
+20:05:31.607 [main] DEBUG server.building.Area - > IT
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - queried area list
+20:05:31.607 [main] DEBUG server.building.Area - > basement
+20:05:31.607 [main] DEBUG server.building.Area - > ground_floor
+20:05:31.607 [main] DEBUG server.building.Area - > floor1
+20:05:31.607 [main] DEBUG server.building.Area - > exterior
+20:05:31.607 [main] DEBUG server.building.Area - > stairs
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - queried area list
+20:05:31.607 [main] DEBUG server.building.Area - > parking
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - queried area list
+20:05:31.607 [main] DEBUG server.building.Area - > hall
+20:05:31.607 [main] DEBUG server.building.Area - > room1
+20:05:31.607 [main] DEBUG server.building.Area - > room2
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - queried area list
+20:05:31.607 [main] DEBUG server.building.Area - > room3
+20:05:31.607 [main] DEBUG server.building.Area - > corridor
+20:05:31.607 [main] DEBUG server.building.Area - > IT
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - queried area list
+20:05:31.607 [main] DEBUG server.building.Area - > basement
+20:05:31.607 [main] DEBUG server.building.Area - > ground_floor
+20:05:31.607 [main] DEBUG server.building.Area - > floor1
+20:05:31.607 [main] DEBUG server.building.Area - > exterior
+20:05:31.607 [main] DEBUG server.building.Area - > stairs
+20:05:31.607 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.607 [main] DEBUG server.building.Area - queried area list
+20:05:31.607 [main] DEBUG server.building.Area - > parking
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - queried area list
+20:05:31.608 [main] DEBUG server.building.Area - > hall
+20:05:31.608 [main] DEBUG server.building.Area - > room1
+20:05:31.608 [main] DEBUG server.building.Area - > room2
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - queried area list
+20:05:31.608 [main] DEBUG server.building.Area - > basement
+20:05:31.608 [main] DEBUG server.building.Area - > ground_floor
+20:05:31.608 [main] DEBUG server.building.Area - > floor1
+20:05:31.608 [main] DEBUG server.building.Area - > exterior
+20:05:31.608 [main] DEBUG server.building.Area - > stairs
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - queried area list
+20:05:31.608 [main] DEBUG server.building.Area - > parking
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - queried area list
+20:05:31.608 [main] DEBUG server.building.Area - > hall
+20:05:31.608 [main] DEBUG server.building.Area - > room1
+20:05:31.608 [main] DEBUG server.building.Area - > room2
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - queried area list
+20:05:31.608 [main] DEBUG server.building.Area - > basement
+20:05:31.608 [main] DEBUG server.building.Area - > ground_floor
+20:05:31.608 [main] DEBUG server.building.Area - > floor1
+20:05:31.608 [main] DEBUG server.building.Area - > exterior
+20:05:31.608 [main] DEBUG server.building.Area - > stairs
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - queried area list
+20:05:31.608 [main] DEBUG server.building.Area - > parking
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - queried area list
+20:05:31.608 [main] DEBUG server.building.Area - > basement
+20:05:31.608 [main] DEBUG server.building.Area - > ground_floor
+20:05:31.608 [main] DEBUG server.building.Area - > floor1
+20:05:31.608 [main] DEBUG server.building.Area - > exterior
+20:05:31.608 [main] DEBUG server.building.Area - > stairs
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - queried area list
+20:05:31.608 [main] DEBUG server.building.Area - > parking
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - queried area list
+20:05:31.608 [main] DEBUG server.building.Area - > hall
+20:05:31.608 [main] DEBUG server.building.Area - > room1
+20:05:31.608 [main] DEBUG server.building.Area - > room2
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - queried area list
+20:05:31.608 [main] DEBUG server.building.Area - > room3
+20:05:31.608 [main] DEBUG server.building.Area - > corridor
+20:05:31.608 [main] DEBUG server.building.Area - > IT
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.building.Area - Visitor accepted
+20:05:31.608 [main] DEBUG server.roles.Role - Rolesmanagercreated
+20:05:31.608 [main] INFO  server.User - created user Manel
+20:05:31.609 [main] INFO  server.User - created user Marta
+20:05:31.609 [main] DEBUG server.roles.Role - Rolesadministratorcreated
+20:05:31.609 [main] INFO  server.User - created user Ana
+20:06:29.502 [main] INFO  server.state.Propped - D1 was locked
+20:06:29.504 [main] INFO  server.state.Propped - D2 was locked
+20:06:29.504 [main] INFO  server.state.Propped - D3 was locked
+20:06:29.504 [main] INFO  server.state.Propped - D4 was locked
+20:06:29.504 [main] INFO  server.state.Propped - D5 was locked
+20:06:29.504 [main] INFO  server.state.Propped - D6 was locked
+20:06:29.504 [main] INFO  server.state.Propped - D7 was locked
+20:06:29.504 [main] INFO  server.state.Propped - D8 was locked
+20:06:29.504 [main] INFO  server.state.Propped - D9 was locked
+20:06:29.505 [main] DEBUG server.roles.Role - Rolesblankcreated
+20:06:29.505 [main] INFO  server.User - created user Bernat
+20:06:29.505 [main] INFO  server.User - created user Blai
+20:06:29.532 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.532 [main] DEBUG server.building.Area - queried area list
+20:06:29.532 [main] DEBUG server.building.Area - > basement
+20:06:29.532 [main] DEBUG server.building.Area - > ground_floor
+20:06:29.532 [main] DEBUG server.building.Area - > floor1
+20:06:29.532 [main] DEBUG server.building.Area - > exterior
+20:06:29.532 [main] DEBUG server.building.Area - > stairs
+20:06:29.532 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - queried area list
+20:06:29.533 [main] DEBUG server.building.Area - > parking
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - queried area list
+20:06:29.533 [main] DEBUG server.building.Area - > hall
+20:06:29.533 [main] DEBUG server.building.Area - > room1
+20:06:29.533 [main] DEBUG server.building.Area - > room2
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - queried area list
+20:06:29.533 [main] DEBUG server.building.Area - > room3
+20:06:29.533 [main] DEBUG server.building.Area - > corridor
+20:06:29.533 [main] DEBUG server.building.Area - > IT
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - queried area list
+20:06:29.533 [main] DEBUG server.building.Area - > basement
+20:06:29.533 [main] DEBUG server.building.Area - > ground_floor
+20:06:29.533 [main] DEBUG server.building.Area - > floor1
+20:06:29.533 [main] DEBUG server.building.Area - > exterior
+20:06:29.533 [main] DEBUG server.building.Area - > stairs
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - queried area list
+20:06:29.533 [main] DEBUG server.building.Area - > parking
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - queried area list
+20:06:29.533 [main] DEBUG server.building.Area - > hall
+20:06:29.533 [main] DEBUG server.building.Area - > room1
+20:06:29.533 [main] DEBUG server.building.Area - > room2
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - queried area list
+20:06:29.533 [main] DEBUG server.building.Area - > room3
+20:06:29.533 [main] DEBUG server.building.Area - > corridor
+20:06:29.533 [main] DEBUG server.building.Area - > IT
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - queried area list
+20:06:29.533 [main] DEBUG server.building.Area - > basement
+20:06:29.533 [main] DEBUG server.building.Area - > ground_floor
+20:06:29.533 [main] DEBUG server.building.Area - > floor1
+20:06:29.533 [main] DEBUG server.building.Area - > exterior
+20:06:29.533 [main] DEBUG server.building.Area - > stairs
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - queried area list
+20:06:29.533 [main] DEBUG server.building.Area - > parking
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.533 [main] DEBUG server.building.Area - queried area list
+20:06:29.535 [main] DEBUG server.building.Area - > hall
+20:06:29.535 [main] DEBUG server.building.Area - > room1
+20:06:29.535 [main] DEBUG server.building.Area - > room2
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - queried area list
+20:06:29.535 [main] DEBUG server.building.Area - > room3
+20:06:29.535 [main] DEBUG server.building.Area - > corridor
+20:06:29.535 [main] DEBUG server.building.Area - > IT
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - queried area list
+20:06:29.535 [main] DEBUG server.building.Area - > basement
+20:06:29.535 [main] DEBUG server.building.Area - > ground_floor
+20:06:29.535 [main] DEBUG server.building.Area - > floor1
+20:06:29.535 [main] DEBUG server.building.Area - > exterior
+20:06:29.535 [main] DEBUG server.building.Area - > stairs
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - queried area list
+20:06:29.535 [main] DEBUG server.building.Area - > parking
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - queried area list
+20:06:29.535 [main] DEBUG server.building.Area - > hall
+20:06:29.535 [main] DEBUG server.building.Area - > room1
+20:06:29.535 [main] DEBUG server.building.Area - > room2
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - queried area list
+20:06:29.535 [main] DEBUG server.building.Area - > room3
+20:06:29.535 [main] DEBUG server.building.Area - > corridor
+20:06:29.535 [main] DEBUG server.building.Area - > IT
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - queried area list
+20:06:29.535 [main] DEBUG server.building.Area - > basement
+20:06:29.535 [main] DEBUG server.building.Area - > ground_floor
+20:06:29.535 [main] DEBUG server.building.Area - > floor1
+20:06:29.535 [main] DEBUG server.building.Area - > exterior
+20:06:29.535 [main] DEBUG server.building.Area - > stairs
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - queried area list
+20:06:29.535 [main] DEBUG server.building.Area - > parking
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - queried area list
+20:06:29.535 [main] DEBUG server.building.Area - > hall
+20:06:29.535 [main] DEBUG server.building.Area - > room1
+20:06:29.535 [main] DEBUG server.building.Area - > room2
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - queried area list
+20:06:29.535 [main] DEBUG server.building.Area - > basement
+20:06:29.535 [main] DEBUG server.building.Area - > ground_floor
+20:06:29.535 [main] DEBUG server.building.Area - > floor1
+20:06:29.535 [main] DEBUG server.building.Area - > exterior
+20:06:29.535 [main] DEBUG server.building.Area - > stairs
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - queried area list
+20:06:29.535 [main] DEBUG server.building.Area - > parking
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.535 [main] DEBUG server.building.Area - queried area list
+20:06:29.535 [main] DEBUG server.building.Area - > hall
+20:06:29.535 [main] DEBUG server.building.Area - > room1
+20:06:29.536 [main] DEBUG server.building.Area - > room2
+20:06:29.536 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.536 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.536 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.536 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.536 [main] DEBUG server.building.Area - queried area list
+20:06:29.536 [main] DEBUG server.building.Area - > room3
+20:06:29.536 [main] DEBUG server.building.Area - > corridor
+20:06:29.536 [main] DEBUG server.building.Area - > IT
+20:06:29.536 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.536 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.536 [main] DEBUG server.building.Area - queried area list
+20:06:29.536 [main] DEBUG server.building.Area - > basement
+20:06:29.536 [main] DEBUG server.building.Area - > ground_floor
+20:06:29.536 [main] DEBUG server.building.Area - > floor1
+20:06:29.536 [main] DEBUG server.building.Area - > exterior
+20:06:29.536 [main] DEBUG server.building.Area - > stairs
+20:06:29.536 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.536 [main] DEBUG server.building.Area - queried area list
+20:06:29.536 [main] DEBUG server.building.Area - > parking
+20:06:29.536 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.536 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.536 [main] DEBUG server.building.Area - queried area list
+20:06:29.536 [main] DEBUG server.building.Area - > hall
+20:06:29.536 [main] DEBUG server.building.Area - > room1
+20:06:29.536 [main] DEBUG server.building.Area - > room2
+20:06:29.536 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.536 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.536 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.536 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.536 [main] DEBUG server.building.Area - queried area list
+20:06:29.536 [main] DEBUG server.building.Area - > basement
+20:06:29.536 [main] DEBUG server.building.Area - > ground_floor
+20:06:29.536 [main] DEBUG server.building.Area - > floor1
+20:06:29.536 [main] DEBUG server.building.Area - > exterior
+20:06:29.536 [main] DEBUG server.building.Area - > stairs
+20:06:29.536 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.536 [main] DEBUG server.building.Area - queried area list
+20:06:29.536 [main] DEBUG server.building.Area - > parking
+20:06:29.536 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.536 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.536 [main] DEBUG server.building.Area - queried area list
+20:06:29.536 [main] DEBUG server.building.Area - > hall
+20:06:29.536 [main] DEBUG server.building.Area - > room1
+20:06:29.536 [main] DEBUG server.building.Area - > room2
+20:06:29.536 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.536 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.536 [main] DEBUG server.roles.Role - Rolesemployeecreated
+20:06:29.536 [main] INFO  server.User - created user Ernest
+20:06:29.537 [main] INFO  server.User - created user Eulalia
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - queried area list
+20:06:29.537 [main] DEBUG server.building.Area - > basement
+20:06:29.537 [main] DEBUG server.building.Area - > ground_floor
+20:06:29.537 [main] DEBUG server.building.Area - > floor1
+20:06:29.537 [main] DEBUG server.building.Area - > exterior
+20:06:29.537 [main] DEBUG server.building.Area - > stairs
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - queried area list
+20:06:29.537 [main] DEBUG server.building.Area - > parking
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - queried area list
+20:06:29.537 [main] DEBUG server.building.Area - > basement
+20:06:29.537 [main] DEBUG server.building.Area - > ground_floor
+20:06:29.537 [main] DEBUG server.building.Area - > floor1
+20:06:29.537 [main] DEBUG server.building.Area - > exterior
+20:06:29.537 [main] DEBUG server.building.Area - > stairs
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - queried area list
+20:06:29.537 [main] DEBUG server.building.Area - > parking
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - queried area list
+20:06:29.537 [main] DEBUG server.building.Area - > hall
+20:06:29.537 [main] DEBUG server.building.Area - > room1
+20:06:29.537 [main] DEBUG server.building.Area - > room2
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - queried area list
+20:06:29.537 [main] DEBUG server.building.Area - > room3
+20:06:29.537 [main] DEBUG server.building.Area - > corridor
+20:06:29.537 [main] DEBUG server.building.Area - > IT
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - queried area list
+20:06:29.537 [main] DEBUG server.building.Area - > basement
+20:06:29.537 [main] DEBUG server.building.Area - > ground_floor
+20:06:29.537 [main] DEBUG server.building.Area - > floor1
+20:06:29.537 [main] DEBUG server.building.Area - > exterior
+20:06:29.537 [main] DEBUG server.building.Area - > stairs
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - queried area list
+20:06:29.537 [main] DEBUG server.building.Area - > parking
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - queried area list
+20:06:29.537 [main] DEBUG server.building.Area - > hall
+20:06:29.537 [main] DEBUG server.building.Area - > room1
+20:06:29.537 [main] DEBUG server.building.Area - > room2
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - queried area list
+20:06:29.537 [main] DEBUG server.building.Area - > basement
+20:06:29.537 [main] DEBUG server.building.Area - > ground_floor
+20:06:29.537 [main] DEBUG server.building.Area - > floor1
+20:06:29.537 [main] DEBUG server.building.Area - > exterior
+20:06:29.537 [main] DEBUG server.building.Area - > stairs
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - queried area list
+20:06:29.537 [main] DEBUG server.building.Area - > parking
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.537 [main] DEBUG server.building.Area - queried area list
+20:06:29.537 [main] DEBUG server.building.Area - > hall
+20:06:29.538 [main] DEBUG server.building.Area - > room1
+20:06:29.538 [main] DEBUG server.building.Area - > room2
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - queried area list
+20:06:29.538 [main] DEBUG server.building.Area - > room3
+20:06:29.538 [main] DEBUG server.building.Area - > corridor
+20:06:29.538 [main] DEBUG server.building.Area - > IT
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - queried area list
+20:06:29.538 [main] DEBUG server.building.Area - > basement
+20:06:29.538 [main] DEBUG server.building.Area - > ground_floor
+20:06:29.538 [main] DEBUG server.building.Area - > floor1
+20:06:29.538 [main] DEBUG server.building.Area - > exterior
+20:06:29.538 [main] DEBUG server.building.Area - > stairs
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - queried area list
+20:06:29.538 [main] DEBUG server.building.Area - > parking
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - queried area list
+20:06:29.538 [main] DEBUG server.building.Area - > hall
+20:06:29.538 [main] DEBUG server.building.Area - > room1
+20:06:29.538 [main] DEBUG server.building.Area - > room2
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - queried area list
+20:06:29.538 [main] DEBUG server.building.Area - > room3
+20:06:29.538 [main] DEBUG server.building.Area - > corridor
+20:06:29.538 [main] DEBUG server.building.Area - > IT
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - queried area list
+20:06:29.538 [main] DEBUG server.building.Area - > basement
+20:06:29.538 [main] DEBUG server.building.Area - > ground_floor
+20:06:29.538 [main] DEBUG server.building.Area - > floor1
+20:06:29.538 [main] DEBUG server.building.Area - > exterior
+20:06:29.538 [main] DEBUG server.building.Area - > stairs
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - queried area list
+20:06:29.538 [main] DEBUG server.building.Area - > parking
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - queried area list
+20:06:29.538 [main] DEBUG server.building.Area - > hall
+20:06:29.538 [main] DEBUG server.building.Area - > room1
+20:06:29.538 [main] DEBUG server.building.Area - > room2
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - queried area list
+20:06:29.538 [main] DEBUG server.building.Area - > room3
+20:06:29.538 [main] DEBUG server.building.Area - > corridor
+20:06:29.538 [main] DEBUG server.building.Area - > IT
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - queried area list
+20:06:29.538 [main] DEBUG server.building.Area - > basement
+20:06:29.538 [main] DEBUG server.building.Area - > ground_floor
+20:06:29.538 [main] DEBUG server.building.Area - > floor1
+20:06:29.538 [main] DEBUG server.building.Area - > exterior
+20:06:29.538 [main] DEBUG server.building.Area - > stairs
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - queried area list
+20:06:29.538 [main] DEBUG server.building.Area - > parking
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - queried area list
+20:06:29.538 [main] DEBUG server.building.Area - > hall
+20:06:29.538 [main] DEBUG server.building.Area - > room1
+20:06:29.538 [main] DEBUG server.building.Area - > room2
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.538 [main] DEBUG server.building.Area - queried area list
+20:06:29.538 [main] DEBUG server.building.Area - > room3
+20:06:29.538 [main] DEBUG server.building.Area - > corridor
+20:06:29.539 [main] DEBUG server.building.Area - > IT
+20:06:29.539 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.539 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.539 [main] DEBUG server.building.Area - queried area list
+20:06:29.539 [main] DEBUG server.building.Area - > basement
+20:06:29.539 [main] DEBUG server.building.Area - > ground_floor
+20:06:29.539 [main] DEBUG server.building.Area - > floor1
+20:06:29.539 [main] DEBUG server.building.Area - > exterior
+20:06:29.539 [main] DEBUG server.building.Area - > stairs
+20:06:29.539 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.539 [main] DEBUG server.building.Area - queried area list
+20:06:29.539 [main] DEBUG server.building.Area - > parking
+20:06:29.539 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.539 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.539 [main] DEBUG server.building.Area - queried area list
+20:06:29.539 [main] DEBUG server.building.Area - > hall
+20:06:29.539 [main] DEBUG server.building.Area - > room1
+20:06:29.539 [main] DEBUG server.building.Area - > room2
+20:06:29.539 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.539 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.539 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.539 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.539 [main] DEBUG server.building.Area - queried area list
+20:06:29.539 [main] DEBUG server.building.Area - > basement
+20:06:29.539 [main] DEBUG server.building.Area - > ground_floor
+20:06:29.539 [main] DEBUG server.building.Area - > floor1
+20:06:29.539 [main] DEBUG server.building.Area - > exterior
+20:06:29.539 [main] DEBUG server.building.Area - > stairs
+20:06:29.539 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.539 [main] DEBUG server.building.Area - queried area list
+20:06:29.539 [main] DEBUG server.building.Area - > parking
+20:06:29.539 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.539 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.539 [main] DEBUG server.building.Area - queried area list
+20:06:29.539 [main] DEBUG server.building.Area - > hall
+20:06:29.539 [main] DEBUG server.building.Area - > room1
+20:06:29.539 [main] DEBUG server.building.Area - > room2
+20:06:29.539 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.539 [main] DEBUG server.building.Area - Visitor accepted
+20:06:29.539 [main] DEBUG server.roles.Role - Rolesmanagercreated
+20:06:29.539 [main] INFO  server.User - created user Manel
+20:06:29.539 [main] INFO  server.User - created user Marta
+20:06:29.539 [main] DEBUG server.roles.Role - Rolesadministratorcreated
+20:06:29.539 [main] INFO  server.User - created user Ana
+20:07:04.673 [main] INFO  server.state.Propped - D1 was locked
+20:07:04.675 [main] INFO  server.state.Propped - D2 was locked
+20:07:04.675 [main] INFO  server.state.Propped - D3 was locked
+20:07:04.675 [main] INFO  server.state.Propped - D4 was locked
+20:07:04.675 [main] INFO  server.state.Propped - D5 was locked
+20:07:04.675 [main] INFO  server.state.Propped - D6 was locked
+20:07:04.675 [main] INFO  server.state.Propped - D7 was locked
+20:07:04.675 [main] INFO  server.state.Propped - D8 was locked
+20:07:04.675 [main] INFO  server.state.Propped - D9 was locked
+20:07:04.677 [main] INFO  server.User - created user Bernat
+20:07:04.677 [main] INFO  server.User - created user Blai
+20:07:04.740 [main] INFO  server.User - created user Ernest
+20:07:04.740 [main] INFO  server.User - created user Eulalia
+20:07:04.740 [main] INFO  server.User - created user Manel
+20:07:04.740 [main] INFO  server.User - created user Marta
+20:07:04.740 [main] INFO  server.User - created user Ana
+20:07:44.756 [main] INFO  server.state.State - D1 was locked
+20:07:44.759 [main] INFO  server.state.State - D2 was locked
+20:07:44.759 [main] INFO  server.state.State - D3 was locked
+20:07:44.759 [main] INFO  server.state.State - D4 was locked
+20:07:44.759 [main] INFO  server.state.State - D5 was locked
+20:07:44.759 [main] INFO  server.state.State - D6 was locked
+20:07:44.759 [main] INFO  server.state.State - D7 was locked
+20:07:44.759 [main] INFO  server.state.State - D8 was locked
+20:07:44.759 [main] INFO  server.state.State - D9 was locked
+20:07:44.759 [main] INFO  server.User - created user Bernat
+20:07:44.759 [main] INFO  server.User - created user Blai
+20:07:44.787 [main] INFO  server.User - created user Ernest
+20:07:44.787 [main] INFO  server.User - created user Eulalia
+20:07:44.787 [main] INFO  server.User - created user Manel
+20:07:44.787 [main] INFO  server.User - created user Marta
+20:07:44.787 [main] INFO  server.User - created user Ana
+20:07:57.088 [Thread-1] INFO  server.state.State - D5 was unlocked
+20:07:57.088 [Thread-1] INFO  server.state.State - D5 was unlocked
+20:08:00.660 [Thread-3] WARN  server.state.State - Can't open door D5 because it's already open
+20:08:01.744 [Thread-4] INFO  server.state.State - D5 was closed
+20:08:03.376 [Thread-5] INFO  server.state.State - D5 was locked
+20:08:03.376 [Thread-5] INFO  server.state.State - D5 was closed
+20:08:04.840 [Thread-6] INFO  server.state.State - D5 was unlocked shortly
+20:08:05.792 [Thread-8] INFO  server.state.State - D5 was opened
+20:08:14.852 [Timer-0] INFO  server.state.State - D5 is propped
+20:08:14.852 [Timer-0] WARN  server.state.State - D5 was propped

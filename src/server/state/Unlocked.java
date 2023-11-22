@@ -2,12 +2,13 @@ package server.state;
 
 import server.Door;
 
-// This class represents the unlocked state of a door.
 
 public class Unlocked extends State {
 
+  // the locked state can be closed if open, locked
   Unlocked(Door door) {
     super(door);
+    logger.info(door.getId() + " was unlocked");
   }
 
   @Override
@@ -15,7 +16,7 @@ public class Unlocked extends State {
     if (door.isClosed()) {
       door.setClose(false);
     } else {
-      System.out.println("Can't open door " + door.getId() + " because it's already open");
+      logger.warn("Can't open door " + door.getId() + " because it's already open");
     }
   }
 
@@ -23,8 +24,9 @@ public class Unlocked extends State {
   public void close() {
     if (!door.isClosed()) {
       door.setClose(true);
+      logger.info(door.getId() + " was closed");
     } else {
-      System.out.println(door.getId() + " is already closed");
+      logger.warn(door.getId() + " is already closed");
     }
   }
 
@@ -37,16 +39,16 @@ public class Unlocked extends State {
   public void lock() {
     if (door.isClosed()) {
       door.setState(new Locked(door));
+      logger.info(door.getId() + " was closed");
     } else {
-      System.out.println(door.getId() + " can't be locked, it's open");
+      logger.warn(door.getId() + " can't be locked, it's open");
     }
   }
 
   @Override
   public void unlock() {
-    System.out.println("already unlocked");
+    logger.warn(door.getId() + "already unlocked");
   }
-
 
   @Override
   public String getName() {

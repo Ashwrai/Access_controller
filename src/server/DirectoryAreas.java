@@ -1,25 +1,34 @@
 package server;
 
+import java.util.HashSet;
+import java.util.Set;
+import java.util.UUID;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import server.building.Area;
-import server.building.AreaIdFinder;
 import server.building.Partition;
 import server.building.Space;
+import server.building.visitor.FindAreaById;
 
-import java.util.Set;
 
-
-/*- Purpose:
-    Manages and holds the information about different areas in the building. These areas can be both partitions and spaces.
-- Design Pattern:
-    Singleton Pattern: Ensures that a class has only one instance and provides a global point to this instance.
-    This is evident in the usage of a private static variable for areas and public static methods to access and manipulate it.*/
 public class DirectoryAreas {
+  //  - Purpose:
+  //  Manages and holds the information about different areas in the building.
+  //  These areas can be both partitions and spaces.
+  //      - Design Pattern:
+  //  Singleton Pattern: Ensures that a class has only one instance and provides
+  //  a global point to this instance. This is evident in the usage of a private
+  //  static variable for areas and public static methods to access and
+  //  manipulate it.
+
+  private static final Logger logger = LoggerFactory.getLogger(DirectoryAreas.class);
   private static Area rootArea;
   private static Set<Area> areas;
 
   // This method initializes the areas in the building.
-  public static void makeAreas(){
+  public static void makeAreas() {
     Partition building = new Partition("building");
+    rootArea = building;
     Partition basement = new Partition("basement");
     Partition groundFloor = new Partition("ground_floor");
     Partition firstFloor = new Partition("floor1");
@@ -49,7 +58,7 @@ public class DirectoryAreas {
     firstFloor.addArea(corridor);
     firstFloor.addArea(IT);
 
-    DirectoryAreas.areas=Set.of(
+    DirectoryAreas.areas = Set.of(
         building,
         basement,
         groundFloor,
@@ -66,8 +75,16 @@ public class DirectoryAreas {
     );
   }
 
+  public static Area fromSet(Set<String> ids) {
+    Partition area = new Partition(UUID.randomUUID().toString());
+    for (String id : ids) {
+      area.addArea(DirectoryAreas.findAreaById(id));
+    }
+    return area;
+  }
+
   public static Area findAreaById(final String id) {
-    AreaIdFinder visitor = new AreaIdFinder(id);
+    FindAreaById visitor = new FindAreaById(id);
     rootArea.accept(visitor);
     return visitor.getResult();
   }
@@ -75,10 +92,10 @@ public class DirectoryAreas {
   // Returns a specific space by its name.
   public static Space getSpaceByName(String name) {
     Area area = DirectoryAreas.findAreaByName(name);
-    if(area instanceof Space){
+    if (area instanceof Space) {
       return (Space) area;
     }
-    System.out.println("space with name " +name + " not found");
+    logger.warn("space with name " + name + " not found");
     return null;
   }
 
@@ -89,13 +106,16 @@ public class DirectoryAreas {
         return area;
       }
     }
-    System.out.println("area with name " + name + " not found");
+    logger.warn("area with name " + name + " not found");
     return null; // otherwise we get a Java error
   }
 
   // Used by RequestRefresh to get all doors in the areas.
   public static Set<Area> getAllDoors() {
-    System.out.println(DirectoryAreas.areas);
+    logger.debug("queried all areas");
+    for (Area area : DirectoryAreas.areas) {
+      logger.debug("> " + area.getName());
+    }
     return DirectoryAreas.areas;
   }
 

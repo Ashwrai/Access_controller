@@ -1,27 +1,32 @@
-package server.building;
+package server.building.visitor;
 
-public class AreaIdFinder implements AreaVisitor{
+import server.Door;
+import server.building.Area;
+import server.building.Partition;
+import server.building.Space;
 
-    private String targetId;
 
-    private Area result;
+public class FindAreaById implements Visitor {
 
-  public AreaIdFinder(final String id) {
+  private final String targetId;
+  private Area result;
+
+  public FindAreaById(final String id) {
     this.targetId = id;
   }
 
-  public void visit(final Space space) {
+  public void visitSpace(final Space space) {
     if (space.getName().equals(targetId)) {
       result = space;
     }
   }
 
-
-  public void visit(final Partition partition) {
+  public void visitPartition(final Partition partition) {
     if (partition.getName().equals(targetId)) {
       result = partition;
     } else {
       for (Area area : partition.getAreas()) {
+
         area.accept(this);
         if (result != null) {
           break;
@@ -33,5 +38,4 @@ public class AreaIdFinder implements AreaVisitor{
   public Area getResult() {
     return result;
   }
-
 }

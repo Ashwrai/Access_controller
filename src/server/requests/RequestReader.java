@@ -82,11 +82,10 @@ public class RequestReader implements Request {
     Door door = DirectoryDoors.findDoorById(doorId);
     assert door != null : "door " + doorId + " not found";
     authorize(user, door);
-    // this sets the boolean authorize attribute of the request
     door.processRequest(this);
     // even if not authorized we process the request, so that if desired we could log all
     // the requests made to the server as part of processing the request
-    doorClosed = door.isClosed(); //saber en qué estado quedó la puerta
+    doorClosed = door.isClosed();
   }
 
   // the result is put into the request object plus, if not authorized, why not,
@@ -96,10 +95,9 @@ public class RequestReader implements Request {
       authorized = false;
       addReason("user doesn't exists");
     } else {
-      //TODO: get the who, where, when and what in order to decide, and if not
-      // authorized add the reason(s)
       Role role = user.getRole();
-      HashSet<String> reasons = role.hasPermission(now.getDayOfWeek(), now.toLocalDate(), now.toLocalTime(), door.getTo(), door.getFrom(), action);
+      HashSet<String> reasons = role.hasPermission(now.getDayOfWeek(), now.toLocalDate(),
+          now.toLocalTime(), door.getTo(), door.getFrom(), action);
 
       for (String reason : reasons) {
         addReason(reason);

@@ -1,13 +1,18 @@
 package server;
 
 import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import server.building.Space;
 import server.requests.RequestReader;
 import server.state.Locked;
 import server.state.State;
 
-
 public class Door {
+
+  private static Logger logger = LoggerFactory.getLogger(Door.class);
+
+  // Unique identifier for the door
   private final String id;
   private State state;
   private boolean closed;
@@ -17,9 +22,14 @@ public class Door {
   public Door(String id, Space from, Space to) {
     this.id = id;
     this.closed = true;
+
     this.state = new Locked(this);
+
+    // Spaces associated with the door
     this.from = from;
     this.to = to;
+
+    // Register the door with the destination space
     this.to.addDoor(this);
   }
 
@@ -27,14 +37,18 @@ public class Door {
     // it is the Door that process the request because the door has and knows
     // its state, and if closed or open
     if (request.isAuthorized()) {
+      logger.debug("processed request for door " + this.id);
       String action = request.getAction();
       doAction(action);
     } else {
-      System.out.println("not authorized");
+      logger.warn("unauthorized request for door " + this.id);
     }
+
+    // Set the door state in the request
     request.setDoorStateName(getStateName());
   }
 
+  // Perform the specified action on the door based on its current state
   private void doAction(String action) {
     switch (action) {
       case Actions.OPEN:
@@ -54,6 +68,9 @@ public class Door {
         break;
       default:
         assert false : "Unknown action " + action;
+        logger.warn("unknown action for door " + this.id + ": " + action);
+
+        // Terminate the program due to an unexpected situation
         System.exit(-1);
     }
   }
@@ -102,7 +119,6 @@ public class Door {
   public void setTo(Space to) {
     this.to = to;
   }
-
 
   public Space getFrom() {
     return this.from;
