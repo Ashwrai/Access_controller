@@ -1,4 +1,4 @@
-package baseNoStates.requests;
+package server.requests;
 
 import org.json.JSONObject;
 

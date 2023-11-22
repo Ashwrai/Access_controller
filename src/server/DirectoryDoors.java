@@ -1,7 +1,8 @@
-package baseNoStates;
-import baseNoStates.building.*;
+package server;
 
 import java.util.Set;
+import server.building.Space;
+
 
 /*- Purpose:
     Manages and holds the information about different doors in the building.
@@ -11,6 +12,7 @@ import java.util.Set;
 
 public final class DirectoryDoors {
   private static Set<Door> allDoors;
+
   public static void makeDoors() {
 
     Space exterior = DirectoryAreas.getSpaceByName("exterior");

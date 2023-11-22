@@ -1,4 +1,4 @@
-package baseNoStates.roles;
+package server.roles;
 
 public final class RoleId {
   // Print statements for each not allowed permission

@@ -1,10 +1,10 @@
-package baseNoStates.requests;
+package server.requests;
 
-import baseNoStates.DirectoryDoors;
-import baseNoStates.Door;
 import java.util.ArrayList;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import server.DirectoryDoors;
+import server.Door;
 
 public class RequestRefresh implements Request {
   private final ArrayList<JSONObject> jsonsDoors = new ArrayList<>();
