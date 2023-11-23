@@ -871,3 +871,124 @@
 20:08:05.792 [Thread-8] INFO  server.state.State - D5 was opened
 20:08:14.852 [Timer-0] INFO  server.state.State - D5 is propped
 20:08:14.852 [Timer-0] WARN  server.state.State - D5 was propped
+12:18:49.351 [main] INFO  server.state.State - D1 was locked
+12:18:49.357 [main] INFO  server.state.State - D2 was locked
+12:18:49.357 [main] INFO  server.state.State - D3 was locked
+12:18:49.358 [main] INFO  server.state.State - D4 was locked
+12:18:49.358 [main] INFO  server.state.State - D5 was locked
+12:18:49.358 [main] INFO  server.state.State - D6 was locked
+12:18:49.358 [main] INFO  server.state.State - D7 was locked
+12:18:49.358 [main] INFO  server.state.State - D8 was locked
+12:18:49.358 [main] INFO  server.state.State - D9 was locked
+12:18:49.385 [main] INFO  server.User - created user Bernat
+12:18:49.385 [main] INFO  server.User - created user Blai
+12:18:49.457 [main] INFO  server.User - created user Ernest
+12:18:49.457 [main] INFO  server.User - created user Eulalia
+12:18:49.457 [main] INFO  server.User - created user Manel
+12:18:49.457 [main] INFO  server.User - created user Marta
+12:18:49.457 [main] INFO  server.User - created user Ana
+12:19:10.424 [Thread-1] INFO  server.state.State - D5 was unlocked
+12:19:10.424 [Thread-1] INFO  server.state.State - D5 was unlocked
+12:26:43.842 [main] INFO  server.state.State - D1 was locked
+12:26:43.842 [main] INFO  server.state.State - D2 was locked
+12:26:43.842 [main] INFO  server.state.State - D3 was locked
+12:26:43.842 [main] INFO  server.state.State - D4 was locked
+12:26:43.842 [main] INFO  server.state.State - D5 was locked
+12:26:43.842 [main] INFO  server.state.State - D6 was locked
+12:26:43.842 [main] INFO  server.state.State - D7 was locked
+12:26:43.842 [main] INFO  server.state.State - D8 was locked
+12:26:43.842 [main] INFO  server.state.State - D9 was locked
+12:26:43.842 [main] INFO  server.User - created user Bernat
+12:26:43.842 [main] INFO  server.User - created user Blai
+12:26:43.889 [main] INFO  server.User - created user Ernest
+12:26:43.889 [main] INFO  server.User - created user Eulalia
+12:26:43.889 [main] INFO  server.User - created user Manel
+12:26:43.889 [main] INFO  server.User - created user Marta
+12:26:43.889 [main] INFO  server.User - created user Ana
+12:30:48.178 [Thread-1] INFO  server.state.State - D5 was unlocked
+12:30:48.178 [Thread-1] INFO  server.state.State - D5 was unlocked
+12:30:52.147 [Thread-3] INFO  server.state.State - D5 was closed
+12:30:54.531 [Thread-4] INFO  server.state.State - D5 was locked
+12:30:54.531 [Thread-4] INFO  server.state.State - D5 was closed
+12:30:56.500 [Thread-5] INFO  server.state.State - D5 was unlocked shortly
+12:31:01.229 [Thread-7] INFO  server.state.State - D5 was opened
+12:31:06.517 [Timer-0] INFO  server.state.State - D5 is propped
+12:31:06.517 [Timer-0] WARN  server.state.State - D5 was propped
+12:33:28.421 [Thread-9] INFO  server.state.State - D4 was unlocked
+12:33:28.421 [Thread-9] INFO  server.state.State - D4 was unlocked
+12:33:28.421 [Thread-9] INFO  server.state.State - D3 was unlocked
+12:33:28.421 [Thread-9] INFO  server.state.State - D3 was unlocked
+12:33:28.421 [Thread-9] WARN  server.state.State - Door D5is open, it's propped
+12:33:28.421 [Thread-9] INFO  server.state.State - D6 was unlocked
+12:33:28.421 [Thread-9] INFO  server.state.State - D6 was unlocked
+12:33:29.889 [Thread-10] INFO  server.state.State - D4 was locked
+12:33:29.889 [Thread-10] INFO  server.state.State - D4 was closed
+12:33:29.891 [Thread-10] INFO  server.state.State - D3 was locked
+12:33:29.891 [Thread-10] INFO  server.state.State - D3 was closed
+12:33:29.891 [Thread-10] WARN  server.state.State - Can't lock, door D5is open because it's propped
+12:33:29.891 [Thread-10] INFO  server.state.State - D6 was locked
+12:33:29.891 [Thread-10] INFO  server.state.State - D6 was closed
+12:33:31.274 [Thread-11] WARN  server.state.State - D4 is already locked
+12:33:31.274 [Thread-11] WARN  server.state.State - D3 is already locked
+12:33:31.274 [Thread-11] WARN  server.state.State - Can't lock, door D5is open because it's propped
+12:33:31.274 [Thread-11] WARN  server.state.State - D6 is already locked
+12:33:31.828 [Thread-12] WARN  server.state.State - D4 is already locked
+12:33:31.828 [Thread-12] WARN  server.state.State - D3 is already locked
+12:33:31.828 [Thread-12] WARN  server.state.State - Can't lock, door D5is open because it's propped
+12:33:31.828 [Thread-12] WARN  server.state.State - D6 is already locked
+12:33:32.137 [Thread-13] WARN  server.state.State - D4 is already locked
+12:33:32.137 [Thread-13] WARN  server.state.State - D3 is already locked
+12:33:32.137 [Thread-13] WARN  server.state.State - Can't lock, door D5is open because it's propped
+12:33:32.137 [Thread-13] WARN  server.state.State - D6 is already locked
+12:33:34.744 [Thread-14] INFO  server.state.State - D4 was unlocked
+12:33:34.744 [Thread-14] INFO  server.state.State - D4 was unlocked
+12:33:34.744 [Thread-14] INFO  server.state.State - D3 was unlocked
+12:33:34.744 [Thread-14] INFO  server.state.State - D3 was unlocked
+12:33:34.744 [Thread-14] WARN  server.state.State - Door D5is open, it's propped
+12:33:34.744 [Thread-14] INFO  server.state.State - D6 was unlocked
+12:33:34.744 [Thread-14] INFO  server.state.State - D6 was unlocked
+12:33:39.815 [Thread-15] INFO  server.state.State - D5 was locked
+12:33:39.816 [Thread-15] INFO  server.state.State - Door D5 was locked
+12:33:42.568 [Thread-16] WARN  server.state.State - D4already unlocked
+12:33:42.568 [Thread-16] WARN  server.state.State - D3already unlocked
+12:33:42.568 [Thread-16] INFO  server.state.State - D5 was unlocked
+12:33:42.568 [Thread-16] INFO  server.state.State - D5 was unlocked
+12:33:42.568 [Thread-16] WARN  server.state.State - D6already unlocked
+12:33:46.266 [Thread-17] WARN  server.state.State - D4already unlocked
+12:33:46.266 [Thread-17] WARN  server.state.State - D3already unlocked
+12:33:46.266 [Thread-17] WARN  server.state.State - D5already unlocked
+12:33:46.266 [Thread-17] WARN  server.state.State - D6already unlocked
+12:33:51.864 [Thread-18] INFO  server.state.State - D8 was unlocked
+12:33:51.865 [Thread-18] INFO  server.state.State - D8 was unlocked
+12:33:51.865 [Thread-18] INFO  server.state.State - D7 was unlocked
+12:33:51.865 [Thread-18] INFO  server.state.State - D7 was unlocked
+12:33:51.865 [Thread-18] INFO  server.state.State - D9 was unlocked
+12:33:51.865 [Thread-18] INFO  server.state.State - D9 was unlocked
+12:34:01.447 [main] INFO  server.state.State - D1 was locked
+12:34:01.455 [main] INFO  server.state.State - D2 was locked
+12:34:01.458 [main] INFO  server.state.State - D3 was locked
+12:34:01.458 [main] INFO  server.state.State - D4 was locked
+12:34:01.458 [main] INFO  server.state.State - D5 was locked
+12:34:01.458 [main] INFO  server.state.State - D6 was locked
+12:34:01.459 [main] INFO  server.state.State - D7 was locked
+12:34:01.459 [main] INFO  server.state.State - D8 was locked
+12:34:01.459 [main] INFO  server.state.State - D9 was locked
+12:34:01.460 [main] INFO  server.User - created user Bernat
+12:34:01.460 [main] INFO  server.User - created user Blai
+12:34:01.503 [main] INFO  server.User - created user Ernest
+12:34:01.503 [main] INFO  server.User - created user Eulalia
+12:34:01.503 [main] INFO  server.User - created user Manel
+12:34:01.503 [main] INFO  server.User - created user Marta
+12:34:01.503 [main] INFO  server.User - created user Ana
+12:34:13.379 [Thread-1] INFO  server.state.State - D4 was unlocked
+12:34:13.379 [Thread-1] INFO  server.state.State - D4 was unlocked
+12:34:13.385 [Thread-1] INFO  server.state.State - D3 was unlocked
+12:34:13.385 [Thread-1] INFO  server.state.State - D3 was unlocked
+12:34:13.385 [Thread-1] INFO  server.state.State - D5 was unlocked
+12:34:13.385 [Thread-1] INFO  server.state.State - D5 was unlocked
+12:34:13.385 [Thread-1] INFO  server.state.State - D6 was unlocked
+12:34:13.385 [Thread-1] INFO  server.state.State - D6 was unlocked
+12:34:14.149 [Thread-2] WARN  server.state.State - D4already unlocked
+12:34:14.149 [Thread-2] WARN  server.state.State - D3already unlocked
+12:34:14.149 [Thread-2] WARN  server.state.State - D5already unlocked
+12:34:14.149 [Thread-2] WARN  server.state.State - D6already unlocked
