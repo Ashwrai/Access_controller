@@ -11,6 +11,7 @@ public class GetPartitionDoors implements Visitor {
   private final ArrayList<Door> doors = new ArrayList<>();
 
   public void visitSpace(final Space space) {
+
     doors.addAll(space.getDoors());
   }
 
@@ -21,6 +22,10 @@ public class GetPartitionDoors implements Visitor {
   }
 
   public ArrayList<Door> getDoors() {
+    logger.debug("queried door list");
+    for (Door door : doors) {
+      logger.debug("> " + door.getId());
+    }
     return doors;
   }
 }

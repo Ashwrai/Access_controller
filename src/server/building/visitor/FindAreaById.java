@@ -22,6 +22,8 @@ public class FindAreaById implements Visitor {
   }
 
   public void visitPartition(final Partition partition) {
+    logger.debug(targetId);
+    logger.debug(partition.getName());
     if (partition.getName().equals(targetId)) {
       result = partition;
     } else {

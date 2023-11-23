@@ -79,6 +79,7 @@ public class RequestArea implements Request {
       for (Door door : doors) {
         RequestReader requestReader = new RequestReader(credential, action, now, door.getId());
         requestReader.process();
+        requests.add(requestReader);
       }
 
     }

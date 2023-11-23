@@ -5,7 +5,6 @@ import server.Door;
 
 public class Unlocked extends State {
 
-  // the locked state can be closed if open, locked
   Unlocked(Door door) {
     super(door);
     logger.info(door.getId() + " was unlocked");
