@@ -1,6 +1,5 @@
 package server.building.visitor;
 
-import server.Door;
 import server.building.Area;
 import server.building.Partition;
 import server.building.Space;

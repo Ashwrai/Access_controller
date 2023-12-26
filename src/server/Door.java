@@ -4,7 +4,9 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import server.building.Space;
+import server.requests.RequestChildren;
 import server.requests.RequestReader;
+import server.roles.Reasons;
 import server.state.Locked;
 import server.state.State;
 
@@ -18,6 +20,7 @@ public class Door {
   private boolean closed;
   private Space from;
   private Space to;
+  private RequestReader request;
 
   public Door(String id, Space from, Space to) {
     this.id = id;
@@ -33,7 +36,12 @@ public class Door {
     this.to.addDoor(this);
   }
 
+  public void addReasons(String msg) {
+    request.addReason(msg);
+  }
+
   public void processRequest(RequestReader request) {
+    this.request = request;
     // it is the Door that process the request because the door has and knows
     // its state, and if closed or open
     if (request.isAuthorized()) {

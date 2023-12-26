@@ -1,5 +1,12 @@
 package server.roles;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import server.building.Area;
+import server.building.Partition;
+import server.building.Space;
+import server.building.visitor.GetSpacesFromArea;
+
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -7,12 +14,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import server.building.Area;
-import server.building.Partition;
-import server.building.Space;
-import server.building.visitor.GetSpacesFromArea;
 
 
 public class Role {

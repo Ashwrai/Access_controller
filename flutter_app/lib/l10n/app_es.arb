@@ -1,0 +1,21 @@
+{
+  "title": "Sistema de Control de Acceso",
+  "menu": "Menú",
+  "spaces": "Espacios",
+  "recent": "Recientes",
+  "lockedDoors": "Puertas Bloqueadas",
+  "error": "Error",
+  "ok": "Aceptar",
+  "openAction": "Abrir",
+  "closeAction": "Cerrar",
+  "lockAction": "Bloquear",
+  "unlockAction": "Desbloquear",
+  "unlockShortlyAction": "Desbloqueo Temporal",
+  "adminGroup": "Administradores",
+  "managerGroup": "Gerentes",
+  "employeeGroup": "Empleados",
+  "openDoor": "Abrir Puerta",
+  "closeDoor": "Cerrar Puerta",
+  "unlockDoor": "Desbloquear Puerta",
+  "lockDoor": "Bloquear Puerta"
+}

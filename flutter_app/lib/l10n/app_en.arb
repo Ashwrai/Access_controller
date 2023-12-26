@@ -1,0 +1,21 @@
+{
+  "title": "Access Control System",
+  "menu": "Menu",
+  "spaces": "Spaces",
+  "recent": "Recent",
+  "lockedDoors": "Locked Doors",
+  "error": "Error",
+  "ok": "OK",
+  "openAction": "Open",
+  "closeAction": "Close",
+  "lockAction": "Lock",
+  "unlockAction": "Unlock",
+  "unlockShortlyAction": "Unlock Shortly",
+  "adminGroup": "Administrators",
+  "managerGroup": "Managers",
+  "employeeGroup": "Employees",
+  "openDoor": "Open Door",
+  "closeDoor": "Close Door",
+  "unlockDoor": "Unlock Door",
+  "lockDoor": "Lock Door"
+}

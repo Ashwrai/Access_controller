@@ -6,8 +6,8 @@ Created on Sat Apr  4 14:30:21 2020
 @author: joan
 """
 
-from skimage.io import imread, imsave
 import matplotlib.pyplot as plt
+from skimage.io import imread
 
 # coordinates javascript and Pinta, first=column, second=row,
 # reverse than numpy

@@ -40,6 +40,7 @@ public class Unlocked extends State {
       door.setState(new Locked(door));
       logger.info(door.getId() + " was closed");
     } else {
+      door.addReasons(door.getId() + " can't be locked, it's open");
       logger.warn(door.getId() + " can't be locked, it's open");
     }
   }

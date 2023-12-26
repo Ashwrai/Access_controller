@@ -1,16 +1,17 @@
 package server;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import server.roles.Role;
+import server.roles.RoleId;
+import server.roles.Schedule;
+
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.Month;
 import java.util.ArrayList;
 import java.util.Set;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import server.roles.Role;
-import server.roles.RoleId;
-import server.roles.Schedule;
 
 
 public final class DirectoryUsers {

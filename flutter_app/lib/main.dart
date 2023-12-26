@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'screen_partition.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +28,15 @@ class MyApp extends StatelessWidget {
         ),
         // see https://docs.flutter.dev/cookbook/design/themes
       ),
-      home: const ScreenPartition(id: "building"),
+      supportedLocales: AppLocalizations.supportedLocales,
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+
+      home: const ScreenPartition(id: "ROOT", showMenu: true),
     );
   }
 }

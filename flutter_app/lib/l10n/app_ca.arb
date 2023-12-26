@@ -1,0 +1,21 @@
+{
+  "title": "Sistema de Control d'Accés",
+  "menu": "Menú",
+  "spaces": "Espais",
+  "recent": "Recents",
+  "lockedDoors": "Portes Bloquejades",
+  "error": "Error",
+  "ok": "D'acord",
+  "openAction": "Obrir",
+  "closeAction": "Tancar",
+  "lockAction": "Bloquejar",
+  "unlockAction": "Desbloquejar",
+  "unlockShortlyAction": "Desbloqueig Temporal",
+  "adminGroup": "Administradors",
+  "managerGroup": "Gestors",
+  "employeeGroup": "Empleats",
+  "openDoor": "Obrir Porta",
+  "closeDoor": "Tancar Porta",
+  "unlockDoor": "Desbloquejar Porta",
+  "lockDoor": "Bloquejar Porta"
+}

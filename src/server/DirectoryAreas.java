@@ -1,14 +1,14 @@
 package server;
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import server.building.Area;
 import server.building.Partition;
 import server.building.Space;
 import server.building.visitor.FindAreaById;
+
+import java.util.Set;
+import java.util.UUID;
 
 
 public class DirectoryAreas {
@@ -84,6 +84,9 @@ public class DirectoryAreas {
   }
 
   public static Area findAreaById(final String id) {
+    if (id.equals("ROOT")) {
+      return rootArea;
+    }
     FindAreaById visitor = new FindAreaById(id);
     rootArea.accept(visitor);
     return visitor.getResult();

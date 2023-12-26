@@ -1,10 +1,12 @@
 package server.building;
 
-import java.util.Set;
+import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import server.Door;
 import server.building.visitor.Visitor;
+
+import java.util.Set;
 
 public abstract class Area {
   // - Purpose:
@@ -25,4 +27,6 @@ public abstract class Area {
   public abstract Set<Door> getDoors();
 
   public abstract void accept(Visitor visitor);
+
+  public abstract JSONObject toJson(int depth);
 }

@@ -1,10 +1,11 @@
 package server.requests;
 
-import java.util.ArrayList;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import server.DirectoryDoors;
 import server.Door;
+
+import java.util.ArrayList;
 
 public class RequestRefresh implements Request {
   private final ArrayList<JSONObject> jsonsDoors = new ArrayList<>();

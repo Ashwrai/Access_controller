@@ -2,8 +2,6 @@ package server.building.visitor;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import server.Door;
-import server.building.Area;
 import server.building.Partition;
 import server.building.Space;
 

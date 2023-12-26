@@ -1,9 +1,10 @@
 package server;
 
-import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import server.building.Space;
+
+import java.util.Set;
 
 
 public final class DirectoryDoors {

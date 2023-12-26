@@ -1,5 +1,7 @@
 package server;
 
+import server.requests.*;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -9,10 +11,6 @@ import java.net.Socket;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.StringTokenizer;
-import server.requests.Request;
-import server.requests.RequestArea;
-import server.requests.RequestReader;
-import server.requests.RequestRefresh;
 
 
 
@@ -134,11 +132,7 @@ public class WebServer {
           request = makeRequestArea(tokens);
           break;
         case "get_children":
-          //TODO: this is to be implemented when programming the mobile app in Flutter
-          // in order to navigate the hierarchy of partitions, spaces and doors
-          assert false : "request get_children is not yet implemented";
-          request = null;
-          System.exit(-1);
+          request = makeRequestChildren(tokens);
           break;
         default:
           // just in case we change the user interface or the simulator
@@ -147,6 +141,11 @@ public class WebServer {
           System.exit(-1);
       }
       return request;
+    }
+
+    private RequestChildren makeRequestChildren(String[] tokens) {
+      String areaId = tokens[1];
+      return new RequestChildren(areaId);
     }
 
     private RequestReader makeRequestReader(String[] tokens) {

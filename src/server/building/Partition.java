@@ -1,10 +1,13 @@
 package server.building;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+import server.Door;
+import server.building.visitor.Visitor;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
-import server.Door;
-import server.building.visitor.Visitor;
 
 public class Partition extends Area {
   // - Purpose:
@@ -46,4 +49,21 @@ public class Partition extends Area {
     logger.debug("Visitor accepted");
     visitor.visitPartition(this);
   }
+
+  public JSONObject toJson(int depth) {
+    // for depth=1 only the root and children,
+    // for recusive = all levels use Integer.MAX_VALUE
+    JSONObject json = new JSONObject();
+    json.put("class", "partition");
+    json.put("id", getName());
+    JSONArray jsonAreas = new JSONArray();
+    if (depth > 0) {
+      for (Area a : areas) {
+        jsonAreas.put(a.toJson(depth - 1));
+      }
+      json.put("areas", jsonAreas);
+    }
+    return json;
+  }
+
 }

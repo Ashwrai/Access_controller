@@ -1,9 +1,5 @@
 package server.requests;
 
-import static server.DirectoryAreas.getRootArea;
-
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import server.Actions;
@@ -11,6 +7,11 @@ import server.Door;
 import server.building.Area;
 import server.building.visitor.FindAreaById;
 import server.building.visitor.GetPartitionDoors;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+
+import static server.DirectoryAreas.getRootArea;
 
 
 
@@ -81,7 +82,6 @@ public class RequestArea implements Request {
         requestReader.process();
         requests.add(requestReader);
       }
-
     }
   }
 }

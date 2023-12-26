@@ -1,9 +1,12 @@
 package server.building;
 
-import java.util.HashSet;
-import java.util.Set;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import server.Door;
 import server.building.visitor.Visitor;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class Space extends Area {
   // - Purpose:
@@ -28,4 +31,17 @@ public class Space extends Area {
     logger.debug("Visitor accepted");
     visitor.visitSpace(this);
   }
+
+  public JSONObject toJson(int depth) { // depth not used here
+    JSONObject json = new JSONObject();
+    json.put("class", "space");
+    json.put("id", getName());
+    JSONArray jsonDoors = new JSONArray();
+    for (Door d : getDoors()) {
+      jsonDoors.put(d.toJson());
+    }
+    json.put("access_doors", jsonDoors);
+    return json;
+  }
+
 }

@@ -1,10 +1,11 @@
 package server.building.visitor;
 
-import java.util.ArrayList;
 import server.Door;
 import server.building.Area;
 import server.building.Partition;
 import server.building.Space;
+
+import java.util.ArrayList;
 
 
 public class GetPartitionDoors implements Visitor {

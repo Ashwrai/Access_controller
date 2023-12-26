@@ -1,8 +1,5 @@
 package server.requests;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.HashSet;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import server.DirectoryDoors;
@@ -10,6 +7,10 @@ import server.DirectoryUsers;
 import server.Door;
 import server.User;
 import server.roles.Role;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.HashSet;
 
 public class RequestReader implements Request {
   private final String credential; // who

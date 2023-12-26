@@ -1,12 +1,12 @@
 package server.state;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.time.LocalDateTime;
 import java.util.Observable;
 import java.util.Timer;
 import java.util.TimerTask;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import server.DirectoryAreas;
 
 // Represents a clock that notifies its observers every fixed period of time.
 public class Clock extends Observable {
