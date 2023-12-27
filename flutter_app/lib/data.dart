@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class Actions {
   static const String open = "open";
   static const String close = "close";
@@ -26,7 +25,8 @@ class Schedule {
   late TimeOfDay fromTime;
   late TimeOfDay toTime;
 
-  Schedule(this.weekdays, this.fromDate, this.toDate, this.fromTime, this.toTime);
+  Schedule(
+      this.weekdays, this.fromDate, this.toDate, this.fromTime, this.toTime);
 }
 
 class UserGroup {
@@ -37,7 +37,8 @@ class UserGroup {
   late List<String> actions; // what
   late List<User> users; // who
 
-  UserGroup(this.name, this.description, this.areas, this.schedule, this.actions, this.users);
+  UserGroup(this.name, this.description, this.areas, this.schedule,
+      this.actions, this.users);
 }
 
 // This class replaces what we would get from a new http request to the server,
@@ -45,52 +46,98 @@ class UserGroup {
 // that would return them as a string answer in JSON format
 class Data {
   // Admin
-  static Schedule scheduleAdmin = Schedule(
-      [DateTime.monday, DateTime.tuesday, DateTime.wednesday, DateTime.thursday,
-        DateTime.friday, DateTime.saturday, DateTime.sunday],
-      DateTime(2023, 1, 1), DateTime(2026, 1, 1),
-      TimeOfDay(hour: 0, minute: 0), TimeOfDay(hour: 23, minute: 59)
-  );
-  static UserGroup admin = UserGroup("admin", "administrators", ["building",],
-      scheduleAdmin, Actions.all, [User("Ana", "89325"), User("Aureli", "87325"),]
-  );
+  static Schedule scheduleAdmin = Schedule([
+    DateTime.monday,
+    DateTime.tuesday,
+    DateTime.wednesday,
+    DateTime.thursday,
+    DateTime.friday,
+    DateTime.saturday,
+    DateTime.sunday
+  ],
+      DateTime(2023, 1, 1),
+      DateTime(2026, 1, 1),
+      const TimeOfDay(hour: 0, minute: 0),
+      const TimeOfDay(hour: 23, minute: 59));
+  static UserGroup admin = UserGroup(
+      "admin",
+      "administrators",
+      [
+        "building",
+      ],
+      scheduleAdmin,
+      Actions.all,
+      [
+        User("Ana", "89325"),
+        User("Aureli", "87325"),
+      ]);
 
   // Managers
-  static Schedule scheduleManagers = Schedule(
-      [DateTime.monday, DateTime.tuesday, DateTime.wednesday, DateTime.thursday,
-        DateTime.friday, DateTime.saturday,],
-      DateTime(2023, 9, 1), DateTime(2024, 8, 30),
-      TimeOfDay(hour: 7, minute: 0), TimeOfDay(hour: 22, minute: 0)
-  );
-  static UserGroup managers = UserGroup("managers",
-      "the CEO, CTO and heads of department", ["building",],
-      scheduleManagers, Actions.all, [User("Manel", "43762"), User("Miquel", "77832"),
-        User("Maria", "89324"), User("Maure", "12345"),]
-  );
+  static Schedule scheduleManagers = Schedule([
+    DateTime.monday,
+    DateTime.tuesday,
+    DateTime.wednesday,
+    DateTime.thursday,
+    DateTime.friday,
+    DateTime.saturday,
+  ],
+      DateTime(2023, 9, 1),
+      DateTime(2024, 8, 30),
+      const TimeOfDay(hour: 7, minute: 0),
+      const TimeOfDay(hour: 22, minute: 0));
+  static UserGroup managers = UserGroup(
+      "managers",
+      "the CEO, CTO and heads of department",
+      [
+        "building",
+      ],
+      scheduleManagers,
+      Actions.all,
+      [
+        User("Manel", "43762"),
+        User("Miquel", "77832"),
+        User("Maria", "89324"),
+        User("Maure", "12345"),
+      ]);
 
   // Employees
-  static Schedule scheduleEmployees = Schedule(
-      [DateTime.monday, DateTime.tuesday, DateTime.wednesday, DateTime.thursday,
-        DateTime.friday,],
-      DateTime(2023, 9, 1), DateTime(2024, 3, 1),
-      TimeOfDay(hour: 7, minute: 0), TimeOfDay(hour: 20, minute: 0)
-  );
-  static UserGroup employees = UserGroup("employees",
+  static Schedule scheduleEmployees = Schedule([
+    DateTime.monday,
+    DateTime.tuesday,
+    DateTime.wednesday,
+    DateTime.thursday,
+    DateTime.friday,
+  ],
+      DateTime(2023, 9, 1),
+      DateTime(2024, 3, 1),
+      const TimeOfDay(hour: 7, minute: 0),
+      const TimeOfDay(hour: 20, minute: 0));
+  static UserGroup employees = UserGroup(
+      "employees",
       "employees of own departments plus oursourcing companies",
       ["ground_floor", "room3", "corridor"],
-      scheduleEmployees, [Actions.open, Actions.close, Actions.unlockShortly], [User("Eva", "89325"), User("Eulalia", "87325"),
-        User("Esteve", "43623"),]
-  );
+      scheduleEmployees,
+      [Actions.open, Actions.close, Actions.unlockShortly],
+      [
+        User("Eva", "89325"),
+        User("Eulalia", "87325"),
+        User("Esteve", "43623"),
+      ]);
 
   static List<UserGroup> userGroups = [admin, managers, employees];
 
   // defaults for new user group
-  static Schedule defaultSchedule = Schedule(
-      [DateTime.monday, DateTime.tuesday, DateTime.wednesday, DateTime.thursday,
-        DateTime.friday,],
-      DateTime.now(), DateTime.now().add(const Duration(days: 365)),
-      TimeOfDay(hour: 8, minute: 0), TimeOfDay(hour: 19, minute: 0)
-  );
+  static Schedule defaultSchedule = Schedule([
+    DateTime.monday,
+    DateTime.tuesday,
+    DateTime.wednesday,
+    DateTime.thursday,
+    DateTime.friday,
+  ],
+      DateTime.now(),
+      DateTime.now().add(const Duration(days: 365)),
+      const TimeOfDay(hour: 8, minute: 0),
+      const TimeOfDay(hour: 19, minute: 0));
   static List<String> defaultAreas = ["ground_floor", "room3", "corridor"];
   static List<String> defaultActions = ["open", "close"];
   static String defaultName = "new group";

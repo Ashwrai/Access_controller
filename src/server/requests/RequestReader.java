@@ -47,7 +47,6 @@ public class RequestReader implements Request {
     reasons.add(reason);
   }
 
-
   @Override
   public String toString() {
     if (userName == null) {

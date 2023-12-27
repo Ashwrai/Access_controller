@@ -134,6 +134,9 @@ public class WebServer {
         case "get_children":
           request = makeRequestChildren(tokens);
           break;
+        case "get_propped":
+          request = makeRequestPropped();
+          break;
         default:
           // just in case we change the user interface or the simulator
           assert false : "unknown request " + tokens[0];
@@ -146,6 +149,10 @@ public class WebServer {
     private RequestChildren makeRequestChildren(String[] tokens) {
       String areaId = tokens[1];
       return new RequestChildren(areaId);
+    }
+
+    private RequestPropped makeRequestPropped() {
+      return new RequestPropped();
     }
 
     private RequestReader makeRequestReader(String[] tokens) {

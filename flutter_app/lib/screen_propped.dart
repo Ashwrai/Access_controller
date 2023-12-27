@@ -4,24 +4,23 @@ import 'package:flutter/material.dart';
 import 'tree.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class ScreenSpace extends StatefulWidget {
-  final String id;
+class ScreenPropped extends StatefulWidget {
   final Function(Locale) setLocale;
 
-  const ScreenSpace({super.key, required this.id, required this.setLocale});
+  const ScreenPropped({super.key, required this.setLocale});
 
   @override
-  State<ScreenSpace> createState() => _StateScreenSpace();
+  State<ScreenPropped> createState() => _StateScreenPropped();
 }
 
-class _StateScreenSpace extends State<ScreenSpace> {
+class _StateScreenPropped extends State<ScreenPropped> {
   late Future<Tree> futureTree;
   List<String> reasons = [];
 
   @override
   void initState() {
     super.initState();
-    futureTree = getTree(widget.id);
+    futureTree = getProppedDoors();
   }
 
   @override
@@ -79,9 +78,10 @@ class _StateScreenSpace extends State<ScreenSpace> {
                       Navigator.of(context).pushAndRemoveUntil(
                         MaterialPageRoute(
                             builder: (context) => ScreenPartition(
-                                id: "ROOT",
-                                showMenu: true,
-                                setLocale: widget.setLocale)),
+                                  id: "ROOT",
+                                  showMenu: true,
+                                  setLocale: widget.setLocale,
+                                )),
                         (Route<dynamic> route) => false,
                       );
                     }),
@@ -224,7 +224,7 @@ class _StateScreenSpace extends State<ScreenSpace> {
   }
 
   void _refresh() async {
-    futureTree = getTree(widget.id);
+    futureTree = getProppedDoors();
     setState(() {});
   }
 

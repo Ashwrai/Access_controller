@@ -7,27 +7,25 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  Locale _locale = const Locale('en');
+
+  void setLocale(Locale newLocale) {
+    setState(() {
+      _locale = newLocale;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      // removes the debug banner that hides the home button
-      title: 'ACS',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.blue, // instead of deepPurple
-          brightness: Brightness.light,
-        ), // light or dark,
-        useMaterial3: true,
-        textTheme: const TextTheme(
-          bodyMedium: TextStyle(fontSize: 20), // size of hello
-        ),
-        // see https://docs.flutter.dev/cookbook/design/themes
-      ),
       supportedLocales: AppLocalizations.supportedLocales,
       localizationsDelegates: const [
         AppLocalizations.delegate,
@@ -35,8 +33,26 @@ class MyApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-
-      home: const ScreenPartition(id: "ROOT", showMenu: true),
+      locale: _locale,
+      onGenerateTitle: (BuildContext context) {
+        return AppLocalizations.of(context)!.title;
+      },
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.blue,
+          brightness: Brightness.light,
+        ),
+        useMaterial3: true,
+        textTheme: const TextTheme(
+          bodyMedium: TextStyle(fontSize: 20),
+        ),
+      ),
+      home: ScreenPartition(
+        id: "ROOT",
+        showMenu: true,
+        setLocale: setLocale,
+      ),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

@@ -8,6 +8,7 @@ import server.requests.RequestChildren;
 import server.requests.RequestReader;
 import server.roles.Reasons;
 import server.state.Locked;
+import server.state.Propped;
 import server.state.State;
 
 public class Door {
@@ -89,6 +90,10 @@ public class Door {
 
   public boolean isClosed() {
     return closed;
+  }
+
+  public boolean isPropped() {
+    return this.state instanceof Propped;
   }
 
   public String getId() {

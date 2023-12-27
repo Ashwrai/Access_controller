@@ -1,13 +1,22 @@
+import 'package:exercise_flutter_acs/screen_propped.dart';
+
 import 'requests.dart';
 import 'package:flutter/material.dart';
-import 'tree.dart'; // Asegúrate de que tree.dart tiene las definiciones correctas
+import 'tree.dart';
 import 'screen_space.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ScreenPartition extends StatefulWidget {
   final String id;
   final bool showMenu;
+  final Function(Locale) setLocale;
 
-  const ScreenPartition({super.key, required this.id, this.showMenu = false});
+  const ScreenPartition({
+    Key? key,
+    required this.id,
+    this.showMenu = false,
+    required this.setLocale,
+  }) : super(key: key);
 
   @override
   State<ScreenPartition> createState() => _ScreenPartitionState();
@@ -15,8 +24,6 @@ class ScreenPartition extends StatefulWidget {
 
 class _ScreenPartitionState extends State<ScreenPartition> {
   late Future<Tree> futureTree;
-  List<String> recentSpaces =
-      []; // Aquí se guarda los ID de los espacios recientes
 
   @override
   void initState() {
@@ -27,9 +34,9 @@ class _ScreenPartitionState extends State<ScreenPartition> {
   void addRecentSpace(String spaceId) {
     setState(() {
       // Elimina el espacio si ya existe en la lista
-      recentSpaces.remove(spaceId);
+      SpaceStore.recentAreas.remove(spaceId);
       // Agregar al inicio de la lista para que los más recientes aparezcan primero
-      recentSpaces.insert(0, spaceId);
+      SpaceStore.recentAreas.insert(0, spaceId);
     });
   }
 
@@ -37,22 +44,32 @@ class _ScreenPartitionState extends State<ScreenPartition> {
     // Aquí puedes manejar la navegación a un espacio específico
     // Por ejemplo, si cada espacio tiene una pantalla asociada, puedes hacer algo como esto:
     Navigator.of(context).push(MaterialPageRoute<void>(
-      builder: (context) => ScreenSpace(id: spaceId),
+      builder: (context) => ScreenSpace(
+        id: spaceId,
+        setLocale: widget.setLocale,
+      ),
     ));
     // No olvides implementar la lógica necesaria en ScreenSpace para manejar el id correctamente
   }
 
   void _navigateDownPartition(String childId) {
-    addRecentSpace(childId); // Añadir a recientes
+    addRecentSpace(childId);
     Navigator.of(context).push(MaterialPageRoute<void>(
-      builder: (context) => ScreenPartition(id: childId),
+      builder: (context) => ScreenPartition(
+        id: childId,
+        showMenu: false,
+        setLocale: widget.setLocale,
+      ),
     ));
   }
 
   void _navigateDownSpace(String childId) {
     addRecentSpace(childId); // Añadir a recientes
     Navigator.of(context).push(MaterialPageRoute<void>(
-      builder: (context) => ScreenSpace(id: childId),
+      builder: (context) => ScreenSpace(
+        id: childId,
+        setLocale: widget.setLocale,
+      ),
     ));
   }
 // future with listview
@@ -61,8 +78,12 @@ class _ScreenPartitionState extends State<ScreenPartition> {
   void goToInitialMenu() {
     Navigator.of(context).pushAndRemoveUntil(
       MaterialPageRoute(
-          builder: (context) =>
-              const ScreenPartition(id: "ROOT", showMenu: true)),
+        builder: (context) => ScreenPartition(
+          id: "ROOT",
+          showMenu: true,
+          setLocale: widget.setLocale,
+        ),
+      ),
       (Route<dynamic> route) => false,
     );
   }
@@ -71,7 +92,7 @@ class _ScreenPartitionState extends State<ScreenPartition> {
     Navigator.of(context).push(MaterialPageRoute<void>(
       builder: (context) => Scaffold(
         appBar: AppBar(
-          title: const Text('Espacios Recientes'),
+          title: Text(AppLocalizations.of(context)!.recent),
           backgroundColor: Theme.of(context).colorScheme.primary,
           foregroundColor: Theme.of(context).colorScheme.onPrimary,
           leading: IconButton(
@@ -80,13 +101,13 @@ class _ScreenPartitionState extends State<ScreenPartition> {
           ),
         ),
         body: ListView.builder(
-          itemCount: recentSpaces.length,
+          itemCount: SpaceStore.recentAreas.length,
           itemBuilder: (context, index) {
             return ListTile(
-              title: Text(recentSpaces[index]),
+              title: Text(SpaceStore.recentAreas[index]),
               onTap: () {
                 Navigator.of(context).pop(); // Cierra la lista de recientes
-                _navigateDownPartition(recentSpaces[
+                _navigateDownPartition(SpaceStore.recentAreas[
                     index]); // Usa el método que ya tienes para navegar
               },
             );
@@ -101,7 +122,6 @@ class _ScreenPartitionState extends State<ScreenPartition> {
     return FutureBuilder<Tree>(
       future: futureTree,
       builder: (context, snapshot) {
-        // anonymous function
         if (snapshot.hasData) {
           return Scaffold(
             appBar: AppBar(
@@ -114,8 +134,12 @@ class _ScreenPartitionState extends State<ScreenPartition> {
                     onPressed: () {
                       Navigator.of(context).pushAndRemoveUntil(
                         MaterialPageRoute(
-                            builder: (context) => const ScreenPartition(
-                                id: "ROOT", showMenu: true)),
+                          builder: (context) => ScreenPartition(
+                            id: "ROOT",
+                            showMenu: true,
+                            setLocale: widget.setLocale,
+                          ),
+                        ),
                         (Route<dynamic> route) => false,
                       );
                     }),
@@ -132,25 +156,73 @@ class _ScreenPartitionState extends State<ScreenPartition> {
                           decoration: BoxDecoration(
                             color: Theme.of(context).colorScheme.primary,
                           ),
-                          child: const Text('Menú',
-                              style: TextStyle(color: Colors.white)),
+                          child: Text(AppLocalizations.of(context)!.menu,
+                              style: const TextStyle(color: Colors.white)),
                         ),
                         ListTile(
+                            leading: const Icon(Icons.language),
+                            title: const Text('Cambiar idioma'),
+                            onTap: () {
+                              showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) {
+                                    return AlertDialog(
+                                      title: const Text('Selecciona un idioma'),
+                                      content: SingleChildScrollView(
+                                          child: ListBody(children: <Widget>[
+                                        GestureDetector(
+                                          child: const Text('English'),
+                                          onTap: () {
+                                            widget
+                                                .setLocale(const Locale('en'));
+                                            Navigator.of(context).pop();
+                                            setState(() {});
+                                          },
+                                        ),
+                                        const Padding(
+                                            padding: EdgeInsets.all(8.0)),
+                                        GestureDetector(
+                                          child: const Text('Español'),
+                                          onTap: () {
+                                            widget
+                                                .setLocale(const Locale('es'));
+                                            Navigator.of(context).pop();
+                                            setState(() {});
+                                          },
+                                        ),
+                                        const Padding(
+                                            padding: EdgeInsets.all(8.0)),
+                                        GestureDetector(
+                                            child: const Text('Catalan'),
+                                            onTap: () {
+                                              widget.setLocale(
+                                                  const Locale('ca'));
+                                              Navigator.of(context).pop();
+                                              setState(() {});
+                                            })
+                                      ])),
+                                    );
+                                  });
+                            }),
+                        ListTile(
                           leading: const Icon(Icons.business_outlined),
-                          title: const Text('Espais'),
+                          title: Text(AppLocalizations.of(context)!.spaces),
                           onTap: () {
                             Navigator.pop(context); // Cierra el Drawer
                             Navigator.of(context).pushAndRemoveUntil(
                               MaterialPageRoute(
-                                  builder: (context) => const ScreenPartition(
-                                      id: "ROOT", showMenu: true)),
+                                  builder: (context) => ScreenPartition(
+                                        id: "ROOT",
+                                        showMenu: true,
+                                        setLocale: widget.setLocale,
+                                      )),
                               (Route<dynamic> route) => false,
                             );
                           },
                         ),
                         ListTile(
                           leading: const Icon(Icons.history),
-                          title: const Text('Recents'),
+                          title: Text(AppLocalizations.of(context)!.recent),
                           onTap: () {
                             Navigator.pop(context); // Cierra el Drawer
                             showRecentSpaces(); // Función para mostrar espacios recientes
@@ -160,7 +232,10 @@ class _ScreenPartitionState extends State<ScreenPartition> {
                           leading: const Icon(Icons.warning),
                           title: const Text('Portes Travades'),
                           onTap: () {
-                            // Acción para "Portes Travades"
+                            Navigator.of(context).push(MaterialPageRoute<void>(
+                              builder: (context) =>
+                                  ScreenPropped(setLocale: widget.setLocale),
+                            ));
                           },
                         ),
                       ],

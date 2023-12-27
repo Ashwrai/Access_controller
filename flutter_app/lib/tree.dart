@@ -4,6 +4,10 @@ abstract class Area {
   Area(this.id, this.children);
 }
 
+class SpaceStore {
+  static List<String> recentAreas = [];
+}
+
 class Partition extends Area {
   Partition(String id, List<Area> children) : super(id, children);
 }
@@ -45,6 +49,12 @@ class Tree {
         children.add(Door(id: d['id'], state: d['state'], closed: d['closed']));
       }
       root = Space(dec['id'], children);
+    } else if (dec['class'] == "prop") {
+      List<Door> children = <Door>[];
+      for (Map<String, dynamic> d in dec['propped']) {
+        children.add(Door(id: d['id'], state: d['state'], closed: d['closed']));
+      }
+      root = Space("Propped", children);
     } else {
       assert(false);
     }
