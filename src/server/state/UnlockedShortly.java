@@ -79,6 +79,7 @@ public class UnlockedShortly extends State implements Observer {
       door.setState(new Locked(door));
     } else {
       logger.warn(door.getId() + " can't be locked, it's open");
+      door.addReasons(door.getId() + " is propped, unable to lock door");
     }
   }
 

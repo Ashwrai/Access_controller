@@ -15,6 +15,7 @@ public class Locked extends State {
 
   public void open() {
     logger.warn("Can't open door " + door.getId() + " because it's locked");
+    door.addReasons(door.getId() + " is locked");
   }
 
   public void close() {

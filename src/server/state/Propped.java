@@ -25,17 +25,18 @@ public class Propped extends State {
 
   @Override
   public void unlockShortly() {
-    logger.warn("Door " + door.getId() + " is open, it's propped");
+    door.setState(new UnlockedShortly(door));
   }
 
   @Override
   public void lock() {
     logger.warn("Can't lock, door " + door.getId() + "is open because it's propped");
+    door.addReasons(door.getId() + " is propped, unable to lock door");
   }
 
   @Override
   public void unlock() {
-    logger.warn("Door " + door.getId() + "is open, it's propped");
+    door.setState(new Unlocked(door));
   }
 
   @Override
