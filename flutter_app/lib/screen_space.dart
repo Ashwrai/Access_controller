@@ -2,7 +2,6 @@ import 'package:exercise_flutter_acs/screen_partition.dart';
 import 'requests.dart';
 import 'package:flutter/material.dart';
 import 'tree.dart';
-import 'flutter_gen/gen_l10n/app_localizations.dart';
 
 class ScreenSpace extends StatefulWidget {
   final String id;
@@ -103,22 +102,21 @@ class _StateScreenSpace extends State<ScreenSpace> {
                 children: <Widget>[
                   ElevatedButton(
                     onPressed: () async {
-                        reasons = await lockArea(snapshot.data!.root.id);
-                        _refresh();
+                      reasons = await lockArea(snapshot.data!.root.id);
+                      _refresh();
                     },
-                    child: Text('Lock everything'),
+                    child: const Text('Lock everything'),
                   ),
                   ElevatedButton(
                     onPressed: () async {
-                        reasons = await unlockArea(snapshot.data!.root.id);
-                        _refresh();
+                      reasons = await unlockArea(snapshot.data!.root.id);
+                      _refresh();
                     },
-                    child: Text('Unlock everything'),
+                    child: const Text('Unlock everything'),
                   ),
                 ],
               ),
             ),
-            
           );
         } else if (snapshot.hasError) {
           return Text("${snapshot.error}");
@@ -139,7 +137,6 @@ class _StateScreenSpace extends State<ScreenSpace> {
     IconButton lockIcon;
     IconButton shortIcon;
 
-    
     shortIcon = IconButton(
         icon: const Icon(
           Icons.lock_clock_outlined,

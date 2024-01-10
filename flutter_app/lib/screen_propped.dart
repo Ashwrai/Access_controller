@@ -2,7 +2,6 @@ import 'package:exercise_flutter_acs/screen_partition.dart';
 import 'requests.dart';
 import 'package:flutter/material.dart';
 import 'tree.dart';
-import 'flutter_gen/gen_l10n/app_localizations.dart';
 
 class ScreenPropped extends StatefulWidget {
   final Function(Locale) setLocale;

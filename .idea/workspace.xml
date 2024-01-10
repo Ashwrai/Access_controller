@@ -9,15 +9,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" name="Changes" comment="yes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logfile.log" beforeDir="false" afterPath="$PROJECT_DIR$/logfile.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/state/Locked.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/state/Locked.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/state/Propped.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/state/Propped.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/state/UnlockedShortly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/state/UnlockedShortly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app/lib/screen_partition.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app/lib/screen_partition.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app/lib/screen_propped.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app/lib/screen_propped.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app/lib/screen_space.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app/lib/screen_space.dart" afterDir="false" />
     </list>
     <list id="d2376686-7edd-44b4-bbbb-943f1966d20f" name="Changes by h_sar" comment="" />
-    <list id="737479e6-6d58-4ba7-b634-18de8d69cc02" name="Changes by quique" comment="">
-      <change beforePath="$PROJECT_DIR$/src/server/state/Propped.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/state/Propped.java" afterDir="false" />
-    </list>
     <list id="5e59b389-6729-4ff6-8ab7-6d2be5b824ae" name="Changes by quiquelhappy" comment="Changes by quiquelhappy" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,15 +29,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/server/state/Propped.java">
-      <ranges>
-        <range start1="27" end1="28" start2="27" end2="28" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
-        <range start1="33" end1="33" start2="33" end2="34" changelist="737479e6-6d58-4ba7-b634-18de8d69cc02" />
-        <range start1="37" end1="38" start2="38" end2="39" changelist="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

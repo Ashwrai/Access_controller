@@ -37,7 +37,8 @@ class _ScreenPartitionState extends State<ScreenPartition> {
     super.setState(fn);
     _showAlerts();
   }
-    void _showAlerts() {
+
+  void _showAlerts() {
     for (String reason in reasons) {
       Future.delayed(Duration.zero, () {
         _showAlertDialog(reason);
@@ -66,20 +67,17 @@ class _ScreenPartitionState extends State<ScreenPartition> {
   }
 
   void addRecentArea(String spaceId) {
-    setState(() {
-      // Elimina el espacio si ya existe en la lista
-      SpaceStore.recentAreas.remove(spaceId);
-      // Agregar al inicio de la lista para que los más recientes aparezcan primero
-      SpaceStore.recentAreas.insert(0, spaceId);
-    });
+    // Elimina el espacio si ya existe en la lista
+    SpaceStore.recentAreas.remove(spaceId);
+    // Agregar al inicio de la lista para que los más recientes aparezcan primero
+    SpaceStore.recentAreas.insert(0, spaceId);
   }
-    void addRecentSpace(String spaceId) {
-    setState(() {
-      // Elimina el espacio si ya existe en la lista
-      SpaceStore.recentSpaces.remove(spaceId);
-      // Agregar al inicio de la lista para que los más recientes aparezcan primero
-      SpaceStore.recentSpaces.insert(0, spaceId);
-    });
+
+  void addRecentSpace(String spaceId) {
+    // Elimina el espacio si ya existe en la lista
+    SpaceStore.recentSpaces.remove(spaceId);
+    // Agregar al inicio de la lista para que los más recientes aparezcan primero
+    SpaceStore.recentSpaces.insert(0, spaceId);
   }
 
   void navigateToSpace(String spaceId) {
@@ -130,45 +128,58 @@ class _ScreenPartitionState extends State<ScreenPartition> {
     );
   }
 
-void showRecentSpaces() {
-  Navigator.of(context).push(MaterialPageRoute<void>(
-    builder: (context) => Scaffold(
-      appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.recent),
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        foregroundColor: Theme.of(context).colorScheme.onPrimary,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () => Navigator.of(context).pop(),
+  void showRecentSpaces() {
+    Navigator.of(context).push(MaterialPageRoute<void>(
+      builder: (context) => Scaffold(
+        appBar: AppBar(
+          title: Text(AppLocalizations.of(context)!.recent),
+          backgroundColor: Theme.of(context).colorScheme.primary,
+          foregroundColor: Theme.of(context).colorScheme.onPrimary,
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
+        ),
+        body: ListView(
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                ListView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: SpaceStore.recentAreas.length,
+                  itemBuilder: (context, index) {
+                    return ListTile(
+                      title: Text(SpaceStore.recentAreas[index]),
+                      onTap: () {
+                        Navigator.of(context).pop(); // Close the recent list
+                        _navigateDownPartition(SpaceStore.recentAreas[index]);
+                      },
+                    );
+                  },
+                ),
+                ListView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: SpaceStore.recentSpaces.length,
+                  itemBuilder: (context, index) {
+                    return ListTile(
+                      title: Text(SpaceStore.recentSpaces[index]),
+                      onTap: () {
+                        Navigator.of(context).pop(); // Close the recent list
+                        _navigateDownSpace(SpaceStore.recentSpaces[index]);
+                      },
+                    );
+                  },
+                ),
+              ],
+            ),
+          ],
         ),
       ),
-      body: ListView.builder(
-        itemCount: SpaceStore.recentAreas.length,
-        itemBuilder: (context, index) {
-          return ExpansionTile(
-            title: Text(SpaceStore.recentAreas[index]),
-            children: [
-              ListView.builder(
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                itemCount: SpaceStore.recentSpaces.length,
-                itemBuilder: (context, spaceIndex) {
-                  return ListTile(
-                    title: Text(SpaceStore.recentSpaces[spaceIndex]),
-                    onTap: () {
-                      Navigator.of(context).pop(); // Close the recent list
-                      _navigateDownSpace(SpaceStore.recentSpaces[spaceIndex]);
-                    },
-                  );
-                },
-              ),
-            ],
-          );
-        },
-      ),
-    ),
-  ));
-}
+    ));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -309,21 +320,22 @@ void showRecentSpaces() {
                 children: <Widget>[
                   ElevatedButton(
                     onPressed: () async {
-                        reasons = await lockArea(snapshot.data!.root.id);
-                        _refresh();
+                      reasons = await lockArea(snapshot.data!.root.id);
+                      _refresh();
                     },
-                    child: Text('Lock everything'),
+                    child: const Text('Lock everything'),
                   ),
                   ElevatedButton(
                     onPressed: () async {
-                        reasons = await unlockArea(snapshot.data!.root.id);
-                        _refresh();
+                      reasons = await unlockArea(snapshot.data!.root.id);
+                      _refresh();
                     },
-                    child: Text('Unlock everything'),
+                    child: const Text('Unlock everything'),
                   ),
                 ],
               ),
-            ),          );
+            ),
+          );
         } else if (snapshot.hasError) {
           return Text("${snapshot.error}");
         }
@@ -360,4 +372,3 @@ void showRecentSpaces() {
     setState(() {});
   }
 }
-
