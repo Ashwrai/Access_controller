@@ -8,6 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b586c16b-f0a5-4b13-aaa4-3211c463a2bb" name="Changes" comment="yes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app/lib/screen_partition.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app/lib/screen_partition.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_app/lib/screen_space.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_app/lib/screen_space.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logfile.log" beforeDir="false" afterPath="$PROJECT_DIR$/logfile.log" afterDir="false" />
     </list>
     <list id="d2376686-7edd-44b4-bbbb-943f1966d20f" name="Changes by h_sar" comment="" />

@@ -143,7 +143,6 @@ class _ScreenPartitionState extends State<ScreenPartition> {
                         (Route<dynamic> route) => false,
                       );
                     }),
-                //TODO other actions
               ],
             ),
             // Drawer con las opciones de menú
@@ -270,15 +269,15 @@ class _ScreenPartitionState extends State<ScreenPartition> {
     assert(area is Partition || area is Space);
     if (area is Partition) {
       return ListTile(
-        title: Text('P ${area.id}'),
+        leading: const Icon(Icons.layers),
+        title: Text(area.id),
         onTap: () => _navigateDownPartition(area.id),
-        // TODO: Navegar para mostrar áreas hijas
       );
     } else {
       return ListTile(
-        title: Text('S ${area.id}'),
+        leading: const Icon(Icons.group),
+        title: Text(area.id),
         onTap: () => _navigateDownSpace(area.id),
-        // TODO: Navegar para mostrar puertas hijas
       );
     }
   }

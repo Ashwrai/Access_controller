@@ -210,7 +210,8 @@ class _StateScreenSpace extends State<ScreenSpace> {
     }
 
     return ListTile(
-      title: Text('D ${door.id}'),
+      leading: const Icon(Icons.sensor_door),
+      title: Text(door.id),
       trailing: Row(
         mainAxisSize:
             MainAxisSize.min, // Ensure widgets take minimum space horizontally
