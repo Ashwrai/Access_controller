@@ -4,7 +4,7 @@ import 'requests.dart';
 import 'package:flutter/material.dart';
 import 'tree.dart';
 import 'screen_space.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'flutter_gen/gen_l10n/app_localizations.dart';
 
 class ScreenPartition extends StatefulWidget {
   final String id;

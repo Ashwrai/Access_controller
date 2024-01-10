@@ -5,7 +5,7 @@ import 'dart:convert' as convert;
 
 import 'tree.dart';
 
-const String baseUrl = "https://9a75d778577487f7ae212dcda8e831fb.serveo.net";
+const String baseUrl = "https://9f12969c1315d5d0e1339500d65a2101.serveo.net";
 Future<Tree> getTree(String areaId) async {
   Uri uri = Uri.parse("$baseUrl/get_children?$areaId");
   final response = await http.get(uri);
