@@ -122,7 +122,7 @@ class _StateScreenPropped extends State<ScreenPropped> {
           Icons.lock_clock_outlined,
         ),
         onPressed: () async {
-          reasons = await unlockShortly(door.id, false);
+          reasons = await unlockDoorShortly(door.id);
           _refresh();
         });
 
@@ -130,7 +130,7 @@ class _StateScreenPropped extends State<ScreenPropped> {
       doorIcon = IconButton(
         icon: const Icon(Icons.door_front_door_sharp),
         onPressed: () async {
-          reasons = await open(door.id, false);
+          reasons = await openDoor(door.id);
           _refresh();
         },
       );
@@ -138,7 +138,7 @@ class _StateScreenPropped extends State<ScreenPropped> {
       doorIcon = IconButton(
         icon: const Icon(Icons.meeting_room_sharp),
         onPressed: () async {
-          reasons = await close(door.id, false);
+          reasons = await closeDoor(door.id);
           _refresh();
         },
       );
@@ -148,7 +148,7 @@ class _StateScreenPropped extends State<ScreenPropped> {
       lockIcon = IconButton(
         icon: const Icon(Icons.lock_open_sharp),
         onPressed: () async {
-          reasons = await lock(door.id, false);
+          reasons = await lockDoor(door.id);
           _refresh();
         },
       );
@@ -156,7 +156,7 @@ class _StateScreenPropped extends State<ScreenPropped> {
       lockIcon = IconButton(
         icon: const Icon(Icons.lock_sharp),
         onPressed: () async {
-          reasons = await unlock(door.id, false);
+          reasons = await unlockDoor(door.id);
           _refresh();
         },
       );
@@ -164,7 +164,7 @@ class _StateScreenPropped extends State<ScreenPropped> {
       lockIcon = IconButton(
         icon: const Icon(Icons.lock_sharp),
         onPressed: () async {
-          reasons = await unlock(door.id, false);
+          reasons = await unlockDoor(door.id);
           _refresh();
         },
       );
@@ -173,14 +173,14 @@ class _StateScreenPropped extends State<ScreenPropped> {
             Icons.warning,
           ),
           onPressed: () async {
-            reasons = await unlockShortly(door.id, false);
+            reasons = await unlockDoorShortly(door.id);
             _refresh();
           });
     } else if (door.state == 'unlocked_shortly') {
       lockIcon = IconButton(
         icon: const Icon(Icons.lock_sharp),
         onPressed: () async {
-          reasons = await unlock(door.id, false);
+          reasons = await unlockDoor(door.id);
           _refresh();
         },
       );
@@ -189,21 +189,21 @@ class _StateScreenPropped extends State<ScreenPropped> {
             Icons.punch_clock,
           ),
           onPressed: () async {
-            reasons = await unlockShortly(door.id, false);
+            reasons = await unlockDoorShortly(door.id);
             _refresh();
           });
     } else {
       lockIcon = IconButton(
         icon: const Icon(Icons.lock_sharp),
         onPressed: () async {
-          reasons = await unlock(door.id, false);
+          reasons = await unlockDoor(door.id);
           _refresh();
         },
       );
       lockIcon = IconButton(
         icon: const Icon(Icons.lock_sharp),
         onPressed: () async {
-          reasons = await unlock(door.id, false);
+          reasons = await unlockDoor(door.id);
           _refresh();
         },
       );

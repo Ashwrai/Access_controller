@@ -60,4 +60,10 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get lockDoor => 'Bloquear Puerta';
+
+  @override
+  String get propped => 'Puertas Atascadas';
+
+  @override
+  String get idioma => 'Cambiar Idioma';
 }

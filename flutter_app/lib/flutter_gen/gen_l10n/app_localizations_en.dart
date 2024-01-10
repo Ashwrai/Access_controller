@@ -46,6 +46,7 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get managerGroup => 'Managers';
 
+  
   @override
   String get employeeGroup => 'Employees';
 
@@ -60,4 +61,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get lockDoor => 'Lock Door';
+
+  @override
+  String get propped => 'Doors jammed';
+
+  @override
+  String get idioma => 'Change Language';
 }

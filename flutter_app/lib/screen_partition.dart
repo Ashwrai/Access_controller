@@ -24,6 +24,7 @@ class ScreenPartition extends StatefulWidget {
 
 class _ScreenPartitionState extends State<ScreenPartition> {
   late Future<Tree> futureTree;
+  List<String> reasons = [];
 
   @override
   void initState() {
@@ -31,12 +32,53 @@ class _ScreenPartitionState extends State<ScreenPartition> {
     futureTree = getTree(widget.id);
   }
 
-  void addRecentSpace(String spaceId) {
+  @override
+  void setState(VoidCallback fn) {
+    super.setState(fn);
+    _showAlerts();
+  }
+    void _showAlerts() {
+    for (String reason in reasons) {
+      Future.delayed(Duration.zero, () {
+        _showAlertDialog(reason);
+      });
+    }
+  }
+
+  void _showAlertDialog(String item) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Error'),
+          content: Text(item),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('OK'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  void addRecentArea(String spaceId) {
     setState(() {
       // Elimina el espacio si ya existe en la lista
       SpaceStore.recentAreas.remove(spaceId);
       // Agregar al inicio de la lista para que los más recientes aparezcan primero
       SpaceStore.recentAreas.insert(0, spaceId);
+    });
+  }
+    void addRecentSpace(String spaceId) {
+    setState(() {
+      // Elimina el espacio si ya existe en la lista
+      SpaceStore.recentSpaces.remove(spaceId);
+      // Agregar al inicio de la lista para que los más recientes aparezcan primero
+      SpaceStore.recentSpaces.insert(0, spaceId);
     });
   }
 
@@ -53,7 +95,7 @@ class _ScreenPartitionState extends State<ScreenPartition> {
   }
 
   void _navigateDownPartition(String childId) {
-    addRecentSpace(childId);
+    addRecentArea(childId);
     Navigator.of(context).push(MaterialPageRoute<void>(
       builder: (context) => ScreenPartition(
         id: childId,
@@ -88,34 +130,45 @@ class _ScreenPartitionState extends State<ScreenPartition> {
     );
   }
 
-  void showRecentSpaces() {
-    Navigator.of(context).push(MaterialPageRoute<void>(
-      builder: (context) => Scaffold(
-        appBar: AppBar(
-          title: Text(AppLocalizations.of(context)!.recent),
-          backgroundColor: Theme.of(context).colorScheme.primary,
-          foregroundColor: Theme.of(context).colorScheme.onPrimary,
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back),
-            onPressed: () => Navigator.of(context).pop(),
-          ),
-        ),
-        body: ListView.builder(
-          itemCount: SpaceStore.recentAreas.length,
-          itemBuilder: (context, index) {
-            return ListTile(
-              title: Text(SpaceStore.recentAreas[index]),
-              onTap: () {
-                Navigator.of(context).pop(); // Cierra la lista de recientes
-                _navigateDownPartition(SpaceStore.recentAreas[
-                    index]); // Usa el método que ya tienes para navegar
-              },
-            );
-          },
+void showRecentSpaces() {
+  Navigator.of(context).push(MaterialPageRoute<void>(
+    builder: (context) => Scaffold(
+      appBar: AppBar(
+        title: Text(AppLocalizations.of(context)!.recent),
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        foregroundColor: Theme.of(context).colorScheme.onPrimary,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () => Navigator.of(context).pop(),
         ),
       ),
-    ));
-  }
+      body: ListView.builder(
+        itemCount: SpaceStore.recentAreas.length,
+        itemBuilder: (context, index) {
+          return ExpansionTile(
+            title: Text(SpaceStore.recentAreas[index]),
+            children: [
+              ListView.builder(
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                itemCount: SpaceStore.recentSpaces.length,
+                itemBuilder: (context, spaceIndex) {
+                  return ListTile(
+                    title: Text(SpaceStore.recentSpaces[spaceIndex]),
+                    onTap: () {
+                      Navigator.of(context).pop(); // Close the recent list
+                      _navigateDownSpace(SpaceStore.recentSpaces[spaceIndex]);
+                    },
+                  );
+                },
+              ),
+            ],
+          );
+        },
+      ),
+    ),
+  ));
+}
 
   @override
   Widget build(BuildContext context) {
@@ -160,7 +213,7 @@ class _ScreenPartitionState extends State<ScreenPartition> {
                         ),
                         ListTile(
                             leading: const Icon(Icons.language),
-                            title: const Text('Cambiar idioma'),
+                            title: Text(AppLocalizations.of(context)!.idioma),
                             onTap: () {
                               showDialog(
                                   context: context,
@@ -229,7 +282,7 @@ class _ScreenPartitionState extends State<ScreenPartition> {
                         ),
                         ListTile(
                           leading: const Icon(Icons.warning),
-                          title: const Text('Portes Travades'),
+                          title: Text(AppLocalizations.of(context)!.propped),
                           onTap: () {
                             Navigator.of(context).push(MaterialPageRoute<void>(
                               builder: (context) =>
@@ -250,7 +303,27 @@ class _ScreenPartitionState extends State<ScreenPartition> {
               separatorBuilder: (BuildContext context, int index) =>
                   const Divider(),
             ),
-          );
+            bottomNavigationBar: BottomAppBar(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  ElevatedButton(
+                    onPressed: () async {
+                        reasons = await lockArea(snapshot.data!.root.id);
+                        _refresh();
+                    },
+                    child: Text('Lock everything'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () async {
+                        reasons = await unlockArea(snapshot.data!.root.id);
+                        _refresh();
+                    },
+                    child: Text('Unlock everything'),
+                  ),
+                ],
+              ),
+            ),          );
         } else if (snapshot.hasError) {
           return Text("${snapshot.error}");
         }
@@ -281,4 +354,10 @@ class _ScreenPartitionState extends State<ScreenPartition> {
       );
     }
   }
+
+  void _refresh() async {
+    futureTree = getTree(widget.id);
+    setState(() {});
+  }
 }
+

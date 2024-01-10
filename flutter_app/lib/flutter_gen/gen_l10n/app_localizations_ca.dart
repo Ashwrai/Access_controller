@@ -60,4 +60,10 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get lockDoor => 'Bloquejar Porta';
+
+  @override
+  String get propped => 'Portes Travades';
+
+  @override
+  String get idioma => 'Canviar Idioma';
 }

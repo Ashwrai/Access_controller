@@ -6,6 +6,7 @@ abstract class Area {
 
 class SpaceStore {
   static List<String> recentAreas = [];
+  static List<String> recentSpaces = [];
 }
 
 class Partition extends Area {

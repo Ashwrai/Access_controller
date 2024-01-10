@@ -208,6 +208,14 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Lock Door'**
   String get lockDoor;
+
+  /// No description provided for @propped.
+  ///
+  /// In en, this message translates to:
+  /// **'Propped'**
+  String get propped; 
+
+  String get idioma;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
