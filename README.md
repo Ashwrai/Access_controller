@@ -15,9 +15,6 @@ The project is divided into multiple milestones, each addressing specific develo
 - **Third Milestone**: Involves building a user interface for a mobile app to interact with the system, including navigation through the hierarchy of areas, displaying door and area status, and sending requests to the Access Control Unit (ACU).
 
 ## Technical Details
-
-### Technology used
-
 - **Languages**:
   - Java
   - Dart (for Flutter mobile app development)
