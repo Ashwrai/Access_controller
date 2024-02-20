@@ -16,7 +16,7 @@ The project is divided into multiple milestones, each addressing specific develo
 
 ## Technical Details
 
-### Languages and Libraries
+### Technology used
 
 - **Languages**:
   - Java
@@ -24,6 +24,7 @@ The project is divided into multiple milestones, each addressing specific develo
 - **Libraries**:
   - java.util.time: Used for date and time representation.
   - logback: Used for logging functionality.
+- **Other tools**:
   - JSON: Utilized for data interchange between system components.
   - PlantUML: Utilized for creating UML diagrams to visualize system architecture.
 
